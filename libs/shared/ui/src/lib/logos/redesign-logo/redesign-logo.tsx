@@ -1,9 +1,9 @@
 import { type ImageProps, Image } from '../../image/image'
 
-import RhLogo from './logo-wrap.svg'
+import AcmeLogo from './logo-wrap.svg'
 
 export const AcmeLogo = (props: ImageProps) => {
-  return <Image src={RhLogo} {...props} fit="contain" />
+  return <Image src={AcmeLogo} {...props} fit="contain" />
 }
 
 export default AcmeLogo

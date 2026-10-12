@@ -31,7 +31,7 @@ public enum IpMarketplaceSpeciality implements SerializableEnum {
   PULMONOLOGY("Pulmonology"),
   RADIATION_ONCOLOGY("Radiation Oncology"),
   RADIOLOGY("Radiology"),
-  RHEUMATOLOGY("Rheumatology"),
+  RHEUMATOLOGY("Acmeeumatology"),
   SLEEP_MEDICINE("Sleep Medicine"),
   SPORTS_MEDICINE("Sports Medicine"),
   UROLOGY("Urology");

@@ -30,7 +30,7 @@ The Portal application initializes React Query at the root and wraps the applica
 
 ```mermaid
 graph TB
-Root["main.tsx<br/>Root Provider Setup"] --> Providers["Providers:<br/>QueryClientProvider<br/>RhProvider<br/>GoogleOAuthProvider"]
+Root["main.tsx<br/>Root Provider Setup"] --> Providers["Providers:<br/>QueryClientProvider<br/>AcmeProvider<br/>GoogleOAuthProvider"]
 Providers --> App["app.tsx<br/>RouterProvider + Analytics"]
 App --> Routes["Routes & Pages"]
 Routes --> Hooks["Custom Hooks<br/>useQuery/useMutation"]
@@ -259,7 +259,7 @@ RQ-->>UI : "isError=true, error.status>=500"
 ### Local State Management and Context Providers
 - The application is wrapped with:
   - QueryClientProvider for React Query
-  - RhProvider for theming
+  - AcmeProvider for theming
   - GoogleOAuthProvider for authentication
 - Analytics and telemetry integrations are initialized at startup
 - Local UI state is managed by React hooks within components; no global Redux-like store is evident in the analyzed files
@@ -286,7 +286,7 @@ The state management layer depends on:
 ```mermaid
 graph LR
 Main["main.tsx"] --> RQP["QueryClientProvider"]
-Main --> Acme["RhProvider"]
+Main --> Acme["AcmeProvider"]
 Main --> GAuth["GoogleOAuthProvider"]
 App["app.tsx"] --> Router["RouterProvider"]
 Hooks["Domain Hooks"] --> RQ["@tanstack/react-query"]

@@ -163,7 +163,7 @@ public class VendorServiceTests {
   }
 
   @Test
-  public void testGetAll_vendorPointContactIsProvidedForRhUser() {
+  public void testGetAll_vendorPointContactIsProvidedForAcmeUser() {
     mockSecurityContext(RoleAuthority.ROLE_RH_USER);
     var vendor = testVendor();
 

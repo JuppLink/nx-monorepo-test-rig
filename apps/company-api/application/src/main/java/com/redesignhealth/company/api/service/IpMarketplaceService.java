@@ -18,8 +18,8 @@ import static com.acmehealth.company.api.entity.request.RoleAuthority.ROLE_RH_US
 import static com.acmehealth.company.api.entity.request.RoleAuthority.ROLE_SUPER_ADMIN;
 import static com.acmehealth.company.api.expansion.Expansion.METRICS;
 import static com.acmehealth.company.api.expansion.Expansion.REQUESTS;
-import static com.acmehealth.company.api.util.RhCustomCounter.BUYER_VIEW_COUNTER;
-import static com.acmehealth.company.api.util.RhCustomCounter.LABEL_BUYER_VIEW_COUNTER;
+import static com.acmehealth.company.api.util.AcmeCustomCounter.BUYER_VIEW_COUNTER;
+import static com.acmehealth.company.api.util.AcmeCustomCounter.LABEL_BUYER_VIEW_COUNTER;
 
 import com.acmehealth.company.api.client.email.EmailSender;
 import com.acmehealth.company.api.client.prometheus.PrometheusClient;
@@ -90,7 +90,7 @@ import com.acmehealth.company.api.service.dto.ChatRoomParameter;
 import com.acmehealth.company.api.service.helper.BuilderForException;
 import com.acmehealth.company.api.service.helper.Filter;
 import com.acmehealth.company.api.service.helper.RefGenerator;
-import com.acmehealth.company.api.util.RhCustomCounter;
+import com.acmehealth.company.api.util.AcmeCustomCounter;
 import jakarta.annotation.Nullable;
 import jakarta.transaction.Transactional;
 import java.net.URI;
@@ -302,7 +302,7 @@ public class IpMarketplaceService {
     var ipMarketplace =
         ipMarketplaceRepository.findByApiId(apiId).orElseThrow(IpMarketplaceNotFoundException::new);
     if (AuthChecks.hasRole(ROLE_OP_CO_USER) && isABuyer(requester))
-      RhCustomCounter.increment(requester.getUsername(), apiId.value(), existingBuyerViews);
+      AcmeCustomCounter.increment(requester.getUsername(), apiId.value(), existingBuyerViews);
     if (expansions.isEmpty()) {
       return IpMarketplaceSummary.from(ipMarketplace, isABuyer);
     } else {
@@ -713,7 +713,7 @@ public class IpMarketplaceService {
                   ipMarketplaceRequestContactInfos = null;
                 }
                 var key =
-                    RhCustomCounter.sanitizeEmail(requester.getUsername())
+                    AcmeCustomCounter.sanitizeEmail(requester.getUsername())
                         + "_"
                         + ipMarketplace.getApiId().getApiId();
                 return IpMarketplaceSummary.from(

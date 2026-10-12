@@ -41,7 +41,7 @@ export const mockAdminUser: UserInfoSummary = {
   picture: 'https://example.com/image.jpeg'
 }
 
-export const mockRhUser: UserInfoSummary = {
+export const mockAcmeUser: UserInfoSummary = {
   email: 'sazh.katzroy@acmehealth.com',
   givenName: 'Sazh',
   familyName: 'Katzroy',

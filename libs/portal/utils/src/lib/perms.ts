@@ -6,7 +6,7 @@ import { Roles } from './roles'
  * TODO: We need to implement the roles check like the following and replace the regex
  */
 export const isAdminRole = (role?: string) => {
-  return role === Roles.RhAdmin || role === Roles.SuperAdmin
+  return role === Roles.AcmeAdmin || role === Roles.SuperAdmin
 }
 
 export const isSuperAdminRole = (role: string) => /super/gi.test(role)

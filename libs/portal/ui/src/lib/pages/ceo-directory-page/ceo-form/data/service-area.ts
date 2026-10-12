@@ -40,7 +40,7 @@ export const serviceArea: Option[] = [
   'Oklahoma',
   'Oregon',
   'Pennsylvania',
-  'Rhode Island',
+  'Acmeode Island',
   'South Carolina',
   'South Dakota',
   'Tennessee',

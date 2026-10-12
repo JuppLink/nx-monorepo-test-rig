@@ -30,7 +30,7 @@ sequenceDiagram
     participant Hotjar
     participant OAuth as GoogleOAuthProvider
     participant Query as QueryClientProvider
-    participant Theme as RhProvider
+    participant Theme as AcmeProvider
     participant App as App Component
     participant Router as RouterProvider
     participant SI as Speed Insights
@@ -40,7 +40,7 @@ sequenceDiagram
     Main->>Hotjar: Initialize Hotjar (if site ID set)
     Main->>OAuth: Wrap with GoogleOAuthProvider
     OAuth->>Query: Wrap with QueryClientProvider
-    Query->>Theme: Wrap with RhProvider + theme
+    Query->>Theme: Wrap with AcmeProvider + theme
     Theme->>App: Render App component
     App->>SI: Mount Speed Insights
     App->>Router: Mount RouterProvider with routes

@@ -8,7 +8,7 @@ import {
   mockGetCeos,
   mockGetCeosFilters,
   mockGetUserInfo,
-  mockRhUser
+  mockAcmeUser
 } from '@acmehealth/portal/data-assets'
 import { mocks, render, screen } from '@acmehealth/shared-utils-jest'
 import { setupServer } from 'msw/node'
@@ -45,7 +45,7 @@ describe('CEO Directory Page', () => {
     })
 
     describe('with Acme User', () => {
-      beforeEach(() => mockGetUserInfo(server, mockRhUser))
+      beforeEach(() => mockGetUserInfo(server, mockAcmeUser))
 
       it('does not display add button', () => {
         render(<CeoDirectoryPage />)

@@ -6,13 +6,13 @@ import java.util.Set;
 import org.springframework.stereotype.Component;
 
 @Component
-public class RhCustomCounter {
+public class AcmeCustomCounter {
   private static Counter buyerViewCustomCounter = null;
 
   public static final String BUYER_VIEW_COUNTER = "custom_buyer_view_counter";
   public static final String LABEL_BUYER_VIEW_COUNTER = "buyer_view";
 
-  public RhCustomCounter(CollectorRegistry registry) {
+  public AcmeCustomCounter(CollectorRegistry registry) {
     initBuyerViewCounters(registry);
   }
 

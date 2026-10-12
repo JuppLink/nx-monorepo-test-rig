@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { theme } from '@chakra-ui/react'
 import { AuthProvider } from '@acmehealth/third-party-network/features/authentication'
-import { RhProvider } from '@acmehealth/ui'
+import { AcmeProvider } from '@acmehealth/ui'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
@@ -31,9 +31,9 @@ root.render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools buttonPosition="bottom-right" />
-      <RhProvider theme={theme}>
+      <AcmeProvider theme={theme}>
         <AuthProvider>{router}</AuthProvider>
-      </RhProvider>
+      </AcmeProvider>
     </QueryClientProvider>
   </StrictMode>
 )

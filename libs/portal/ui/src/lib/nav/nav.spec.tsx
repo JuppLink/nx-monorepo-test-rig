@@ -5,7 +5,7 @@ import {
   mockEnterpriseSellerUser,
   mockGetIpMarketplace,
   mockIpListingWithUnreleasedIPRequest,
-  mockRhUser,
+  mockAcmeUser,
   mockSuperAdminUser
 } from '@acmehealth/portal/data-assets'
 import { logout } from '@acmehealth/portal/utils'
@@ -105,7 +105,7 @@ describe('Nav', () => {
         'log out'
       ]
 
-      render(<Nav userInfo={mockRhUser} />)
+      render(<Nav userInfo={mockAcmeUser} />)
 
       const nav = screen.getByRole('navigation')
       const actualNavList = within(nav).getAllByRole('button')

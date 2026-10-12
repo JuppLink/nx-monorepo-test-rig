@@ -5,7 +5,7 @@ import {
   mockGetUserInfo,
   mockMarketplaceBuyerCompany,
   mockMarketplaceSellerCompany,
-  mockRhOpCoCompany
+  mockAcmeOpCoCompany
 } from '@acmehealth/portal/data-assets'
 import { render, screen } from '@acmehealth/shared-utils-jest'
 import { within } from '@testing-library/react'
@@ -51,7 +51,7 @@ describe('CompanyUsers', () => {
   })
 
   it('renders description for Acme Company', async () => {
-    mockGetCompany(server, mockRhOpCoCompany)
+    mockGetCompany(server, mockAcmeOpCoCompany)
     render(<CompanyUsers />)
     expect(
       await screen.findByText(
@@ -61,7 +61,7 @@ describe('CompanyUsers', () => {
   })
 
   it('renders a table of company members if members exist', async () => {
-    mockGetCompany(server, mockRhOpCoCompany)
+    mockGetCompany(server, mockAcmeOpCoCompany)
     render(<CompanyUsers />)
     const [header, ...users] = await screen.findAllByRole('row')
     expect(users).toHaveLength(1)
@@ -72,7 +72,7 @@ describe('CompanyUsers', () => {
   })
 
   it('renders an empty state if no members exist', async () => {
-    mockGetCompany(server, mockRhOpCoCompany)
+    mockGetCompany(server, mockAcmeOpCoCompany)
 
     mockGetCompanyMembers(server, [])
 

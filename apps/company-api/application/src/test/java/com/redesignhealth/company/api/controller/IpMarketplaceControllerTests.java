@@ -78,7 +78,7 @@ import com.acmehealth.company.api.repository.PersonRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
 import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.IpMarketplaceService;
-import com.acmehealth.company.api.util.RhCustomCounter;
+import com.acmehealth.company.api.util.AcmeCustomCounter;
 import java.net.URI;
 import java.util.List;
 import java.util.Optional;
@@ -1477,13 +1477,13 @@ public class IpMarketplaceControllerTests {
         .thenReturn(Optional.of(buyerPerson));
     when(ipMarketplaceRepository.findByApiId(IpMarketplaceRef.of("iPMarketplaceId")))
         .thenReturn(Optional.of(ipMarketplace));
-    try (MockedStatic<RhCustomCounter> mockStatic = Mockito.mockStatic(RhCustomCounter.class)) {
-      RhCustomCounter.increment(anyString(), anyString(), any());
+    try (MockedStatic<AcmeCustomCounter> mockStatic = Mockito.mockStatic(AcmeCustomCounter.class)) {
+      AcmeCustomCounter.increment(anyString(), anyString(), any());
       mockMvc
           .perform(get("/ip-marketplace/{iPMarketplaceId}", "iPMarketplaceId"))
           .andExpect(status().isOk());
       mockStatic.verify(
-          () -> RhCustomCounter.increment(anyString(), anyString(), any()), atLeast(1));
+          () -> AcmeCustomCounter.increment(anyString(), anyString(), any()), atLeast(1));
     }
   }
 

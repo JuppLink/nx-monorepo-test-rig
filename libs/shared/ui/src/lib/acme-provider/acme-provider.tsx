@@ -8,7 +8,7 @@ import { ColorModeProvider } from './color-mode'
 
 import '@fontsource-variable/inter'
 
-export interface RhProviderProps
+export interface AcmeProviderProps
   extends Pick<
     ThemeProviderProps,
     | 'forcedTheme'
@@ -25,11 +25,11 @@ export interface RhProviderProps
   value?: SystemContext
 }
 
-export function RhProvider({
+export function AcmeProvider({
   children,
   value,
   ...themeProps
-}: RhProviderProps) {
+}: AcmeProviderProps) {
   return (
     <ChakraProvider value={value ?? defaultSystem}>
       <ColorModeProvider {...themeProps}>{children}</ColorModeProvider>

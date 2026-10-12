@@ -6,15 +6,15 @@ This is a Acme Health UI theme generated with [Hypertheme Editor](https://hypert
 
 Put the entire directory inside the `src/` folder of your project.
 
-Use it in inside your RhProvider
+Use it in inside your AcmeProvider
 
 ```tsx
 import * as React from 'react'
-import { RhProvider } from '@acmehealth/ui'
+import { AcmeProvider } from '@acmehealth/ui'
 import theme from './theme'
 
 function App() {
-  return <RhProvider theme={theme}>...rest of code</RhProvider>
+  return <AcmeProvider theme={theme}>...rest of code</AcmeProvider>
 }
 
 export default App

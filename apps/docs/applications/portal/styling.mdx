@@ -29,14 +29,14 @@ export const theme = createSystem(config)
 
 ## Acme provider
 
-The `RhProvider` from `@acmehealth/ui` wraps the application and provides the theme to all Chakra components:
+The `AcmeProvider` from `@acmehealth/ui` wraps the application and provides the theme to all Chakra components:
 
 ```tsx
-import { RhProvider, theme } from '@acmehealth/ui'
+import { AcmeProvider, theme } from '@acmehealth/ui'
 
-<RhProvider value={theme}>
+<AcmeProvider value={theme}>
   <App />
-</RhProvider>
+</AcmeProvider>
 ```
 
 <Note>
@@ -101,7 +101,7 @@ If you encounter legacy patterns, here is how they map to v3:
 
 | Chakra v2 | Chakra v3 |
 |---|---|
-| `<ChakraProvider theme={theme}>` | `<RhProvider value={systemInstance}>` |
+| `<ChakraProvider theme={theme}>` | `<AcmeProvider value={systemInstance}>` |
 | `useColorModeValue('white', 'gray.800')` | Semantic token `bg.surface` |
 | `extendTheme({})` | `defineConfig({})` + `createSystem()` |
 | `<Box as="button">` | `<Box asChild>` or use Chakra's `<Button>` |

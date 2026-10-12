@@ -1,6 +1,6 @@
 import { CompanySummary } from '../../companies'
 
-export const mockRhOpCoCompany: CompanySummary = {
+export const mockAcmeOpCoCompany: CompanySummary = {
   name: 'Ever/Body',
   id: '6aBCde12',
   number: 3,
@@ -29,7 +29,7 @@ export const mockRhOpCoCompany: CompanySummary = {
   links: []
 }
 
-export const mockRhThemeCompany: CompanySummary = {
+export const mockAcmeThemeCompany: CompanySummary = {
   name: 'Ever/Body',
   id: '6aBCde12',
   legalName: 'Ever/Body, Inc.',

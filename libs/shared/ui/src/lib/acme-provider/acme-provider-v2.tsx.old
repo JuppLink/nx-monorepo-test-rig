@@ -12,15 +12,15 @@ import '@fontsource/inter/variable.css'
 
 import { system } from '../theme'
 
-interface RhProviderProps {
+interface AcmeProviderProps {
   children: ReactNode
   defaultColorMode?: 'light' | 'dark' | 'system'
 }
 
-export const RhProvider = ({
+export const AcmeProvider = ({
   children,
   defaultColorMode = 'light'
-}: RhProviderProps) => {
+}: AcmeProviderProps) => {
   return (
     <ThemeProvider
       attribute="class"
@@ -33,5 +33,5 @@ export const RhProvider = ({
 }
 
 // Legacy provider for backward compatibility (deprecated)
-// Use RhProvider with next-themes instead
-export const LegacyRhProvider = RhProvider
+// Use AcmeProvider with next-themes instead
+export const LegacyAcmeProvider = AcmeProvider

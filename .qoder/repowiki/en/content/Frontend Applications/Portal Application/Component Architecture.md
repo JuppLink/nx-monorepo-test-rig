@@ -360,7 +360,7 @@ InfraFormCard --> FormItem : "uses"
 
 ```mermaid
 graph LR
-MAIN["main.tsx"] --> THEME["RhProvider"]
+MAIN["main.tsx"] --> THEME["AcmeProvider"]
 MAIN --> QUERY["QueryClientProvider"]
 MAIN --> OAUTH["GoogleOAuthProvider"]
 APP["app.tsx"] --> ROUTER["router.tsx"]

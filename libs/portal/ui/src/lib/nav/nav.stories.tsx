@@ -6,7 +6,7 @@ import {
   mockInvalidEnterpriseBuyerAndSellerUser,
   mockIpListingWithUnreleasedIPRequest,
   mockIpMarketplaceWithRequests,
-  mockRhUser,
+  mockAcmeUser,
   mockSuperAdminUser
 } from '@acmehealth/portal/data-assets'
 import { http, HttpResponse } from 'msw'
@@ -42,9 +42,9 @@ export const AdminUser = {
   } as NavProps
 }
 
-export const RhUser = {
+export const AcmeUser = {
   args: {
-    userInfo: mockRhUser
+    userInfo: mockAcmeUser
   } as NavProps
 }
 

@@ -6,7 +6,7 @@ import {
   mockCompanyUser,
   mockGetCeoById,
   mockGetUserInfo,
-  mockRhUser
+  mockAcmeUser
 } from '@acmehealth/portal/data-assets'
 import { render, screen, waitFor } from '@acmehealth/shared-utils-jest'
 import { setupServer } from 'msw/node'
@@ -67,7 +67,7 @@ describe('CeoProfileDetails', () => {
     })
   })
   describe('Acme user', () => {
-    beforeEach(() => mockGetUserInfo(server, mockRhUser))
+    beforeEach(() => mockGetUserInfo(server, mockAcmeUser))
     describe('opt-in CEO', () => {
       beforeEach(() => mockGetCeoById(server, mockCeoOptIn))
 

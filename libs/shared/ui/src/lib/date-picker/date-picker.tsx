@@ -30,7 +30,7 @@ export interface DatePickerProps {
   name?: string
 }
 
-// const RhDatePicker = acme(ReactDatePicker)
+// const AcmeDatePicker = acme(ReactDatePicker)
 
 const customDateInput = (
   { value, onClick, onChange }: InputProps,

@@ -207,7 +207,7 @@ public class CompanyControllerTests {
 
   @Test
   @WithAcmeUser(role = ROLE_RH_USER)
-  public void testList_returnsAllWithRhUser() throws Exception {
+  public void testList_returnsAllWithAcmeUser() throws Exception {
     var company = testCompany(testPerson());
     when(companyRepository.findAll(Mockito.any(Pageable.class)))
         .thenReturn(new PageImpl<>(List.of(company)));

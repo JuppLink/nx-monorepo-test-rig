@@ -5,7 +5,7 @@ import { Loader } from '@acmehealth/ui'
 
 // import { acme } from '@acmehealth/ui'
 import { getAccessToken, getIdToken, setAccessToken } from '../../utils/auth'
-// const RhEmbeddedChat = acme(EmbeddedChat)
+// const AcmeEmbeddedChat = acme(EmbeddedChat)
 
 export function Chat() {
   //const [idToken, _] = useState(getIdToken())

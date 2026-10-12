@@ -108,7 +108,7 @@ Router["React Router<br/>BrowserRouter/Routes"]
 Layout["RootLayout<br/>Protected Routes"]
 AuthProvider["AuthProvider<br/>Authentication Provider"]
 QueryClient["React Query<br/>QueryClientProvider"]
-Theme["Chakra UI Theme<br/>RhProvider"]
+Theme["Chakra UI Theme<br/>AcmeProvider"]
 Login["Login Page"]
 Home["Home Page"]
 AdvisorDetail["Advisor Detail Page"]
@@ -323,7 +323,7 @@ Client->>Contract : Reference OpenAPI schema
 - [company-api.json:1-200](file://contracts/company-api/v1/company-api.json#L1-L200)
 
 ## Styling Approach and Accessibility
-- Theming: Chakra UI theme is applied globally via RhProvider, ensuring consistent design tokens and component styles.
+- Theming: Chakra UI theme is applied globally via AcmeProvider, ensuring consistent design tokens and component styles.
 - Responsive design: Components utilize responsive spacing and sizing props to adapt across screen sizes.
 - Accessibility: AvatarMenu uses semantic markup and keyboard-friendly interactions through Chakra UI components. Ensure all interactive elements have appropriate ARIA roles and focus management.
 

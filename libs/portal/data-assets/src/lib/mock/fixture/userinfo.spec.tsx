@@ -5,7 +5,7 @@ import {
   mockCompanyUser,
   mockEnterpriseBuyerUser,
   mockEnterpriseSellerUser,
-  mockRhUser,
+  mockAcmeUser,
   mockSuperAdminUser
 } from './userinfo'
 
@@ -22,7 +22,7 @@ describe('UserInfo fixtures validation against API contract', () => {
     })
 
     it('Acme User', () => {
-      const valid = api.validateResponse(mockRhUser, 'getUserInfo', 200)
+      const valid = api.validateResponse(mockAcmeUser, 'getUserInfo', 200)
       expect(valid.errors).toBeNull()
     })
 

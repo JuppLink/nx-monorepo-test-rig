@@ -6,8 +6,8 @@ import {
   mockGetUserInfo,
   mockMarketplaceBuyerCompany,
   mockMarketplaceSellerCompany,
-  mockRhOpCoCompany,
-  mockRhThemeCompany
+  mockAcmeOpCoCompany,
+  mockAcmeThemeCompany
 } from '@acmehealth/portal/data-assets'
 import {
   render,
@@ -35,7 +35,7 @@ describe('CompanyDetailsPage', () => {
   describe('renders header', () => {
     beforeEach(() => mockGetUserInfo(server, mockAdminUser))
     it('renders name, number, status for Acme Company', async () => {
-      mockGetCompany(server, mockRhOpCoCompany)
+      mockGetCompany(server, mockAcmeOpCoCompany)
       render(<CompanyDetailsPage />)
       await waitForLoadingToFinish()
 
@@ -56,7 +56,7 @@ describe('CompanyDetailsPage', () => {
   describe('rendering tabs', () => {
     beforeEach(() => mockGetUserInfo(server, mockAdminUser))
     it('renders default tabs', async () => {
-      mockGetCompany(server, mockRhThemeCompany)
+      mockGetCompany(server, mockAcmeThemeCompany)
       render(<CompanyDetailsPage />)
       await waitForLoadingToFinish()
 
@@ -67,7 +67,7 @@ describe('CompanyDetailsPage', () => {
     })
 
     it('renders infra/vendors tabs for OP_CO stage companies', async () => {
-      mockGetCompany(server, mockRhOpCoCompany)
+      mockGetCompany(server, mockAcmeOpCoCompany)
       render(<CompanyDetailsPage />)
       await waitForLoadingToFinish()
 
@@ -104,7 +104,7 @@ describe('CompanyDetailsPage', () => {
 
   it('displays edit button for admins', async () => {
     mockGetUserInfo(server, mockAdminUser)
-    mockGetCompany(server, mockRhOpCoCompany)
+    mockGetCompany(server, mockAcmeOpCoCompany)
     render(<CompanyDetailsPage />)
     await waitForLoadingToFinish()
 
@@ -113,7 +113,7 @@ describe('CompanyDetailsPage', () => {
 
   it('hides edit button for company users', async () => {
     mockGetUserInfo(server, mockCompanyUser)
-    mockGetCompany(server, mockRhOpCoCompany)
+    mockGetCompany(server, mockAcmeOpCoCompany)
     render(<CompanyDetailsPage />)
     await waitForLoadingToFinish()
 

@@ -5,7 +5,7 @@ import {
   mockConsentWithStaleVersion,
   mockEnterpriseBuyerUser,
   mockEnterpriseSellerUser,
-  mockRhUser
+  mockAcmeUser
 } from '../mock'
 
 import { hasUserConsented, inferConsentType } from './hooks'
@@ -29,7 +29,7 @@ describe('Terms hooks', () => {
     })
 
     it('defaults to TERMS_OF_SERVICE', () => {
-      expect(inferConsentType(mockRhUser)).toBe('TERMS_OF_SERVICE')
+      expect(inferConsentType(mockAcmeUser)).toBe('TERMS_OF_SERVICE')
     })
   })
 

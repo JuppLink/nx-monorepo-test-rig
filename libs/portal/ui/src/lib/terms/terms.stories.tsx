@@ -1,7 +1,7 @@
 import {
   mockEnterpriseBuyerUser,
   mockEnterpriseSellerUser,
-  mockRhUser
+  mockAcmeUser
 } from '@acmehealth/portal/data-assets'
 import { http, HttpResponse } from 'msw'
 import { withRouter } from 'storybook-addon-react-router-v6'
@@ -21,7 +21,7 @@ const Story: Meta<typeof Terms> = {
 
 export default Story
 
-export const RhUserFirstTime = {
+export const AcmeUserFirstTime = {
   args: {
     isAskingConsent: true
   },
@@ -29,14 +29,14 @@ export const RhUserFirstTime = {
     msw: {
       handlers: [
         http.get('/userinfo', () => {
-          return HttpResponse.json(mockRhUser)
+          return HttpResponse.json(mockAcmeUser)
         })
       ]
     }
   }
 }
 
-export const RhUserViewing = {
+export const AcmeUserViewing = {
   args: {
     isAskingConsent: false
   },
@@ -44,7 +44,7 @@ export const RhUserViewing = {
     msw: {
       handlers: [
         http.get('/userinfo', () => {
-          return HttpResponse.json(mockRhUser)
+          return HttpResponse.json(mockAcmeUser)
         })
       ]
     }

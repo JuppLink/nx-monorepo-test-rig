@@ -117,8 +117,8 @@ import { acme, shouldForwardProp } from '@acmehealth/ui'
 const Div = acme('div', {
   shouldForwardProp: prop => {
     // don't forward Acme's props
-    const isRhProp = !shouldForwardProp(prop)
-    if (isRhProp) return false
+    const isAcmeProp = !shouldForwardProp(prop)
+    if (isAcmeProp) return false
 
     // else, only forward `sample` prop
     return ['sample'].includes(prop)
@@ -137,8 +137,8 @@ import { acme, shouldForwardProp } from '@acmehealth/ui'
 const Div = acme('div', {
   shouldForwardProp: prop => {
     // don't forward Acme's props
-    const isRhProp = !shouldForwardProp(prop)
-    if (isRhProp) return false
+    const isAcmeProp = !shouldForwardProp(prop)
+    if (isAcmeProp) return false
 
     // forward valid HTML props
     const isValidProp = isValidHTMLProp(prop)

@@ -29,7 +29,7 @@ The Portal application initializes the Chakra UI provider at the root and render
 
 ```mermaid
 graph TB
-Root["apps/portal/src/main.tsx<br/>Root entrypoint"] --> Provider["RhProvider<br/>theme from @acmehealth/ui"]
+Root["apps/portal/src/main.tsx<br/>Root entrypoint"] --> Provider["AcmeProvider<br/>theme from @acmehealth/ui"]
 Provider --> App["apps/portal/src/app/app.tsx<br/>RouterProvider + Helmet + Speed Insights"]
 App --> Routes["apps/portal/src/routes/*<br/>Route components"]
 App --> Assets["apps/portal/src/assets/*<br/>Banner SVG"]
@@ -67,13 +67,13 @@ The styling and theming architecture centers on a shared UI library that exports
 ```mermaid
 graph TB
 subgraph "Portal App"
-A["main.tsx<br/>RhProvider + theme"] --> B["app.tsx<br/>RouterProvider + Helmet + Speed Insights"]
+A["main.tsx<br/>AcmeProvider + theme"] --> B["app.tsx<br/>RouterProvider + Helmet + Speed Insights"]
 B --> C["Routes<br/>Feature pages"]
 B --> D["Assets<br/>SVG Banner"]
 B --> E["Shims<br/>chakra-react-select"]
 end
 subgraph "Shared UI Library (@acmehealth/ui)"
-T["Theme definition"] --> P["RhProvider"]
+T["Theme definition"] --> P["AcmeProvider"]
 end
 A --> P
 P --> T
@@ -191,7 +191,7 @@ The following conceptual sequence illustrates how the provider and theme influen
 ```mermaid
 sequenceDiagram
 participant Root as "main.tsx"
-participant Provider as "RhProvider"
+participant Provider as "AcmeProvider"
 participant Theme as "theme (@acmehealth/ui)"
 participant App as "app.tsx"
 participant Route as "Route Components"
@@ -211,7 +211,7 @@ The Portal app depends on a shared UI library for theme and provider. The provid
 
 ```mermaid
 graph TB
-Portal["apps/portal/src/main.tsx"] --> UI["@acmehealth/ui<br/>RhProvider + theme"]
+Portal["apps/portal/src/main.tsx"] --> UI["@acmehealth/ui<br/>AcmeProvider + theme"]
 Portal --> App["apps/portal/src/app/app.tsx"]
 App --> Routes["apps/portal/src/routes/*"]
 App --> Assets["apps/portal/src/assets/*"]

@@ -28119,7 +28119,7 @@ const musicAlbums = createListCollection({
     },
     {
       value: "rhythmic-illusions",
-      title: "Rhythmic Illusions",
+      title: "Acmeythmic Illusions",
       artist: "Mirage Beats",
       image:
         "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=160&h=160&fit=crop",

@@ -6,7 +6,7 @@ import {
   mockCeoFilters,
   mockCeos,
   mockCeosNoResults,
-  mockRhUser,
+  mockAcmeUser,
   PagedResult,
   UserInfoSummary
 } from '@acmehealth/portal/data-assets'
@@ -88,7 +88,7 @@ export const RHUser = {
           return HttpResponse.json(mockCeos)
         }),
         http.get('/userinfo', () => {
-          return HttpResponse.json(mockRhUser)
+          return HttpResponse.json(mockAcmeUser)
         })
       ]
     }

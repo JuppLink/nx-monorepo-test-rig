@@ -32,9 +32,9 @@ The `GoogleOAuthProvider` wraps the entire application in `main.tsx`:
 ```tsx
 <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
   <QueryClientProvider client={directQueryClient()}>
-    <RhProvider value={theme}>
+    <AcmeProvider value={theme}>
       <App />
-    </RhProvider>
+    </AcmeProvider>
   </QueryClientProvider>
 </GoogleOAuthProvider>
 ```

@@ -1,4 +1,4 @@
-import { mockConsent, mockRhUser } from '@acmehealth/portal/data-assets'
+import { mockConsent, mockAcmeUser } from '@acmehealth/portal/data-assets'
 import { http, HttpResponse } from 'msw'
 import { withRouter } from 'storybook-addon-react-router-v6'
 
@@ -14,7 +14,7 @@ const Story: Meta<typeof SupportPage> = {
     msw: {
       handlers: [
         http.get('/userinfo', () => {
-          return HttpResponse.json(mockRhUser)
+          return HttpResponse.json(mockAcmeUser)
         }),
         http.get('/me/consent/*', () => {
           return HttpResponse.json(mockConsent)

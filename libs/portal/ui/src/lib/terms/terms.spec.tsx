@@ -1,4 +1,4 @@
-import { mockGetUserInfo, mockRhUser } from '@acmehealth/portal/data-assets'
+import { mockGetUserInfo, mockAcmeUser } from '@acmehealth/portal/data-assets'
 import { render, screen } from '@acmehealth/shared-utils-jest'
 import { setupServer } from 'msw/node'
 
@@ -15,7 +15,7 @@ describe('Terms', () => {
   afterEach(() => server.resetHandlers())
   afterAll(() => server.close())
 
-  beforeEach(() => mockGetUserInfo(server, mockRhUser))
+  beforeEach(() => mockGetUserInfo(server, mockAcmeUser))
   const onClose = jest.fn()
   it('should render successfully', () => {
     const { baseElement } = render(

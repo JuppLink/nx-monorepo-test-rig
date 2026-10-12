@@ -132,7 +132,7 @@ subgraph "Providers"
 GAuth["GoogleOAuthProvider"]
 RQP["QueryClientProvider"]
 DevTools["ReactQueryDevtools"]
-Theme["RhProvider / ChakraProvider"]
+Theme["AcmeProvider / ChakraProvider"]
 end
 subgraph "Routing"
 Router["RouterProvider"]

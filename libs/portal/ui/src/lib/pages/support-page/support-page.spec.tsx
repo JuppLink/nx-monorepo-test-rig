@@ -2,7 +2,7 @@ import {
   mockConsent,
   mockGetMeConsent,
   mockGetUserInfo,
-  mockRhUser
+  mockAcmeUser
 } from '@acmehealth/portal/data-assets'
 import { render, screen } from '@acmehealth/shared-utils-jest'
 import { setupServer } from 'msw/node'
@@ -20,7 +20,7 @@ describe('Terms', () => {
   afterEach(() => server.resetHandlers())
   afterAll(() => server.close())
 
-  beforeEach(() => mockGetUserInfo(server, mockRhUser))
+  beforeEach(() => mockGetUserInfo(server, mockAcmeUser))
   beforeEach(() => mockGetMeConsent(server, mockConsent))
 
   it('should render successfully', () => {

@@ -10,7 +10,7 @@
 - [application-dev.yml](file://apps/company-api/application/src/main/resources/application-dev.yml)
 - [application-local.yml](file://apps/company-api/application/src/main/resources/application-local.yml)
 - [index.ts](file://apps/oauth-jwt-generator/src/index.ts)
-- [pom.xml](file://apps/ff4j-rh/pom.xml)
+- [pom.xml](file://apps/ff4j-acme/pom.xml)
 - [Dockerfile](file://apps/prometheus/Dockerfile)
 - [CompanyController.java](file://apps/company-api/application/src/main/java/com/acmehealth/company/api/controller/CompanyController.java)
 - [VendorController.java](file://apps/company-api/application/src/main/java/com/acmehealth/company/api/controller/VendorController.java)
@@ -70,7 +70,7 @@ FF4J_Pom --> PROM_Docker
 - [CompanyController.java](file://apps/company-api/application/src/main/java/com/acmehealth/company/api/controller/CompanyController.java)
 - [VendorController.java](file://apps/company-api/application/src/main/java/com/acmehealth/company/api/controller/VendorController.java)
 - [index.ts:1-74](file://apps/oauth-jwt-generator/src/index.ts#L1-L74)
-- [pom.xml:1-54](file://apps/ff4j-rh/pom.xml#L1-L54)
+- [pom.xml:1-54](file://apps/ff4j-acme/pom.xml#L1-L54)
 - [Dockerfile:1-3](file://apps/prometheus/Dockerfile#L1-L3)
 
 **Section sources**
@@ -101,7 +101,7 @@ FF4J_Pom --> PROM_Docker
 - [Application.java:1-53](file://apps/company-api/application/src/main/java/com/acmehealth/company/api/Application.java#L1-L53)
 - [application.yml:1-616](file://apps/company-api/application/src/main/resources/application.yml#L1-L616)
 - [index.ts:1-74](file://apps/oauth-jwt-generator/src/index.ts#L1-L74)
-- [pom.xml:1-54](file://apps/ff4j-rh/pom.xml#L1-L54)
+- [pom.xml:1-54](file://apps/ff4j-acme/pom.xml#L1-L54)
 - [Dockerfile:1-3](file://apps/prometheus/Dockerfile#L1-L3)
 
 ## Architecture Overview
@@ -128,7 +128,7 @@ PROM --> FF4J
 **Diagram sources**
 - [index.ts:1-74](file://apps/oauth-jwt-generator/src/index.ts#L1-L74)
 - [Application.java:1-53](file://apps/company-api/application/src/main/java/com/acmehealth/company/api/Application.java#L1-L53)
-- [pom.xml:1-54](file://apps/ff4j-rh/pom.xml#L1-L54)
+- [pom.xml:1-54](file://apps/ff4j-acme/pom.xml#L1-L54)
 - [Dockerfile:1-3](file://apps/prometheus/Dockerfile#L1-L3)
 
 ## Detailed Component Analysis
@@ -240,11 +240,11 @@ PROM --> FF4J
 ```
 
 **Diagram sources**
-- [pom.xml:1-54](file://apps/ff4j-rh/pom.xml#L1-L54)
+- [pom.xml:1-54](file://apps/ff4j-acme/pom.xml#L1-L54)
 - [Dockerfile:1-3](file://apps/prometheus/Dockerfile#L1-L3)
 
 **Section sources**
-- [pom.xml:1-54](file://apps/ff4j-rh/pom.xml#L1-L54)
+- [pom.xml:1-54](file://apps/ff4j-acme/pom.xml#L1-L54)
 
 ### Prometheus Monitoring Service
 - Purpose: Scrape metrics from backend services.
@@ -297,14 +297,14 @@ PROM --> FF4J
 - [pom.xml:1-33](file://apps/company-api/pom.xml#L1-L33)
 - [application.yml:1-616](file://apps/company-api/application/src/main/resources/application.yml#L1-L616)
 - [index.ts:1-74](file://apps/oauth-jwt-generator/src/index.ts#L1-L74)
-- [pom.xml:1-54](file://apps/ff4j-rh/pom.xml#L1-L54)
+- [pom.xml:1-54](file://apps/ff4j-acme/pom.xml#L1-L54)
 - [Dockerfile:1-3](file://apps/prometheus/Dockerfile#L1-L3)
 
 **Section sources**
 - [pom.xml:1-33](file://apps/company-api/pom.xml#L1-L33)
 - [application.yml:1-616](file://apps/company-api/application/src/main/resources/application.yml#L1-L616)
 - [index.ts:1-74](file://apps/oauth-jwt-generator/src/index.ts#L1-L74)
-- [pom.xml:1-54](file://apps/ff4j-rh/pom.xml#L1-L54)
+- [pom.xml:1-54](file://apps/ff4j-acme/pom.xml#L1-L54)
 - [Dockerfile:1-3](file://apps/prometheus/Dockerfile#L1-L3)
 
 ## Performance Considerations
@@ -340,7 +340,7 @@ PROM --> FF4J
 - [application-dev.yml:1-41](file://apps/company-api/application/src/main/resources/application-dev.yml#L1-L41)
 - [application-local.yml:1-22](file://apps/company-api/application/src/main/resources/application-local.yml#L1-L22)
 - [index.ts:1-74](file://apps/oauth-jwt-generator/src/index.ts#L1-L74)
-- [pom.xml:1-54](file://apps/ff4j-rh/pom.xml#L1-L54)
+- [pom.xml:1-54](file://apps/ff4j-acme/pom.xml#L1-L54)
 - [Dockerfile:1-3](file://apps/prometheus/Dockerfile#L1-L3)
 
 ## Conclusion

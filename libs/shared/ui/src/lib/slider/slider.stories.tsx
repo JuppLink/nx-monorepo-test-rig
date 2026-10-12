@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { rh } from '../rh/rh'
+import { acme } from '../acme/acme'
 
 import {
   SliderRoot,
@@ -15,9 +15,9 @@ export default {
   title: 'Components / Forms / Slider',
   decorators: [
     (story: () => React.ReactNode) => (
-      <rh.div maxWidth="400px" height="300px" mx="auto" mt="40px">
+      <acme.div maxWidth="400px" height="300px" mx="auto" mt="40px">
         {story()}
-      </rh.div>
+      </acme.div>
     )
   ]
 }
@@ -41,7 +41,7 @@ export const WithPropsUpdate = () => {
   }, [])
 
   return (
-    <rh.div display="flex" flexDirection="column" gap="8">
+    <acme.div display="flex" flexDirection="column" gap="8">
       <h1>
         Slide max value: {max}, isDisabled: {String(isDisabled)}
       </h1>
@@ -66,7 +66,7 @@ export const WithPropsUpdate = () => {
       <button onClick={() => setCount(count => count + 1)}>
         count is {count}
       </button>
-    </rh.div>
+    </acme.div>
   )
 }
 

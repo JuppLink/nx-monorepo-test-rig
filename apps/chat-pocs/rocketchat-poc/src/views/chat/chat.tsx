@@ -3,9 +3,9 @@ import { EmbeddedChat } from '@embeddedchat/react'
 import { useGoogleLogin } from '@react-oauth/google'
 import { Loader } from '@acmehealth/ui'
 
-// import { rh } from '@acmehealth/ui'
+// import { acme } from '@acmehealth/ui'
 import { getAccessToken, getIdToken, setAccessToken } from '../../utils/auth'
-// const RhEmbeddedChat = rh(EmbeddedChat)
+// const RhEmbeddedChat = acme(EmbeddedChat)
 
 export function Chat() {
   //const [idToken, _] = useState(getIdToken())

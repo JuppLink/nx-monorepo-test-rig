@@ -1,4 +1,4 @@
-# Oauth/Google - Google + Okta(RH)
+# Oauth/Google - Google + Okta(Acme)
 
 Okta is a customizable, secure, and drop-in solution to add authentication and authorization services to your applications. Get scalable authentication built right into your application without the development overhead, security risks, and maintenance that come from building it yourself.
 

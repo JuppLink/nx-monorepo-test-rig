@@ -133,7 +133,7 @@ INFRA --> JAVA
   - Support dark/light mode and responsive breakpoints
 
 - Exported Modules
-  - Components: Accordion, Alert, AlertDialog, AspectRatio, AutoComplete, Avatar, Badge, Box, Breadcrumb, Button, Card, Center, Checkbox, Circle, CloseButton, Code, Divider, Drawer, Dialog (re-exported as Modal), ErrorFallback, Flex, FormControl, Grid, HStack, Heading, Icon, IconButton, Icons, Image, Input, Link, LinkOverlay, List, Loader, Logo, Menu, Modal (compatibility), Prose, NumberInput, Radio, RH, RH Provider, RootBoundary, SectionHeader, Select, ShadowBox, SideNav, SimpleGrid, Skeleton, Slider, Spinner, Square, Stack, Stat, StatCard, Stepper, Switch, Table, Tabs, Tag, Text, TextArea, Theme, Toaster, Tooltip, VStack, VisuallyHidden, Wrap, Portal
+  - Components: Accordion, Alert, AlertDialog, AspectRatio, AutoComplete, Avatar, Badge, Box, Breadcrumb, Button, Card, Center, Checkbox, Circle, CloseButton, Code, Divider, Drawer, Dialog (re-exported as Modal), ErrorFallback, Flex, FormControl, Grid, HStack, Heading, Icon, IconButton, Icons, Image, Input, Link, LinkOverlay, List, Loader, Logo, Menu, Modal (compatibility), Prose, NumberInput, Radio, Acme, Acme Provider, RootBoundary, SectionHeader, Select, ShadowBox, SideNav, SimpleGrid, Skeleton, Slider, Spinner, Square, Stack, Stat, StatCard, Stepper, Switch, Table, Tabs, Tag, Text, TextArea, Theme, Toaster, Tooltip, VStack, VisuallyHidden, Wrap, Portal
   - Hooks: useBreakpoint, useDisclosure, useTheme, useTooltip
   - Core: Styled system utilities
 
@@ -148,7 +148,7 @@ INFRA --> JAVA
   - Theming updates (createSystem + defineConfig replacing extendTheme)
 
 - Usage Patterns
-  - Wrap application with the RH Provider to enable theme and color mode
+  - Wrap application with the Acme Provider to enable theme and color mode
   - Import individual components from the index for tree-shaking
   - Use hooks for responsive behavior and UI state management
 

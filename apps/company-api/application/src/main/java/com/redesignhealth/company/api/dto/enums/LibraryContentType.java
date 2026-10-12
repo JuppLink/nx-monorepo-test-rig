@@ -3,9 +3,9 @@ package com.acmehealth.company.api.dto.enums;
 import com.acmehealth.company.api.dto.SerializableEnum;
 
 public enum LibraryContentType implements SerializableEnum {
-  /** General non-interactive content created by RH */
+  /** General non-interactive content created by Acme */
   ARTICLE("Article"),
-  /** General non-interactive content indexed by RH */
+  /** General non-interactive content indexed by Acme */
   THIRD_PARTY("Third Party"),
   /** Streaming video with instructions or other written guidance */
   VIDEO("Video"),

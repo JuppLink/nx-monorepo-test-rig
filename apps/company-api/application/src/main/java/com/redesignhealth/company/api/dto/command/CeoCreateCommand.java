@@ -5,6 +5,6 @@ import lombok.Getter;
 
 @Getter
 public class CeoCreateCommand extends CeoBaseCommand {
-  @Schema(example = "rh@acmehealth.com", requiredMode = Schema.RequiredMode.REQUIRED)
+  @Schema(example = "acme@acmehealth.com", requiredMode = Schema.RequiredMode.REQUIRED)
   private String email;
 }

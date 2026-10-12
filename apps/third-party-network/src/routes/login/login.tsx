@@ -5,7 +5,7 @@ import { Box, Flex, Grid, AcmeLogo } from '@acmehealth/ui'
 import { Graphic } from './components/graphic'
 
 export const Login = () => {
-  useTitle('RH Advise | Log In')
+  useTitle('Acme Advise | Log In')
 
   return (
     <Grid templateColumns="1fr 1fr" h="100%" gap="40px">

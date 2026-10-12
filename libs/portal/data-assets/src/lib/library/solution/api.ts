@@ -36,7 +36,7 @@ export const postCopyTemplate = async (
     undefined,
     {
       headers: {
-        'RH-Google-Access-Token': token
+        'Acme-Google-Access-Token': token
       }
     }
   )

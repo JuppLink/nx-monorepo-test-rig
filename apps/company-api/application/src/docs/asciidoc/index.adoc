@@ -24,16 +24,16 @@ Impersonation allows you to make API calls on behalf of another account.
 This is helpful for troubleshooting issues another person is experiencing without
 needing their credentials.
 
-You can impersonate by providing an email in the `RH-Impersonation-Email` header.
+You can impersonate by providing an email in the `Acme-Impersonation-Email` header.
 
 ----
-RH-Impersonation-Email: jane.doe@example.com
+Acme-Impersonation-Email: jane.doe@example.com
 ----
 
 Below is an example of impersonating `jane.doe@example.com` and their view of the company list.
 [source, console, subs=attributes+]
 ----
-$ curl -h 'RH-Impersonation-Email: jane.doe@example.com' -h 'Authorization: bearer token.value.goes-here' {service-host}/company
+$ curl -h 'Acme-Impersonation-Email: jane.doe@example.com' -h 'Authorization: bearer token.value.goes-here' {service-host}/company
 ----
 
 == Access Control
@@ -65,7 +65,7 @@ a given endpoint, check out the specific endpoint's documentation (xref:company.
 ==== Asset
 [cols="1,1,1,1,1"]
 |===
-|Action | Company Contractor | Company User | RH User | Admin
+|Action | Company Contractor | Company User | Acme User | Admin
 
 | Upload
 | ✅
@@ -78,7 +78,7 @@ a given endpoint, check out the specific endpoint's documentation (xref:company.
 ==== Person
 [cols="1,1,1,1,1"]
 |===
-|Action | Company Contractor | Company User | RH User | Admin
+|Action | Company Contractor | Company User | Acme User | Admin
 
 | View
 | ❌
@@ -103,7 +103,7 @@ a given endpoint, check out the specific endpoint's documentation (xref:company.
 NOTE: All interactions with these endpoints require company membership for non-admin roles.
 [cols="1,1,1,1,1"]
 |===
-|Action | Company Contractor | Company User | RH User | Admin
+|Action | Company Contractor | Company User | Acme User | Admin
 
 | View
 | ✅
@@ -135,7 +135,7 @@ NOTE: All interactions with these endpoints require company membership for non-a
 
 [cols="1,1,1,1,1"]
 |===
-|Action | Company Contractor | Company User | RH User | Admin
+|Action | Company Contractor | Company User | Acme User | Admin
 
 | View
 | ✅
@@ -153,7 +153,7 @@ NOTE: All interactions with these endpoints require company membership for non-a
 ==== Form Definitions
 [cols="1,1,1,1,1"]
 |===
-|Action | Company Contractor | Company User | RH User | Admin
+|Action | Company Contractor | Company User | Acme User | Admin
 
 | View
 | ✅
@@ -171,7 +171,7 @@ NOTE: All interactions with these endpoints require company membership for non-a
 ==== Library
 [cols="1,1,1,1,1"]
 |===
-|Action | Company Contractor | Company User | RH User | Admin
+|Action | Company Contractor | Company User | Acme User | Admin
 
 | View
 | ✅
@@ -189,7 +189,7 @@ NOTE: All interactions with these endpoints require company membership for non-a
 ==== Research
 [cols="1,1,1,1,1"]
 |===
-|Action | Company Contractor | Company User | RH User | Admin
+|Action | Company Contractor | Company User | Acme User | Admin
 
 | View
 | ✅
@@ -207,7 +207,7 @@ NOTE: All interactions with these endpoints require company membership for non-a
 ==== Vendor
 [cols="1,1,1,1,1"]
 |===
-|Action | Company Contractor | Company User | RH User | Admin
+|Action | Company Contractor | Company User | Acme User | Admin
 
 | View
 | ✅
@@ -225,7 +225,7 @@ NOTE: All interactions with these endpoints require company membership for non-a
 ==== Company Vendor
 [cols="1,1,1,1,1"]
 |===
-|Action | Company Contractor | Company User | RH User | Admin
+|Action | Company Contractor | Company User | Acme User | Admin
 
 | View
 | ✅

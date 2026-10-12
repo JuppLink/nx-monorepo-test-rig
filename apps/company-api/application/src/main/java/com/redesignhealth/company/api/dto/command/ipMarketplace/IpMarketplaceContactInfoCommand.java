@@ -7,7 +7,7 @@ import lombok.Getter;
 
 @Getter
 public class IpMarketplaceContactInfoCommand {
-  @Schema(example = "rh@redesighnhealth.com")
+  @Schema(example = "acme@redesighnhealth.com")
   private Optional<PersonRef> buyerEmail;
 
   public static IpMarketplaceContactInfoCommand of(PersonRef buyerEmail) {

@@ -1556,7 +1556,7 @@ export interface components {
       linkedinHref?: string
       /** @enum {string} */
       visible?: 'OPT_IN' | 'OPT_OUT'
-      /** @example rh@acmehealth.com */
+      /** @example acme@acmehealth.com */
       email: string
     }
     AssetSummary: {
@@ -4467,7 +4467,7 @@ export interface operations {
   copy: {
     parameters: {
       header: {
-        'RH-Google-Access-Token': string
+        'Acme-Google-Access-Token': string
       }
       path: {
         id: string

@@ -3,7 +3,7 @@ package com.acmehealth.company.api.entity.request;
 public enum RoleAuthority {
   ROLE_SUPER_ADMIN(5, "Super Admin"),
   ROLE_RH_ADMIN(4, "Admin"),
-  ROLE_RH_USER(3, "RH User"),
+  ROLE_RH_USER(3, "Acme User"),
   ROLE_OP_CO_USER(2, "Company User"),
   ROLE_OP_CO_CONTRACTOR(1, "Company Contractor");
 

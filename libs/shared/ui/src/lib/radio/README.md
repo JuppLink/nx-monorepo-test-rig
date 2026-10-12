@@ -102,7 +102,7 @@ The checkbox comes with 3 sizes.
 ### Custom Radio Buttons
 
 In some cases, you might need to create components that work like radios but
-don't look like radios. RH UI exports `useRadio`, and `useRadioGroup` hooks to
+don't look like radios. Acme UI exports `useRadio`, and `useRadioGroup` hooks to
 help with this scenario. Here's what you need to do:
 
 1. Create a component that consumes the `useRadio` hook.

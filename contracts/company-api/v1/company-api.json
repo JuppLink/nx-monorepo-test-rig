@@ -6712,7 +6712,7 @@
             }
           },
           {
-            "name": "RH-Google-Access-Token",
+            "name": "Acme-Google-Access-Token",
             "in": "header",
             "required": true,
             "schema": {
@@ -13398,7 +13398,7 @@
             "type": "string"
           }
         },
-        "example": "rh@redesighnhealth.com"
+        "example": "acme@redesighnhealth.com"
       },
       "IpMarketplaceContactInfoSummary": {
         "type": "object",
@@ -13639,7 +13639,7 @@
         "properties": {
           "email": {
             "type": "string",
-            "example": "rh@redesinghealth.com"
+            "example": "acme@redesinghealth.com"
           },
           "name": {
             "type": "string",
@@ -15477,7 +15477,7 @@
         "properties": {
           "email": {
             "type": "string",
-            "example": "rh@redesinghealth.com"
+            "example": "acme@redesinghealth.com"
           },
           "name": {
             "type": "string",
@@ -16147,7 +16147,7 @@
           },
           "email": {
             "type": "string",
-            "example": "rh@acmehealth.com"
+            "example": "acme@acmehealth.com"
           }
         }
       },
@@ -16767,7 +16767,7 @@
       "Impersonation Email": {
         "type": "apiKey",
         "description": "Impersonate another person.",
-        "name": "RH-Impersonation-Email",
+        "name": "Acme-Impersonation-Email",
         "in": "header"
       }
     }

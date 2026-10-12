@@ -237,7 +237,7 @@ Alert["Alert"]
 Button["Button"]
 Card["Card"]
 Modal["Modal"]
-Provider["RH Provider"]
+Provider["Acme Provider"]
 Theme["Theme"]
 Accordion --> Provider
 Alert --> Provider

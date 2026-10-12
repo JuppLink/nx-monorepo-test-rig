@@ -21,7 +21,7 @@ describe('UserInfo fixtures validation against API contract', () => {
       expect(valid.errors).toBeNull()
     })
 
-    it('RH User', () => {
+    it('Acme User', () => {
       const valid = api.validateResponse(mockRhUser, 'getUserInfo', 200)
       expect(valid.errors).toBeNull()
     })

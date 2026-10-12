@@ -199,7 +199,7 @@ public class VendorControllerTests {
   public void testCreateVendorData_Data_Should_Be_Created_If_Subcategory_Info_Is_Not_Defined()
       throws Exception {
     var person = testPerson(ROLE_RH_ADMIN);
-    var email = "rh@acmehealth.com";
+    var email = "acme@acmehealth.com";
     when(vendorRepository.save(ArgumentMatchers.any(Vendor.class))).thenReturn(testVendor());
     when(personRepository.findByEmail(PersonRef.of(email))).thenReturn(Optional.of(person));
     when(personRepository.findByEmail(PersonRef.of("adminUser@acmehealth.com")))

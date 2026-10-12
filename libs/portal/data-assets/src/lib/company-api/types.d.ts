@@ -3745,7 +3745,7 @@ export interface operations {
   copy: {
     parameters: {
       header: {
-        'RH-Google-Access-Token': string
+        'Acme-Google-Access-Token': string
       }
       path: {
         id: string

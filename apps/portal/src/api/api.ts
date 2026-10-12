@@ -10,6 +10,6 @@ export const api = () =>
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${getUserAccessToken() ?? ''}`,
-      'RH-Impersonation-Email': getImpersonatedEmail() ?? null
+      'Acme-Impersonation-Email': getImpersonatedEmail() ?? null
     }
   })

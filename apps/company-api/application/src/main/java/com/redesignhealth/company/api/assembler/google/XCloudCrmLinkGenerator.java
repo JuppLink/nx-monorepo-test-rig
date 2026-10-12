@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.hateoas.Link;
 import org.springframework.stereotype.Component;
 
-/** Link to Salesforce Experience Cloud instance hosted by RH Enterprise Growth */
+/** Link to Salesforce Experience Cloud instance hosted by Acme Enterprise Growth */
 @Component
 public class XCloudCrmLinkGenerator implements LinkGenerator {
   private final String xCloudUrl;

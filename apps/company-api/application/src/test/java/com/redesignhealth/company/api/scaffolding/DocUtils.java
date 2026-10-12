@@ -193,7 +193,7 @@ public class DocUtils {
   public static FieldDescriptor numberField() {
     return fieldWithPath("number")
         .description(
-            "Used for placeholder shell entity name until legal name exists (i.e. RH Studio 2 OpCo [#], Inc.)");
+            "Used for placeholder shell entity name until legal name exists (i.e. Acme Studio 2 OpCo [#], Inc.)");
   }
 
   public static FieldDescriptor descriptionField() {

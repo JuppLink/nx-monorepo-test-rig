@@ -20,7 +20,7 @@ JFrog Artifactory is a universal DevOps solution providing end-to-end automation
 * Provides a central repository for all containter artifacts for Opcos.
 * Provides a central repository mirroring all external dependencies with security scans.
 * Supports repository mirroring and a local repository for all languages and container types.
-* RH can push updates to reference images and containers to their Artifactory (Federated). I.E. Design System and Reference software for security
+* Acme can push updates to reference images and containers to their Artifactory (Federated). I.E. Design System and Reference software for security
 * Cloud Vendor Agnostic
 * Offer is either Managed or Self Hosted based on Opco level of comfort
 

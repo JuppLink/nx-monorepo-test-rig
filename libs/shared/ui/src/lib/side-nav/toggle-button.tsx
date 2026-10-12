@@ -1,8 +1,8 @@
 import { Box } from '../box/box'
 import { type IconButtonProps, IconButton } from '../icon-button/icon-button'
-import { rh } from '../rh/rh'
+import { acme } from '../acme/acme'
 
-const Bar = rh('span', {
+const Bar = acme('span', {
   base: {
     display: 'block',
     pos: 'absolute',

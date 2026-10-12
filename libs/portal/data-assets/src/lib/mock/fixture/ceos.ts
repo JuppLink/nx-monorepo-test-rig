@@ -329,7 +329,7 @@ export const mockCeos: PagedResult<Ceo> = {
           name: 'StealthCo',
           stage: 'OP_CO',
           description:
-            'Test: 2. RH User can click the "Start now" button in "Infrastructure setup" section',
+            'Test: 2. Acme User can click the "Start now" button in "Infrastructure setup" section',
           href: '',
           fundraiseStatus: {
             displayName: 'Pre launch phase',
@@ -380,7 +380,7 @@ export const mockCeos: PagedResult<Ceo> = {
           name: 'StealthCo',
           stage: 'OP_CO',
           description:
-            'Test: 2. RH User can click the "Start now" button in "Infrastructure setup" section',
+            'Test: 2. Acme User can click the "Start now" button in "Infrastructure setup" section',
           href: '',
           fundraiseStatus: {
             displayName: 'Pre launch phase',

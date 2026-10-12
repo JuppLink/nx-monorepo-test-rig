@@ -92,7 +92,7 @@ describe('Nav', () => {
       })
     })
 
-    it('RH User', () => {
+    it('Acme User', () => {
       const expectedNavList: string[] = [
         'Home',
         'Companies',

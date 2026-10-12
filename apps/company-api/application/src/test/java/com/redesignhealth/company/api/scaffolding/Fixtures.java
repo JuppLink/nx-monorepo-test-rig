@@ -466,7 +466,7 @@ public class Fixtures {
         .businessType("B2B")
         .member(
             MemberDoc.builder()
-                .email("rh@acmehealth.com")
+                .email("acme@acmehealth.com")
                 .familyName("familyName")
                 .givenName("givenName")
                 .company(
@@ -528,7 +528,7 @@ public class Fixtures {
 
   public static Vendor testVendor(CompanyVendor companyVendor) {
     var vendor = Vendor.of(VendorRef.of(TEST_ID));
-    var email = "rh@acmehealth.com";
+    var email = "acme@acmehealth.com";
     vendor.setName("Boomset");
     vendor.setId(1L);
     vendor.setCreated(testDate());

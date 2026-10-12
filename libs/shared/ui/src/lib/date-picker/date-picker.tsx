@@ -10,7 +10,7 @@ import {
   InputProps,
   InputRightElement
 } from '../input/input'
-import { rh } from '../rh/rh'
+import { acme } from '../acme/acme'
 
 import StyledDatePicker from './date-picker.styles'
 
@@ -30,7 +30,7 @@ export interface DatePickerProps {
   name?: string
 }
 
-// const RhDatePicker = rh(ReactDatePicker)
+// const RhDatePicker = acme(ReactDatePicker)
 
 const customDateInput = (
   { value, onClick, onChange }: InputProps,

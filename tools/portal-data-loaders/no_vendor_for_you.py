@@ -263,7 +263,7 @@ class VendorFeedbackDataLoader(DataLoader):
         vendor_subcategories = self.vendor_subcategories[vendor_name.lower()]
         person = self.get_person(email)
         headers = {
-            'RH-Impersonation-Email': email
+            'Acme-Impersonation-Email': email
         }
         if not person:
             logging.warning(f'[{company_name} -> {vendor_name}] SKIPPED, no user {email}')

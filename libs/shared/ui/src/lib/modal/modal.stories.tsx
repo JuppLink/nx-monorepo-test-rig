@@ -6,7 +6,7 @@ import { Meta } from '@storybook/react-vite'
 
 import { Button } from '../button/button'
 import { useDisclosure } from '../hooks/use-disclosure/use-disclosure'
-import { rh } from '../rh/rh'
+import { acme } from '../acme/acme'
 
 import {
   Modal,
@@ -59,9 +59,9 @@ export function ReturnFocus() {
 
   return (
     <>
-      <rh.div ref={finalRef} tabIndex={-1} aria-label="Focus moved to this box">
+      <acme.div ref={finalRef} tabIndex={-1} aria-label="Focus moved to this box">
         Some other content that'll receive focus on close.
-      </rh.div>
+      </acme.div>
 
       <Button mt={4} onClick={onOpen} maxW="300px">
         Open Modal
@@ -113,7 +113,7 @@ export function NestedModal() {
             officia tempor esse quis.
           </ModalBody>
           <ModalFooter>
-            <rh.div flex="1" />
+            <acme.div flex="1" />
             <Button mr={3}>Button 2</Button>
             <Button colorPalette="primary" onClick={second.onOpen}>
               Open Nested
@@ -126,7 +126,7 @@ export function NestedModal() {
         <ModalContent>
               <ModalHeader>Modal 2 Title</ModalHeader>
               <ModalFooter>
-                <rh.div flex="1" />
+                <acme.div flex="1" />
                 <Button colorPalette="primary" onClick={third.onOpen}>
                   Open Nested 2
                 </Button>

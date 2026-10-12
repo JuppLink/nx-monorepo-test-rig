@@ -61,7 +61,7 @@ export const postCopyTemplate = async (
 ) => {
   const { data } = await axiosApi.post(`/library/topic/${id}/copy`, undefined, {
     headers: {
-      'RH-Google-Access-Token': token
+      'Acme-Google-Access-Token': token
     }
   })
 

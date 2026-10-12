@@ -118,9 +118,9 @@ export const formItems: Record<
             header: 'Terraform',
             items: [
               'Terraform templates allows for the platform to initiate and kick off specific infrastructure choices to size the build out properly for the company',
-              'Terraform templates will allow RH-Platform to centralize and version control an offering for an company that can be replayed via the Platform UI or forked allowing Companies to always have access to the latest RH offering',
+              'Terraform templates will allow Acme-Platform to centralize and version control an offering for an company that can be replayed via the Platform UI or forked allowing Companies to always have access to the latest Acme offering',
               'Templates allows for a modernization of the UI experience to make it simple for a non-tech user to kick off a build out and for more technical users to bypass the UI and use the templates directly',
-              'Terraform is open source and free, and will be managed and maintained by RH for platform use which guarantees companies has the latest and greatest version available'
+              'Terraform is open source and free, and will be managed and maintained by Acme for platform use which guarantees companies has the latest and greatest version available'
             ]
           }
         ]

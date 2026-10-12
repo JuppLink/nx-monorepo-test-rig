@@ -89,7 +89,7 @@ describe('CeoCard', () => {
     })
   })
 
-  describe('with SuperAdmin, Admin, or RH User', () => {
+  describe('with SuperAdmin, Admin, or Acme User', () => {
     const currentRoleList = [
       'ROLE_SUPER_ADMIN',
       'ROLE_RH_ADMIN',

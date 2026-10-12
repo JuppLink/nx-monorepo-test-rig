@@ -290,7 +290,7 @@ public class IpMarketplaceControllerTests {
         .andExpect(status().isForbidden())
         .andExpect(
             jsonPath(
-                "$.message", is("Buyers or RH users can't create IP records for the marketplace")));
+                "$.message", is("Buyers or Acme users can't create IP records for the marketplace")));
   }
 
   @Test
@@ -965,7 +965,7 @@ public class IpMarketplaceControllerTests {
         .andExpect(status().isForbidden())
         .andExpect(
             jsonPath(
-                "$.message", is("Buyers or RH users can't update IP records for the marketplace")));
+                "$.message", is("Buyers or Acme users can't update IP records for the marketplace")));
   }
 
   @Test
@@ -1762,7 +1762,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER, email = "rh@rh.com")
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER, email = "acme@acme.com")
   public void testProcessInfo_Should_Fail_If_Not_A_Seller_Or_Buyer() throws Exception {
     var sellerEmail = "seller@seller.com";
     var buyerCompanyId = "buyerCompanyId";

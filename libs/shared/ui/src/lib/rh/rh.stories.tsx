@@ -1,32 +1,32 @@
-import { rh } from './rh'
+import { acme } from './acme'
 
 export default {
   title: 'System / Core'
 }
 
 export const ApplyProp = () => (
-  <rh.p>
+  <acme.p>
     This is a paragraph, but apply styles from{' '}
-    <rh.code fontFamily="mono">styles.h1</rh.code>
-  </rh.p>
+    <acme.code fontFamily="mono">styles.h1</acme.code>
+  </acme.p>
 )
 
 export const WithHeading = () => (
   <div>
-    <rh.h1
+    <acme.h1
       fontSize={['50px', '80px', '100px']}
       color="tomato"
       css={{ color: 'teal.500' }}
     >
       Welcome
-    </rh.h1>
+    </acme.h1>
   </div>
 )
 
 export const WithGradient = () => (
   <>
-    <rh.div bgGradient="to-r" gradientFrom="pink.300" gradientTo="blue.500" w="500px" h="64px" />
-    <rh.span
+    <acme.div bgGradient="to-r" gradientFrom="pink.300" gradientTo="blue.500" w="500px" h="64px" />
+    <acme.span
       bgGradient="to-r"
       gradientFrom="red.200"
       gradientTo="papayawhip"
@@ -35,13 +35,13 @@ export const WithGradient = () => (
       fontWeight="extrabold"
     >
       Welcome to Chakra UI
-    </rh.span>
+    </acme.span>
   </>
 )
 
 export const WithCSSVarToken = () => {
   return (
-    <rh.div
+    <acme.div
       css={{
         '--banner-height': 'sizes.md',
         '.banner': {
@@ -51,23 +51,23 @@ export const WithCSSVarToken = () => {
       }}
     >
       <div className="banner">banner</div>
-    </rh.div>
+    </acme.div>
   )
 }
 
 export const WithSemanticTokens = () => {
   return (
     <div>
-      <rh.p color="semantic">I am in the default color mode</rh.p>
+      <acme.p color="semantic">I am in the default color mode</acme.p>
       <div data-theme="light">
-        <rh.p color="semantic">I am forced to light mode (red)</rh.p>
+        <acme.p color="semantic">I am forced to light mode (red)</acme.p>
       </div>
       <div data-theme="dark">
-        <rh.p color="semantic">I am forced to dark mode (blue)</rh.p>
+        <acme.p color="semantic">I am forced to dark mode (blue)</acme.p>
         <div data-theme="light">
-          <rh.p pl="4" color="semantic">
+          <acme.p pl="4" color="semantic">
             I am nested and forced to light mode (red)
-          </rh.p>
+          </acme.p>
         </div>
       </div>
     </div>
@@ -77,11 +77,11 @@ export const WithSemanticTokens = () => {
 export const WithColorMode = () => {
   return (
     <>
-      <rh.span>Not forced</rh.span>
+      <acme.span>Not forced</acme.span>
       <div data-theme="dark">
-        <rh.div bg="gray.800" padding="40px">
-          <rh.p color="fg">Forced dark mode</rh.p>
-        </rh.div>
+        <acme.div bg="gray.800" padding="40px">
+          <acme.p color="fg">Forced dark mode</acme.p>
+        </acme.div>
       </div>
     </>
   )

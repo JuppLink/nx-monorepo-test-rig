@@ -44,7 +44,7 @@ describe('CEO Directory Page', () => {
       })
     })
 
-    describe('with RH User', () => {
+    describe('with Acme User', () => {
       beforeEach(() => mockGetUserInfo(server, mockRhUser))
 
       it('does not display add button', () => {

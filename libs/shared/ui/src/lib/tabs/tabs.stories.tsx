@@ -7,7 +7,7 @@ import {
   DrawerContent,
   DrawerOverlay
 } from '../drawer/drawer'
-import { rh } from '../rh/rh'
+import { acme } from '../acme/acme'
 
 import { Tab, TabIndicator, TabList, TabPanel, TabsRoot } from './tabs'
 
@@ -15,9 +15,9 @@ export default {
   title: 'Components / Disclosure / Tabs',
   decorators: [
     (story: any) => (
-      <rh.div maxWidth="500px" mt="100px" mx="auto">
+      <acme.div maxWidth="500px" mt="100px" mx="auto">
         {story()}
-      </rh.div>
+      </acme.div>
     )
   ]
 }
@@ -32,7 +32,7 @@ const variants = [
 
 export const Variants = () =>
   variants.map(variant => (
-    <rh.div key={variant} my="10">
+    <acme.div key={variant} my="10">
       <pre>variant = {variant}</pre>
       <TabsRoot variant={variant} mt="3">
         <TabList>
@@ -42,14 +42,14 @@ export const Variants = () =>
         <TabPanel>Settings</TabPanel>
         <TabPanel>Billings</TabPanel>
       </TabsRoot>
-    </rh.div>
+    </acme.div>
   ))
 
 const sizes = ['sm', 'md', 'lg'] as const
 
 export const Sizes = () =>
   sizes.map(size => (
-    <rh.div key={size} my="10">
+    <acme.div key={size} my="10">
       <pre>size = {size}</pre>
       <TabsRoot size={size} mt="3">
         <TabList>
@@ -59,7 +59,7 @@ export const Sizes = () =>
         <TabPanel>Settings</TabPanel>
         <TabPanel>Billings</TabPanel>
       </TabsRoot>
-    </rh.div>
+    </acme.div>
   ))
 
 export const automatic = () => (
@@ -266,14 +266,14 @@ export const WithSwappedTabs = () => {
   )
 
   return (
-    <rh.div m={4}>
+    <acme.div m={4}>
       <button onClick={swapData}>Swap tab order</button>
       <TabView
         items={items}
         selectedItemId={selectedItemId}
         setSelectedItemId={setSelectedItemId}
       />
-    </rh.div>
+    </acme.div>
   )
 }
 

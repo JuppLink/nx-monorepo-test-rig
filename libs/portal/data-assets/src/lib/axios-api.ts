@@ -14,7 +14,7 @@ export const axiosApi = axios.create({
 
 axiosApi.interceptors.request.use(config => {
   config.headers['Authorization'] = `Bearer ${getUserAccessToken()}`
-  config.headers['RH-Impersonation-Email'] = getImpersonatedEmail()
+  config.headers['Acme-Impersonation-Email'] = getImpersonatedEmail()
 
   return config
 })

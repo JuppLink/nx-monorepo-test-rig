@@ -50,7 +50,7 @@ describe('CompanyUsers', () => {
     ).toBeInTheDocument()
   })
 
-  it('renders description for RH Company', async () => {
+  it('renders description for Acme Company', async () => {
     mockGetCompany(server, mockRhOpCoCompany)
     render(<CompanyUsers />)
     expect(

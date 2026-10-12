@@ -12,7 +12,7 @@ import {
   FieldLabel,
   FieldRoot,
   Input,
-  rh,
+  acme,
   Stack
 } from '../../index'
 
@@ -29,9 +29,9 @@ export default {
   title: 'Components / Forms / NumberInput',
   decorators: [
     (story: any) => (
-      <rh.div maxW="400px" mt="40px" mx="auto">
+      <acme.div maxW="400px" mt="40px" mx="auto">
         {story()}
-      </rh.div>
+      </acme.div>
     )
   ]
 } as Meta<typeof NumberInputRoot>
@@ -63,7 +63,7 @@ const sizes = ['xs', 'sm', 'md', 'lg'] as const
 export const Sizes: StoryFn<typeof NumberInputRoot> = () => (
   <Stack gap="6">
     {sizes.map(size => (
-      <rh.div key={size}>
+      <acme.div key={size}>
         <pre>size = {size}</pre>
         <NumberInputRoot mt="2" size={size} defaultValue={15} min={10}>
           <NumberInputField />
@@ -72,7 +72,7 @@ export const Sizes: StoryFn<typeof NumberInputRoot> = () => (
             <NumberDecrementStepper />
           </NumberInputStepper>
         </NumberInputRoot>
-      </rh.div>
+      </acme.div>
     ))}
   </Stack>
 )
@@ -95,11 +95,11 @@ const UseNumberInput = (args: any) => {
     <>
       <div>current: {valueAsNumber}</div>
       <LoremIpsum p={1} />
-      <rh.div display="flex" {...args}>
+      <acme.div display="flex" {...args}>
         <Button {...getIncrementButtonProps()}>+</Button>
         <Input {...(getInputProps() as any)} />
         <Button {...getDecrementButtonProps()}>-</Button>
-      </rh.div>
+      </acme.div>
       <LoremIpsum p={1} />
     </>
   )
@@ -132,11 +132,11 @@ export const FormatAndParse = () => {
   return (
     <>
       <div>current: {valueAsNumber}</div>
-      <rh.div display="flex">
+      <acme.div display="flex">
         <Button {...getIncrementButtonProps()}>+</Button>
         <Input {...getInputProps()} />
         <Button {...getDecrementButtonProps()}>-</Button>
-      </rh.div>
+      </acme.div>
     </>
   )
 }
@@ -243,12 +243,12 @@ export const WithFormControl = () => {
   return (
     <Stack align="start">
       <FieldRoot id="first-name" invalid={isError}>
-        <rh.div display="flex" mb="2">
+        <acme.div display="flex" mb="2">
           <FieldLabel mb="0" lineHeight="1em">
             Amount
           </FieldLabel>
           <FormError>is invalid!</FormError>
-        </rh.div>
+        </acme.div>
         <NumberInputRoot
           max={50}
           min={10}

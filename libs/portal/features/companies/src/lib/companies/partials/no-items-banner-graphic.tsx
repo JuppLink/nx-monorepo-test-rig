@@ -1,8 +1,8 @@
-import { rh } from '@acmehealth/ui'
+import { acme } from '@acmehealth/ui'
 
 const NoItemsBannerGraphic = () => {
   return (
-    <rh.svg
+    <acme.svg
       width="180"
       height="136"
       viewBox="0 0 180 136"
@@ -161,7 +161,7 @@ const NoItemsBannerGraphic = () => {
           <stop offset="0.350715" stopColor="white" stopOpacity="0" />
         </linearGradient>
       </defs>
-    </rh.svg>
+    </acme.svg>
   )
 }
 

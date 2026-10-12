@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { LoremIpsum } from 'react-lorem-ipsum'
 import { Meta } from '@storybook/react-vite'
 
-import { Box, rh, Stack, Text } from '../../index'
+import { Box, acme, Stack, Text } from '../../index'
 
 import { Skeleton, SkeletonCircle, SkeletonText } from './skeleton'
 
@@ -100,10 +100,10 @@ export const WithNoFade = () => {
 export const Circle = () => <SkeletonCircle />
 
 export const Combined = () => (
-  <rh.div padding="6" boxShadow="lg" bg="white">
+  <acme.div padding="6" boxShadow="lg" bg="white">
     <SkeletonCircle size="10" />
     <SkeletonText mt="4" lineClamp={4} gap="4" />
-  </rh.div>
+  </acme.div>
 )
 
 export const WithIsLoaded = () => {
@@ -115,20 +115,20 @@ export const WithIsLoaded = () => {
   }, [])
 
   return (
-    <rh.div>
-      <rh.div h="100px" borderWidth="1px">
+    <acme.div>
+      <acme.div h="100px" borderWidth="1px">
         Content
-      </rh.div>
+      </acme.div>
       <Skeleton w="100px" isLoaded={hasLoaded} mt={2}>
         <span>Acme UI is dope</span>
       </Skeleton>
       <SkeletonText isLoaded={hasLoaded} mt={2}>
         <p>Acme UI is dope</p>
       </SkeletonText>
-      <rh.div h="100px" borderWidth="1px" mt={2}>
+      <acme.div h="100px" borderWidth="1px" mt={2}>
         Content
-      </rh.div>
-    </rh.div>
+      </acme.div>
+    </acme.div>
   )
 }
 
@@ -138,7 +138,7 @@ export const WithCustomSpeed = () => (
 
 export const WithDarkMode = () => (
   <Stack colorPalette="gray" data-theme="dark">
-    <rh.p>Some text</rh.p>
+    <acme.p>Some text</acme.p>
     <Skeleton boxSize="100px" />
     <Skeleton boxSize="100px" />
     <Skeleton boxSize="100px" />

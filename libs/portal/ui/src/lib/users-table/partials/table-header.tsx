@@ -1,5 +1,5 @@
 import {
-  rh,
+  acme,
   Th,
   Thead,
   Tr,
@@ -13,14 +13,14 @@ const TableHeader = () => {
   return (
     <>
       {(breakpoint === 'xl' || breakpoint === '2xl') && (
-        <rh.colgroup>
-          <rh.col span={1} w="28%" />
-          <rh.col span={1} w="20%" />
-          <rh.col span={1} w="20%" />
-          <rh.col span={1} w="20%" />
-          <rh.col span={1} w="6%" />
-          <rh.col span={1} w="6%" />
-        </rh.colgroup>
+        <acme.colgroup>
+          <acme.col span={1} w="28%" />
+          <acme.col span={1} w="20%" />
+          <acme.col span={1} w="20%" />
+          <acme.col span={1} w="20%" />
+          <acme.col span={1} w="6%" />
+          <acme.col span={1} w="6%" />
+        </acme.colgroup>
       )}
       <Thead>
         <Tr>

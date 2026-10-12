@@ -95,10 +95,10 @@ component using the Acme UI Factory function:
 
 ```jsx
 import NextLink, { type LinkProps as NextLinkProps } from 'next/link'
-import { rh } from '@acmehealth/ui'
+import { acme } from '@acmehealth/ui'
 
 // wrap the NextLink with Acme UI's factory function
-const MagicLink = rh<typeof NextLink, NextLinkProps>(NextLink, {
+const MagicLink = acme<typeof NextLink, NextLinkProps>(NextLink, {
   // ensure that you're forwarding all of the required props for your case
   shouldForwardProp: (prop) => ['href', 'target', 'children', ...].includes(prop),
 })

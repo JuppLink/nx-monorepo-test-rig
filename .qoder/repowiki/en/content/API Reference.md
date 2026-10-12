@@ -122,7 +122,7 @@ end
   - Scheme name: “Google ID”.
   - Type: HTTP Bearer with JWT format.
 - Impersonation
-  - Header: RH-Impersonation-Email.
+  - Header: Acme-Impersonation-Email.
   - Required role: ROLE_SUPER_ADMIN.
 - CORS
   - Allowed origin patterns, methods, and headers are configurable.

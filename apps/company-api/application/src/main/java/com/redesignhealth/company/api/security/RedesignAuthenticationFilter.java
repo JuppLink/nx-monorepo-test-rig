@@ -19,8 +19,8 @@ public class AcmeAuthenticationFilter extends OncePerRequestFilter {
 
   private final AuthenticationManager authenticationManager;
 
-  public static final String IMPERSONATION_HEADER = "RH-Impersonation-Email";
-  public static final String GOOGLE_ACCESS_TOKEN_HEADER = "RH-Google-Access-Token";
+  public static final String IMPERSONATION_HEADER = "Acme-Impersonation-Email";
+  public static final String GOOGLE_ACCESS_TOKEN_HEADER = "Acme-Google-Access-Token";
 
   public AcmeAuthenticationFilter(AuthenticationManager authenticationManager) {
     this.authenticationManager = authenticationManager;

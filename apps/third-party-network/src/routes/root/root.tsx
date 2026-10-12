@@ -3,14 +3,14 @@ import { AdvisorList } from '@acmehealth/third-party-network/features/advisors'
 import { Box, Button, Flex, Text } from '@acmehealth/ui'
 
 export const Home = () => {
-  useTitle('RH Advise | Home')
+  useTitle('Acme Advise | Home')
 
   return (
     <Box>
       <Flex as="header" align="flex-start" justify="space-between">
         <Box>
           <Text as="h1" fontSize="4xl" fontWeight="500">
-            RH Advise
+            Acme Advise
           </Text>
           <Text as="p" fontSize="md" color="gray.600" lineHeight="none" mt="2">
             Search Acme Health’s advisor database to find experts to consult

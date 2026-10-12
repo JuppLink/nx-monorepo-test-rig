@@ -7,7 +7,7 @@ import {
   DrawerRoot,
   IconButton,
   AcmeLogo,
-  rh,
+  acme,
   useDisclosure
 } from '@acmehealth/ui'
 
@@ -22,7 +22,7 @@ interface MobileNavProps {
   userInfo: UserInfoSummary
 }
 
-const Bar = rh('span', {
+const Bar = acme('span', {
   base: {
     display: 'block',
     pos: 'absolute',

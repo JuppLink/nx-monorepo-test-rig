@@ -9,7 +9,7 @@ import { Box, Button } from '@acmehealth/ui'
 export const Advisor = () => {
   const { advisorId = '' } = useParams()
   const { data: advisor } = useAdvisorQuery(advisorId)
-  useTitle('RH Advise' + (advisor?.name ? ` | ${advisor?.name}` : ''))
+  useTitle('Acme Advise' + (advisor?.name ? ` | ${advisor?.name}` : ''))
 
   return (
     <Box>

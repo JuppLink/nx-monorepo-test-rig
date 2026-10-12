@@ -4,7 +4,7 @@ import { MdInfoOutline } from 'react-icons/md'
 import { Button } from '../button/button'
 import { Icon } from '../icon/icon'
 import { Modal, ModalContent, ModalOverlay } from '../modal/modal'
-import { rh } from '../rh/rh'
+import { acme } from '../acme/acme'
 
 import {
   TooltipRoot,
@@ -26,7 +26,7 @@ export const WithButton = () => (
     <TooltipPositioner>
       <TooltipContent>
         <TooltipArrow />
-        This is a rh tooltip
+        This is a acme tooltip
       </TooltipContent>
     </TooltipPositioner>
   </TooltipRoot>
@@ -38,7 +38,7 @@ export const WithString = () => (
       <span>Hover me</span>
     </TooltipTrigger>
     <TooltipPositioner>
-      <TooltipContent>This is a rh tooltip</TooltipContent>
+      <TooltipContent>This is a acme tooltip</TooltipContent>
     </TooltipPositioner>
   </TooltipRoot>
 )
@@ -212,7 +212,7 @@ export const WithAutoPlacement = () => (
 )
 
 export const WithScroll = () => (
-  <rh.div border="solid 1px red" h="200vh" pt="48">
+  <acme.div border="solid 1px red" h="200vh" pt="48">
     <TooltipRoot closeOnScroll positioning={{ placement: 'bottom' }}>
       <TooltipTrigger asChild>
         <Button mt="300px">Can't Touch This</Button>
@@ -224,11 +224,11 @@ export const WithScroll = () => (
         </TooltipContent>
       </TooltipPositioner>
     </TooltipRoot>
-  </rh.div>
+  </acme.div>
 )
 
 export const WithScrollWithin = () => (
-  <rh.div border="solid 1px red" pt="48" height="400px" overflow="auto">
+  <acme.div border="solid 1px red" pt="48" height="400px" overflow="auto">
     <TooltipRoot closeOnScroll positioning={{ placement: 'bottom' }}>
       <TooltipTrigger asChild>
         <Button mt="180px" mb="80px">
@@ -242,7 +242,7 @@ export const WithScrollWithin = () => (
         </TooltipContent>
       </TooltipPositioner>
     </TooltipRoot>
-  </rh.div>
+  </acme.div>
 )
 
 export const WithDynamicDisabled = () => {
@@ -256,14 +256,14 @@ export const WithDynamicDisabled = () => {
       disabled={isDisabled}
     >
       <TooltipTrigger asChild>
-        <rh.span
+        <acme.span
           draggable
           onDragStart={handleDisabled}
           onDragEnd={handleEnabled}
           cursor="grab"
         >
           Drag me, and you won't see
-        </rh.span>
+        </acme.span>
       </TooltipTrigger>
       <TooltipPositioner>
         <TooltipContent>

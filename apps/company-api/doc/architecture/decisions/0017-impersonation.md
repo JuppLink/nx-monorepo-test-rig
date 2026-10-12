@@ -11,7 +11,7 @@ Accepted
 We are unable to test different roles and permissions without access to multiple Google ID/Okta accounts. If a customer is experiencing issues with our tools, we are unable to view the state of their experience.
 
  ## Decision
-Clients can add a `RH-Impersonation-Email` header to make requests on behalf of an email registered in our system.
+Clients can add a `Acme-Impersonation-Email` header to make requests on behalf of an email registered in our system.
 
 The impersonation happens top of funnel during the authentication process.
 ```

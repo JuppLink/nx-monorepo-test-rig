@@ -34,7 +34,7 @@ describe('CompanyDetailsPage', () => {
 
   describe('renders header', () => {
     beforeEach(() => mockGetUserInfo(server, mockAdminUser))
-    it('renders name, number, status for RH Company', async () => {
+    it('renders name, number, status for Acme Company', async () => {
       mockGetCompany(server, mockRhOpCoCompany)
       render(<CompanyDetailsPage />)
       await waitForLoadingToFinish()

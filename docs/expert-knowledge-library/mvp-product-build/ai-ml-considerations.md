@@ -1,13 +1,13 @@
 ---
 cardTitle: 'AI/ML Considerations for Seed Stage Ventures'
-description: Guidance to incorporate AI/ML inco new launches for RH OpCos
+description: Guidance to incorporate AI/ML inco new launches for Acme OpCos
 labels:
   - article
 ---
 
 # AI/ML Considerations for Seed Stage Ventures
 
-Guidance to incorporate AI/ML inco new launches for RH OpCos
+Guidance to incorporate AI/ML inco new launches for Acme OpCos
 
 <iframe
   src="https://assets.acmehealth.com/7qFnLBIyeD7Agm56NVV9PPRelv2Tja8tHUkDZ2aG/Guide_to_incorporating_AI_ML_for_RH_CEOs__3_.pdf"

@@ -15,7 +15,7 @@ The following table lists the categories and components offered within the Desig
 | Other                | <ul><li>[Close Button](other/close-button.md)</li></ul>|
 | Overlay              | <ul><li>[Alert Dialog](overlay/alert-dialog.md)</li><li>[Drawer](overlay/drawer.md)</li><li>[Modal](overlay/modal.md)</li></ul>|
 | Patterns             | <ul><li>Data Display:<ul><li>[Card](patterns/data-display/card.md)</li><li>[CTA Card](patterns/data-display/cta-card.md)</li><li>[Stat Card](patterns/data-display/stat-card.md)</li></ul><li>Feedback: [Loader](patterns/feedback/loader.md)</li><li>Layout: [Section Header](patterns/layout/section-header.md)</li></ul>|
-| Styled System        | <ul><li>[RH Factory](styled-system/acme-factory.md)</li></ul> |
-| Theme                | <ul><li>[Color Mode Toggle](theme/color-mode-toggle.md)</li><li>[RH Provider](theme/acme-provider.md)</li></ul> |
+| Styled System        | <ul><li>[Acme Factory](styled-system/acme-factory.md)</li></ul> |
+| Theme                | <ul><li>[Color Mode Toggle](theme/color-mode-toggle.md)</li><li>[Acme Provider](theme/acme-provider.md)</li></ul> |
 | Typography           | <ul><li>[Heading](typography/heading.md)</li><li>[Text](typography/heading.md)</li></ul>  |
 

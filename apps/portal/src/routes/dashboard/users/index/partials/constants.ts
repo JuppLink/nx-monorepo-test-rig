@@ -26,7 +26,7 @@ export const USER_TYPE_OPTIONS = [
   },
   {
     value: 'ROLE_RH_USER',
-    label: 'RH User'
+    label: 'Acme User'
   },
   {
     value: 'ROLE_OP_CO_USER',

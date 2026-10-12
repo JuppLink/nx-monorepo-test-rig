@@ -48,7 +48,7 @@ api.interceptors.request.use(
       config.headers.Authorization = `Bearer ${getAccessToken()}`
     }
 
-    // config.headers['RH-Impersonation-Email'] = getImpersonatedEmail()
+    // config.headers['Acme-Impersonation-Email'] = getImpersonatedEmail()
 
     return config
   },

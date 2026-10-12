@@ -8,10 +8,10 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * RH Advise Slim Backend
+ * Acme Advise Slim Backend
  *
  * <p>It provides clients with access tokens representing a service account, for brokering access to
- * the RH Advise "backend" Google sheets. Prevents service account credentials from needing to leave
+ * the Acme Advise "backend" Google sheets. Prevents service account credentials from needing to leave
  * the server side.
  *
  * <p>This class is structured oddly. It is meant for _iterating fast_, so it does not have a NoOp*

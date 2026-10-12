@@ -3,7 +3,7 @@
 // - ThemeProvider removed (use ChakraProvider with value prop)
 // - useStyleConfig removed (use recipe system instead)
 
-export { chakra as rh } from '@chakra-ui/react'
+export { chakra as acme } from '@chakra-ui/react'
 
 // v2 compatibility: `As` was a Chakra type for the polymorphic `as` prop
 import type { ElementType } from 'react'

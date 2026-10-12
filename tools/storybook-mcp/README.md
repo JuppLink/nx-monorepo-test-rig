@@ -1,6 +1,6 @@
 # Storybook MCP Server
 
-A Model Context Protocol (MCP) server for generating Storybook stories in the RH Design System.
+A Model Context Protocol (MCP) server for generating Storybook stories in the Acme Design System.
 
 ## Features
 
@@ -21,7 +21,7 @@ This MCP server provides tools to help with Storybook story generation and manag
 
 3. **generate_story** - Generate a Storybook story file for a component
 
-   - Follows established patterns in the RH Design System
+   - Follows established patterns in the Acme Design System
    - Auto-detects library style (shared-ui vs portal-ui)
    - Optionally includes variant and interactive stories
 

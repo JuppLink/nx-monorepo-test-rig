@@ -1,6 +1,6 @@
 ---
 cardTitle: 'Introduction to Acme Governance'
-description: "A high-level overview of RH's governance process for OpCos."
+description: "A high-level overview of Acme's governance process for OpCos."
 labels:
   - article
 

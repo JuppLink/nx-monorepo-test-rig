@@ -106,7 +106,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
       {
         name: 'generate_story',
         description:
-          'Generate a Storybook story file for a React component. Follows the established patterns in the RH Design System.',
+          'Generate a Storybook story file for a React component. Follows the established patterns in the Acme Design System.',
         inputSchema: {
           type: 'object',
           properties: {
@@ -209,7 +209,7 @@ server.setRequestHandler(ReadResourceRequestSchema, async (request) => {
   }
 
   if (uri === 'storybook://patterns') {
-    const patterns = `# Storybook Patterns in RH Design System
+    const patterns = `# Storybook Patterns in Acme Design System
 
 ## Basic Story Pattern (shared-ui)
 \`\`\`tsx

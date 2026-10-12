@@ -194,7 +194,7 @@ public class IpMarketplaceService {
     var isAnOpCoUser = AuthChecks.hasRole(ROLE_OP_CO_USER);
     if ((isAnOpCoUser && isABuyer) || AuthChecks.hasRole(ROLE_RH_USER))
       throw new ForbiddenIpMarketplaceException(
-          "Buyers or RH users can't create IP records for the marketplace");
+          "Buyers or Acme users can't create IP records for the marketplace");
 
     if (isAnOpCoUser && isASeller && !requester.getUsername().equals(command.getEmail())) {
       BuilderForException.buildInvalidFieldException(
@@ -228,7 +228,7 @@ public class IpMarketplaceService {
     var isAnOpCoUser = AuthChecks.hasRole(ROLE_OP_CO_USER);
     if ((isAnOpCoUser && isABuyer) || AuthChecks.hasRole(ROLE_RH_USER))
       throw new ForbiddenIpMarketplaceException(
-          "Buyers or RH users can't update IP records for the marketplace");
+          "Buyers or Acme users can't update IP records for the marketplace");
     if (isAnOpCoUser
         && isASeller
         && !ipMarketplace

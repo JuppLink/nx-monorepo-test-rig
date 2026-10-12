@@ -29,7 +29,7 @@ export const mockAdminUser: UserInfoSummary = {
   familyName: 'Katzroy',
   role: {
     authority: 'ROLE_RH_ADMIN',
-    displayName: 'RH Admin'
+    displayName: 'Acme Admin'
   },
   memberOf: [],
   created: '2023-11-01T19:12:59.535Z',
@@ -47,7 +47,7 @@ export const mockRhUser: UserInfoSummary = {
   familyName: 'Katzroy',
   role: {
     authority: 'ROLE_RH_USER',
-    displayName: 'RH user'
+    displayName: 'Acme user'
   },
   memberOf: [],
   created: '2023-11-01T19:12:59.535Z',

@@ -9,7 +9,7 @@ import {
 } from '@tanstack/react-table'
 
 import {
-  rh,
+  acme,
   TableRoot,
   TableContainer,
   Tbody,
@@ -67,7 +67,7 @@ export function DataTable<Data extends object>({
                       header.getContext()
                     )}
 
-                    <rh.span pl="4">
+                    <acme.span pl="4">
                       {header.column.getIsSorted() ? (
                         header.column.getIsSorted() === 'desc' ? (
                           <TriangleDownIcon aria-label="sorted descending" />
@@ -75,7 +75,7 @@ export function DataTable<Data extends object>({
                           <TriangleUpIcon aria-label="sorted ascending" />
                         )
                       ) : null}
-                    </rh.span>
+                    </acme.span>
                   </Th>
                 )
               })}

@@ -9,7 +9,7 @@ import {
   useState
 } from 'react'
 
-import { Container, rh } from '../../index'
+import { Container, acme } from '../../index'
 
 import {
   AccordionRoot,
@@ -41,9 +41,9 @@ export const Basic = () => (
     <AccordionItem>
       <h2>
         <AccordionButton>
-          <rh.div flex="1" textAlign="left">
+          <acme.div flex="1" textAlign="left">
             Section 1 title
-          </rh.div>
+          </acme.div>
           <AccordionIcon />
         </AccordionButton>
       </h2>
@@ -53,9 +53,9 @@ export const Basic = () => (
     <AccordionItem>
       <h2>
         <AccordionButton>
-          <rh.div flex="1" textAlign="left">
+          <acme.div flex="1" textAlign="left">
             Section 2 title
-          </rh.div>
+          </acme.div>
           <AccordionIcon />
         </AccordionButton>
       </h2>
@@ -69,9 +69,9 @@ export const AllowToggle = () => (
     <AccordionItem>
       <h2>
         <AccordionButton>
-          <rh.div flex="1" textAlign="left">
+          <acme.div flex="1" textAlign="left">
             Section 1 title
-          </rh.div>
+          </acme.div>
           <AccordionIcon />
         </AccordionButton>
       </h2>
@@ -86,9 +86,9 @@ export const AllowToggle = () => (
     <AccordionItem>
       <h2>
         <AccordionButton>
-          <rh.div flex="1" textAlign="left">
+          <acme.div flex="1" textAlign="left">
             Section 2 title
-          </rh.div>
+          </acme.div>
           <AccordionIcon />
         </AccordionButton>
       </h2>
@@ -107,9 +107,9 @@ export const AllowMultiple = () => (
     <AccordionItem>
       <h2>
         <AccordionButton>
-          <rh.div flex="1" textAlign="left">
+          <acme.div flex="1" textAlign="left">
             Section 1 title
-          </rh.div>
+          </acme.div>
           <AccordionIcon />
         </AccordionButton>
       </h2>
@@ -124,9 +124,9 @@ export const AllowMultiple = () => (
     <AccordionItem>
       <h2>
         <AccordionButton>
-          <rh.div flex="1" textAlign="left">
+          <acme.div flex="1" textAlign="left">
             Section 2 title
-          </rh.div>
+          </acme.div>
           <AccordionIcon />
         </AccordionButton>
       </h2>
@@ -145,9 +145,9 @@ export const StylingExpanded = () => (
     <AccordionItem>
       <h2>
         <AccordionButton _expanded={{ bg: 'tomato', color: 'white' }}>
-          <rh.div flex="1" textAlign="left">
+          <acme.div flex="1" textAlign="left">
             Click me to see a different style
-          </rh.div>
+          </acme.div>
           <AccordionIcon />
         </AccordionButton>
       </h2>
@@ -196,24 +196,24 @@ export function Bug_2160() {
   }
 
   return (
-    <rh.div padding={4}>
-      <rh.div mt={3} mb={12}>
-        <rh.input
+    <acme.div padding={4}>
+      <acme.div mt={3} mb={12}>
+        <acme.input
           ref={inputRef}
           value={filter}
           onChange={onInputChange}
           placeholder="Write filter for data title"
         />
-      </rh.div>
+      </acme.div>
       {displayData.length > 0 && (
         <AccordionRoot allowToggle>
           {displayData.map((item, i) => (
             <AccordionItem key={`accordion-item-${i}`}>
               <h2>
                 <AccordionButton>
-                  <rh.div flex="1" textAlign="left">
+                  <acme.div flex="1" textAlign="left">
                     {item.title}
-                  </rh.div>
+                  </acme.div>
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
@@ -222,7 +222,7 @@ export function Bug_2160() {
           ))}
         </AccordionRoot>
       )}
-    </rh.div>
+    </acme.div>
   )
 }
 

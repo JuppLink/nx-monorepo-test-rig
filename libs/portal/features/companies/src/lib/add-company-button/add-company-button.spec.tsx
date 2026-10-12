@@ -7,7 +7,7 @@ describe('AddCompanyButton', () => {
     render(<AddCompanyButton />)
     fireEvent.click(screen.getByText('Add company'))
     expect(
-      screen.getByText('RH company')
+      screen.getByText('Acme company')
     ).toBeInTheDocument()
     expect(
       screen.getByText('Marketplace company')

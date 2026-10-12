@@ -63,9 +63,9 @@ public class SnowflakeServiceTests {
                 "data": [
                     [
                         "44",
-                        "RH Studio 2 OpCo 31, Inc.",
-                        "Parent Company : Acme Health Inc. : RHI Holdings 2, LLC : RH Studio 2 OpCo 31, Inc.",
-                        "RH Studio 2 OpCo 31, Inc.",
+                        "Acme Studio 2 OpCo 31, Inc.",
+                        "Parent Company : Acme Health Inc. : RHI Holdings 2, LLC : Acme Studio 2 OpCo 31, Inc.",
+                        "Acme Studio 2 OpCo 31, Inc.",
                         null,
                         "33",
                         "RHI Holdings 2, LLC",

@@ -66,7 +66,7 @@ describe('CeoProfileDetails', () => {
       })
     })
   })
-  describe('RH user', () => {
+  describe('Acme user', () => {
     beforeEach(() => mockGetUserInfo(server, mockRhUser))
     describe('opt-in CEO', () => {
       beforeEach(() => mockGetCeoById(server, mockCeoOptIn))

@@ -47,7 +47,7 @@ Here's how we do that
 ```
 
 ## More resources
-* [Acme Health Brand Figma](https://www.figma.com/file/0KgTXLaA268QPG3xVW84hE/RH-Internal-Brand-Requests?node-id=305%3A353&t=LC6UCrQmBzSt8dum-1)
+* [Acme Health Brand Figma](https://www.figma.com/file/0KgTXLaA268QPG3xVW84hE/Acme-Internal-Brand-Requests?node-id=305%3A353&t=LC6UCrQmBzSt8dum-1)
 * [How to publish a theme](https://code.visualstudio.com/api/extension-guides/color-theme#create-a-new-color-theme)
 * [Theme attribute names](https://code.visualstudio.com/api/references/theme-color)
 * [How to look up what theme attribute is being used](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#scope-inspector)

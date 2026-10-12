@@ -20,7 +20,7 @@ import lombok.Setter;
 
 @Getter
 public class IpMarketplaceBaseCommand {
-  @Schema(example = "rh@redesinghealth.com")
+  @Schema(example = "acme@redesinghealth.com")
   @NotBlank
   @Setter
   private String email;

@@ -190,7 +190,7 @@ public class IpMarketplaceV2ControllerTests {
                     "iPMarketplaceId",
                     "iPMarketplaceTrackId")
                 .contentType(MediaType.APPLICATION_JSON)
-                .header("RH-Google-Access-Token", "Google_Token")
+                .header("Acme-Google-Access-Token", "Google_Token")
                 .header("Authorization", "Auth authId"))
         .andExpect(status().isForbidden())
         .andExpect(
@@ -242,7 +242,7 @@ public class IpMarketplaceV2ControllerTests {
                     "iPMarketplaceId",
                     "iPMarketplaceTrackId")
                 .contentType(MediaType.APPLICATION_JSON)
-                .header("RH-Google-Access-Token", "Google_Token")
+                .header("Acme-Google-Access-Token", "Google_Token")
                 .header("Authorization", "Auth authId"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.date", notNullValue()))

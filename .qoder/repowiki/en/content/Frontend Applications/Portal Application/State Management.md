@@ -286,7 +286,7 @@ The state management layer depends on:
 ```mermaid
 graph LR
 Main["main.tsx"] --> RQP["QueryClientProvider"]
-Main --> RH["RhProvider"]
+Main --> Acme["RhProvider"]
 Main --> GAuth["GoogleOAuthProvider"]
 App["app.tsx"] --> Router["RouterProvider"]
 Hooks["Domain Hooks"] --> RQ["@tanstack/react-query"]

@@ -4,7 +4,7 @@ import {
   RadioGroupItemControl,
   RadioGroupItemHiddenInput,
   Text,
-  rh
+  acme
 } from '@acmehealth/ui'
 
 interface ButtonRadioProps {
@@ -22,7 +22,7 @@ const ButtonRadio = ({
 }: ButtonRadioProps) => {
   return (
     <RadioGroupItem value={value} asChild>
-      <rh.label
+      <acme.label
         display="flex"
         alignItems="baseline"
         gap={4}
@@ -42,7 +42,7 @@ const ButtonRadio = ({
           </Text>
           {subtitle && <Text fontWeight="normal">{subtitle}</Text>}
         </Box>
-      </rh.label>
+      </acme.label>
     </RadioGroupItem>
   )
 }

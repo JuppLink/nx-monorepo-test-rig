@@ -20,7 +20,7 @@ const AddCompanyButton = () => (
     </MenuTrigger>
     <MenuContent>
       <MenuItem value="acme-company" asChild>
-        <RouterLink to="/companies/add-company">RH company</RouterLink>
+        <RouterLink to="/companies/add-company">Acme company</RouterLink>
       </MenuItem>
       <MenuItem value="marketplace-company" asChild>
         <RouterLink to="/companies/add-marketplace-company">

@@ -104,7 +104,7 @@ build:
 cors:
   allowedOriginPatterns: http://localhost:[*], https://*.acmehealth.com
   allowedMethods: PUT,GET,DELETE,POST
-  allowedHeaders: Authorization,Content-Type,Accept,RH-Impersonation-Email,RH-Google-Access-Token
+  allowedHeaders: Authorization,Content-Type,Accept,Acme-Impersonation-Email,Acme-Google-Access-Token
 
 db:
   seed:

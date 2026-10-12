@@ -20,11 +20,11 @@ curl -H "Authorization: Bearer <google-id-token>" \
 
 ### Impersonation
 
-Super admins (`ROLE_SUPER_ADMIN`) can impersonate another user by including the `RH-Impersonation-Email` header:
+Super admins (`ROLE_SUPER_ADMIN`) can impersonate another user by including the `Acme-Impersonation-Email` header:
 
 ```bash
 curl -H "Authorization: Bearer <google-id-token>" \
-     -H "RH-Impersonation-Email: user@acmehealth.com" \
+     -H "Acme-Impersonation-Email: user@acmehealth.com" \
      https://api.example.com/person
 ```
 

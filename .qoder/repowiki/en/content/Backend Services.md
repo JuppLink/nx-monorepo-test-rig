@@ -10,7 +10,7 @@
 - [application-dev.yml](file://apps/company-api/application/src/main/resources/application-dev.yml)
 - [application-local.yml](file://apps/company-api/application/src/main/resources/application-local.yml)
 - [index.ts](file://apps/oauth-jwt-generator/src/index.ts)
-- [pom.xml](file://apps/ff4j-rh/pom.xml)
+- [pom.xml](file://apps/ff4j-acme/pom.xml)
 - [Dockerfile](file://apps/prometheus/Dockerfile)
 - [CompanyController.java](file://apps/company-api/application/src/main/java/com/acmehealth/company/api/controller/CompanyController.java)
 - [VendorController.java](file://apps/company-api/application/src/main/java/com/acmehealth/company/api/controller/VendorController.java)
@@ -35,7 +35,7 @@ This document describes the backend services in the Acme Health monorepo with a 
 The repository is a monorepo containing multiple applications and libraries. The backend services relevant to this document include:
 - Company API (Spring Boot microservice): responsible for company management, vendor relationships, and related domain features.
 - OAuth JWT Generator (Express service): handles Google OAuth authorization code exchange and returns ID tokens.
-- FF4J RH (Spring Boot service): exposes feature flags via FF4J with Spring Boot Actuator.
+- FF4J Acme (Spring Boot service): exposes feature flags via FF4J with Spring Boot Actuator.
 - Prometheus (monitoring service): Prometheus container configured via a custom YAML.
 
 ```mermaid
@@ -70,7 +70,7 @@ FF4J_Pom --> PROM_Docker
 - [CompanyController.java](file://apps/company-api/application/src/main/java/com/acmehealth/company/api/controller/CompanyController.java)
 - [VendorController.java](file://apps/company-api/application/src/main/java/com/acmehealth/company/api/controller/VendorController.java)
 - [index.ts:1-74](file://apps/oauth-jwt-generator/src/index.ts#L1-L74)
-- [pom.xml:1-54](file://apps/ff4j-rh/pom.xml#L1-L54)
+- [pom.xml:1-54](file://apps/ff4j-acme/pom.xml#L1-L54)
 - [Dockerfile:1-3](file://apps/prometheus/Dockerfile#L1-L3)
 
 **Section sources**
@@ -101,7 +101,7 @@ FF4J_Pom --> PROM_Docker
 - [Application.java:1-53](file://apps/company-api/application/src/main/java/com/acmehealth/company/api/Application.java#L1-L53)
 - [application.yml:1-616](file://apps/company-api/application/src/main/resources/application.yml#L1-L616)
 - [index.ts:1-74](file://apps/oauth-jwt-generator/src/index.ts#L1-L74)
-- [pom.xml:1-54](file://apps/ff4j-rh/pom.xml#L1-L54)
+- [pom.xml:1-54](file://apps/ff4j-acme/pom.xml#L1-L54)
 - [Dockerfile:1-3](file://apps/prometheus/Dockerfile#L1-L3)
 
 ## Architecture Overview
@@ -128,7 +128,7 @@ PROM --> FF4J
 **Diagram sources**
 - [index.ts:1-74](file://apps/oauth-jwt-generator/src/index.ts#L1-L74)
 - [Application.java:1-53](file://apps/company-api/application/src/main/java/com/acmehealth/company/api/Application.java#L1-L53)
-- [pom.xml:1-54](file://apps/ff4j-rh/pom.xml#L1-L54)
+- [pom.xml:1-54](file://apps/ff4j-acme/pom.xml#L1-L54)
 - [Dockerfile:1-3](file://apps/prometheus/Dockerfile#L1-L3)
 
 ## Detailed Component Analysis
@@ -232,7 +232,7 @@ OJG-->>Client : id_token
 
 ```mermaid
 graph TB
-FF4J["FF4J RH Service"]
+FF4J["FF4J Acme Service"]
 ACT["Spring Boot Actuator"]
 PROM["Prometheus"]
 FF4J --> ACT
@@ -240,11 +240,11 @@ PROM --> FF4J
 ```
 
 **Diagram sources**
-- [pom.xml:1-54](file://apps/ff4j-rh/pom.xml#L1-L54)
+- [pom.xml:1-54](file://apps/ff4j-acme/pom.xml#L1-L54)
 - [Dockerfile:1-3](file://apps/prometheus/Dockerfile#L1-L3)
 
 **Section sources**
-- [pom.xml:1-54](file://apps/ff4j-rh/pom.xml#L1-L54)
+- [pom.xml:1-54](file://apps/ff4j-acme/pom.xml#L1-L54)
 
 ### Prometheus Monitoring Service
 - Purpose: Scrape metrics from backend services.
@@ -274,7 +274,7 @@ Store --> End(["Expose Metrics Endpoint"])
   - External integrations include Jira, Google services, OpenSearch, and Rocket.Chat.
 - OAuth JWT Generator:
   - Express-based service with minimal dependencies for HTTP routing and external HTTP calls.
-- FF4J RH:
+- FF4J Acme:
   - Spring Boot starter dependencies for web and actuator, plus FF4J web MVC starter.
 - Prometheus:
   - Containerized service with custom configuration mounting.
@@ -288,7 +288,7 @@ CA --> GDRIVE["Google Drive/Lambda"]
 CA --> OSC["OpenSearch"]
 CA --> RC["Rocket.Chat"]
 OJG["OAuth JWT Generator (Express)"] --> GOOGLE["Google OAuth"]
-FF4J["FF4J RH (Spring Boot)"] --> ACT
+FF4J["FF4J Acme (Spring Boot)"] --> ACT
 PROM["Prometheus"] --> CA
 PROM --> FF4J
 ```
@@ -297,14 +297,14 @@ PROM --> FF4J
 - [pom.xml:1-33](file://apps/company-api/pom.xml#L1-L33)
 - [application.yml:1-616](file://apps/company-api/application/src/main/resources/application.yml#L1-L616)
 - [index.ts:1-74](file://apps/oauth-jwt-generator/src/index.ts#L1-L74)
-- [pom.xml:1-54](file://apps/ff4j-rh/pom.xml#L1-L54)
+- [pom.xml:1-54](file://apps/ff4j-acme/pom.xml#L1-L54)
 - [Dockerfile:1-3](file://apps/prometheus/Dockerfile#L1-L3)
 
 **Section sources**
 - [pom.xml:1-33](file://apps/company-api/pom.xml#L1-L33)
 - [application.yml:1-616](file://apps/company-api/application/src/main/resources/application.yml#L1-L616)
 - [index.ts:1-74](file://apps/oauth-jwt-generator/src/index.ts#L1-L74)
-- [pom.xml:1-54](file://apps/ff4j-rh/pom.xml#L1-L54)
+- [pom.xml:1-54](file://apps/ff4j-acme/pom.xml#L1-L54)
 - [Dockerfile:1-3](file://apps/prometheus/Dockerfile#L1-L3)
 
 ## Performance Considerations
@@ -315,7 +315,7 @@ PROM --> FF4J
 - OAuth JWT Generator:
   - Stateless design with minimal in-memory state improves scalability.
   - External calls to Google OAuth endpoints introduce network latency; caching ID tokens client-side can reduce repeated exchanges.
-- FF4J RH:
+- FF4J Acme:
   - Lightweight feature flag evaluation; keep feature flag stores optimized for low-latency reads.
 - Prometheus:
   - Configure scrape intervals and retention appropriately to balance observability and resource usage.
@@ -330,7 +330,7 @@ PROM --> FF4J
 - OAuth JWT Generator:
   - Ensure state parameter matches between authorization and callback.
   - Validate redirect URI scheme (http vs https) depending on host.
-- FF4J RH:
+- FF4J Acme:
   - Confirm Actuator endpoints are reachable and Prometheus scraping is configured.
 - Prometheus:
   - Validate configuration file mounting and target endpoints.
@@ -340,7 +340,7 @@ PROM --> FF4J
 - [application-dev.yml:1-41](file://apps/company-api/application/src/main/resources/application-dev.yml#L1-L41)
 - [application-local.yml:1-22](file://apps/company-api/application/src/main/resources/application-local.yml#L1-L22)
 - [index.ts:1-74](file://apps/oauth-jwt-generator/src/index.ts#L1-L74)
-- [pom.xml:1-54](file://apps/ff4j-rh/pom.xml#L1-L54)
+- [pom.xml:1-54](file://apps/ff4j-acme/pom.xml#L1-L54)
 - [Dockerfile:1-3](file://apps/prometheus/Dockerfile#L1-L3)
 
 ## Conclusion

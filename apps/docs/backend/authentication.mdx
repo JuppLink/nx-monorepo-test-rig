@@ -106,7 +106,7 @@ flowchart TD
     B -->|Yes| D{Starts with 'Bearer '?}
     D -->|No| C
     D -->|Yes| E[Extract JWT token]
-    E --> F{RH-Impersonation-Email header?}
+    E --> F{Acme-Impersonation-Email header?}
     F -->|Yes| G[Create JwtAuthentication with impersonation]
     F -->|No| H[Create JwtAuthentication]
     G --> I[AuthenticationManager.authenticate]
@@ -123,7 +123,7 @@ flowchart TD
     The filter extracts the bearer token from the `Authorization` header, creates a `JwtAuthentication` object, and delegates to the `AuthenticationManager` for verification.
   </Tab>
   <Tab title="Impersonation flow">
-    Super admins can impersonate other users by including the `RH-Impersonation-Email` header. The filter passes this to the authentication manager, which resolves the impersonated user's roles and company memberships.
+    Super admins can impersonate other users by including the `Acme-Impersonation-Email` header. The filter passes this to the authentication manager, which resolves the impersonated user's roles and company memberships.
   </Tab>
 </Tabs>
 
@@ -137,7 +137,7 @@ The platform defines five hierarchical roles:
 | :--- | :---: | :--- |
 | `ROLE_SUPER_ADMIN` | 5 | Super Admin |
 | `ROLE_RH_ADMIN` | 4 | Admin |
-| `ROLE_RH_USER` | 3 | RH User |
+| `ROLE_RH_USER` | 3 | Acme User |
 | `ROLE_OP_CO_USER` | 2 | Company User |
 | `ROLE_OP_CO_CONTRACTOR` | 1 | Company Contractor |
 
@@ -244,7 +244,7 @@ sequenceDiagram
     The stateless JWT model avoids server-side session storage, reducing the attack surface for session hijacking. Tokens have a limited lifetime enforced by Google's token expiration.
   </Accordion>
   <Accordion title="Impersonation audit trail">
-    When a super admin uses the `RH-Impersonation-Email` header, the original admin's identity is preserved in the authentication context for audit logging purposes.
+    When a super admin uses the `Acme-Impersonation-Email` header, the original admin's identity is preserved in the authentication context for audit logging purposes.
   </Accordion>
   <Accordion title="Principle of least privilege">
     The hierarchical role model ensures users only have access to the minimum resources needed. Company-level membership checks further restrict data access to relevant company members.

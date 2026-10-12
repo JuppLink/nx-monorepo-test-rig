@@ -1,5 +1,5 @@
 === Vendor
-Redesign Health has a list with the vendors being created by the different OP_COs.
+Acme Health has a list with the vendors being created by the different OP_COs.
 This API is responsible for managing those information.
 
 ==== Create

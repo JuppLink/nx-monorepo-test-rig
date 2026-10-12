@@ -30,7 +30,7 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-This guide helps you set up and run the Redesign Health Nx monorepo locally. You will clone the repository, install prerequisites, configure the development environment, start the API server and the Portal application, and learn how to use Nx Console in VS Code. It also covers environment variables for development and production, essential commands for building, serving, testing, and linting, and how to use the devcontainer for a reproducible environment.
+This guide helps you set up and run the Acme Health Nx monorepo locally. You will clone the repository, install prerequisites, configure the development environment, start the API server and the Portal application, and learn how to use Nx Console in VS Code. It also covers environment variables for development and production, essential commands for building, serving, testing, and linting, and how to use the devcontainer for a reproducible environment.
 
 ## Project Structure
 The repository is organized as an Nx monorepo with:

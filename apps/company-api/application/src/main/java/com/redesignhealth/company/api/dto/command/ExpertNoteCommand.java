@@ -23,7 +23,7 @@ public class ExpertNoteCommand {
   @NotBlank
   private String intervieweeName;
 
-  @Schema(example = "Redesign Health")
+  @Schema(example = "Acme Health")
   private String intervieweeCompany;
 
   @Schema(example = "Expert Call", requiredMode = Schema.RequiredMode.REQUIRED)

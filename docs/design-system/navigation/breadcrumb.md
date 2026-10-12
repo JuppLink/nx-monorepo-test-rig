@@ -15,7 +15,7 @@ of a website.
 
 ## Import
 
-Redesign UI exports 4 breadcrumb-related components:
+Acme UI exports 4 breadcrumb-related components:
 
 - `Breadcrumb`: The parent container for breadcrumbs.
 - `BreadcrumbItem`: Individual breadcrumb element containing a link and a

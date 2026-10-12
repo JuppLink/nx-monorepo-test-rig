@@ -1,5 +1,5 @@
 === Research
-Redesign Health conducts research to inform new company ideas.
+Acme Health conducts research to inform new company ideas.
 This API is responsible for managing those reports.
 
 ==== Query

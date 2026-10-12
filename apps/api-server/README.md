@@ -1,6 +1,6 @@
 # API Server
 
-A lightweight Express mock API server that replicates the Redesign Health backend for local development of the Platform Portal. It serves fully populated mock data and requires no external database or cloud connectivity.
+A lightweight Express mock API server that replicates the Acme Health backend for local development of the Platform Portal. It serves fully populated mock data and requires no external database or cloud connectivity.
 
 ## How to Run
 

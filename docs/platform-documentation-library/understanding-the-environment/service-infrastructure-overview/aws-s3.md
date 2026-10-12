@@ -16,7 +16,7 @@ Amazon Simple Storage Service (Amazon S3) is an object storage service offering 
 
 ## Benefits
 
-Amazon S3 provides the following benefits when used as part of the Redesign Platform infrastructure:
+Amazon S3 provides the following benefits when used as part of the Acme Platform infrastructure:
 
 * a standard offering for general purpose storage that can be used across various open-source tools
 * low cost and highly scalable

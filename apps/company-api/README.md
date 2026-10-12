@@ -138,10 +138,10 @@ $ npx nx serve company-api
       "href": "http://localhost:8080/public/open-api"
     }
   },
-  "Redesign Health": {
+  "Acme Health": {
     "Own the outcome": "We do the work to get the job done",
     "Learn continuously": "We focus on constantly growing as individuals and as a team",
-    "Redesign Healthcare": "We bring positive change to patients' lives",
+    "Acme Healthcare": "We bring positive change to patients' lives",
     "Be trusted partners": "We strive to be the teammates and co-founders of choice",
     "Champion diverse perspectives": "We work to unlock our joint potential",
     "Practice kindness": "We aim to build bridges, not walls"

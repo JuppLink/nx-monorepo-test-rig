@@ -1,13 +1,13 @@
 ---
 category: 'features'
-title: 'Redesign UI Factory'
+title: 'Acme UI Factory'
 package: '@acmehealth/ui'
-description: Using the Redesign UI Factory and elements
+description: Using the Acme UI Factory and elements
 ---
 
-# Redesign UI Factory
+# Acme UI Factory
 
-Redesign UI Factory serves as an **object of rh enabled JSX elements**, and also
+Acme UI Factory serves as an **object of rh enabled JSX elements**, and also
 **a function that can be used to enable custom component** receive rh's
 style props.
 
@@ -15,7 +15,7 @@ style props.
 import { rh } from "@acmehealth/ui"
 ```
 
-## Redesign JSX Elements
+## Acme JSX Elements
 
 Create base html elements with theme-aware style props using `rh.<element>`
 notation. For example, if you want a plain html button with ability to pass
@@ -42,12 +42,12 @@ supported.
 <rh.h1 fontSize="lg"> Heading </rh.h1>
 ```
 
-## Redesign UI Factory function
+## Acme UI Factory function
 
 This is a function that converts **non-rh components** or **jsx element** to
 rh-enabled components so you can pass style props to them.
 
-Consider a package called `react-input-autoresize`, let's use the Redesign UI Factory
+Consider a package called `react-input-autoresize`, let's use the Acme UI Factory
 function to make possible to pass style props.
 
 The function will infer the prop types from the wrapped component and also add
@@ -64,13 +64,13 @@ function Example() {
 }
 ```
 
-> Considering that Redesign uses `emotion` under the hood, ensure the non-rh
+> Considering that Acme uses `emotion` under the hood, ensure the non-rh
 > component accepts `className` as props for this to work correctly
 
 ### Attaching styles
 
 In some instances, you might need to attach specific styles to the component
-wrapped in the Redesign UI Factory
+wrapped in the Acme UI Factory
 
 ```jsx
 const AutoResizeInput = rh(AutoResizeInput, {
@@ -81,7 +81,7 @@ const AutoResizeInput = rh(AutoResizeInput, {
 })
 ```
 
-You can also use the Redesign UI Factory on jsx elements as well.
+You can also use the Acme UI Factory on jsx elements as well.
 
 ```jsx
 const Card = rh('div', {
@@ -108,7 +108,7 @@ const Div = rh('div', {
 })
 ```
 
-Another example that combines the default `shouldForwardProp` from Redesign UI
+Another example that combines the default `shouldForwardProp` from Acme UI
 with custom logic.
 
 ```jsx
@@ -116,7 +116,7 @@ import { rh, shouldForwardProp } from '@acmehealth/ui'
 
 const Div = rh('div', {
   shouldForwardProp: prop => {
-    // don't forward Redesign's props
+    // don't forward Acme's props
     const isRhProp = !shouldForwardProp(prop)
     if (isRhProp) return false
 
@@ -136,7 +136,7 @@ import { rh, shouldForwardProp } from '@acmehealth/ui'
 
 const Div = rh('div', {
   shouldForwardProp: prop => {
-    // don't forward Redesign's props
+    // don't forward Acme's props
     const isRhProp = !shouldForwardProp(prop)
     if (isRhProp) return false
 

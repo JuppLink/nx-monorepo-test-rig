@@ -3,7 +3,7 @@ import { useDisclosure } from '../hooks/use-disclosure/use-disclosure'
 import { Box } from '../box/box'
 import { Drawer } from '../drawer/drawer'
 import { Flex } from '../flex/flex'
-import { RedesignLogo } from '../logos/acme-logo/acme-logo'
+import { AcmeLogo } from '../logos/acme-logo/acme-logo'
 
 import { Nav } from './nav'
 import { ToggleButton } from './toggle-button'
@@ -21,9 +21,9 @@ export const MobileNav = ({ userProfile, numOpcos, numPersons }: any) => {
       borderColor="gray.200"
     >
       <Flex justify="space-between" alignItems="center">
-        <RedesignLogo
+        <AcmeLogo
           w={{ base: '200px', md: '225px' }}
-          alt="Redesign Health logo"
+          alt="Acme Health logo"
         />
         <ToggleButton
           open={open}

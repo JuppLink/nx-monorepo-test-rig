@@ -19,7 +19,7 @@ public class ExpertNoteSummary extends RepresentationModel<ExpertNoteSummary> {
   @Schema(example = "Jane Doe")
   private String intervieweeName;
 
-  @Schema(example = "Redesign Health")
+  @Schema(example = "Acme Health")
   private String intervieweeCompany;
 
   @Schema(example = "jane.doe@example.com")

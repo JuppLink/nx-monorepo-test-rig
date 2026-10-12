@@ -15,7 +15,7 @@ const noOp = () => ''
 export const Default = {
   args: {
     title: 'Looking for references on vendors?',
-    description: `Redesign Health facilitates a vendor network amongst OpCos where you can share your experiences with each other. To begin, search for a vendor and we'll show you who to talk with. If you don’t see a vendor on this list, contact your Relationship Manager.`,
+    description: `Acme Health facilitates a vendor network amongst OpCos where you can share your experiences with each other. To begin, search for a vendor and we'll show you who to talk with. If you don’t see a vendor on this list, contact your Relationship Manager.`,
     children: (
       <>
         <Search onChange={noOp} />

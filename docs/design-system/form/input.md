@@ -72,7 +72,7 @@ The input component comes in 4 variants: `outline`, `unstyled`, `flushed`, and
 ### Left and Right Addons
 
 Like bootstrap, you can add addons to the left and right of the `Input`
-component. Redesign UI exports `InputGroup`, `InputLeftAddon`, and
+component. Acme UI exports `InputGroup`, `InputLeftAddon`, and
 `InputRightAddon` to help with this use case.
 
 ```jsx
@@ -94,7 +94,7 @@ component. Redesign UI exports `InputGroup`, `InputLeftAddon`, and
 ### Add elements inside Input
 
 In some scenarios, you might need to add an icon or button inside the input
-component. Redesign UI exports `InputLeftElement` and `InputRightElement` to help
+component. Acme UI exports `InputLeftElement` and `InputRightElement` to help
 with this use case.
 
 If the left or right is an icon or text, you can pass `pointerEvents="none"` to

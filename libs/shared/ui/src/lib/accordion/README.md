@@ -12,7 +12,7 @@ description:
 
 ## Import
 
-Redesign UI exports 5 accordion-related components.
+Acme UI exports 5 accordion-related components.
 
 - `Accordion`: The wrapper that uses cloneElement to pass props to
   `AccordionItem` children.

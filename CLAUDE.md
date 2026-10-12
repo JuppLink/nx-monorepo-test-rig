@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is the **Redesign Health Design System** monorepo, built with Nx. It contains multiple applications and shared libraries organized by domain.
+This is the **Acme Health Design System** monorepo, built with Nx. It contains multiple applications and shared libraries organized by domain.
 
 ### Key Applications
 

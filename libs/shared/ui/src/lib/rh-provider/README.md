@@ -1,6 +1,6 @@
-# Redesign Health UI Theme
+# Acme Health UI Theme
 
-This is a Redesign Health UI theme generated with [Hypertheme Editor](https://hyperthe.me).
+This is a Acme Health UI theme generated with [Hypertheme Editor](https://hyperthe.me).
 
 ## Usage
 

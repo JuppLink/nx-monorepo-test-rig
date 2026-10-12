@@ -912,7 +912,7 @@ export interface components {
     ExpertNoteCommand: {
       /** @example Jane Doe */
       intervieweeName: string
-      /** @example Redesign Health */
+      /** @example Acme Health */
       intervieweeCompany?: string
       /** @example Expert Call */
       type: string
@@ -983,7 +983,7 @@ export interface components {
       id?: string
       /** @example Jane Doe */
       intervieweeName?: string
-      /** @example Redesign Health */
+      /** @example Acme Health */
       intervieweeCompany?: string
       /** @example jane.doe@example.com */
       intervieweeEmail?: string

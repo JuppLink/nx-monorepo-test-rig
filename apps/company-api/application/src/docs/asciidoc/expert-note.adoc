@@ -1,5 +1,5 @@
 === Expert Note
-Redesign Health pays to interview experts and records those calls as notes.
+Acme Health pays to interview experts and records those calls as notes.
 This API is responsible for managing those reports.
 
 ==== Query

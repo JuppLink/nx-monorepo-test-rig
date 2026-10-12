@@ -58,7 +58,7 @@ To access the internal state of the Menu, use a function as a `children`
       <MenuButton>{isOpen ? 'Close' : 'Open'}</MenuButton>
       <MenuList>
         <MenuItem>Download</MenuItem>
-        <MenuItem onClick={() => alert('Redesign Kicks Ass!')}>
+        <MenuItem onClick={() => alert('Acme Kicks Ass!')}>
           Create a Copy
         </MenuItem>
       </MenuList>

@@ -37,13 +37,13 @@ export const TextLines = () => (
 
 export const AsContainer = () => (
   <Skeleton>
-    <span>Redesign UI is dope</span>
+    <span>Acme UI is dope</span>
   </Skeleton>
 )
 
 export const WithFitContent = () => (
   <Skeleton fitContent>
-    <span>Redesign UI is dope</span>
+    <span>Acme UI is dope</span>
   </Skeleton>
 )
 
@@ -56,7 +56,7 @@ export const WithFade = () => {
 
   return (
     <Skeleton isLoaded={hasLoaded}>
-      <span>Redesign UI is dope</span>
+      <span>Acme UI is dope</span>
     </Skeleton>
   )
 }
@@ -70,7 +70,7 @@ export const WithFadeText = () => {
 
   return (
     <SkeletonText isLoaded={hasLoaded}>
-      <span>Redesign UI is dope</span>
+      <span>Acme UI is dope</span>
     </SkeletonText>
   )
 }
@@ -92,7 +92,7 @@ export const WithNoFade = () => {
 
   return (
     <Skeleton fadeDuration={0} isLoaded={hasLoaded}>
-      <span>Redesign UI is dope</span>
+      <span>Acme UI is dope</span>
     </Skeleton>
   )
 }
@@ -120,10 +120,10 @@ export const WithIsLoaded = () => {
         Content
       </rh.div>
       <Skeleton w="100px" isLoaded={hasLoaded} mt={2}>
-        <span>Redesign UI is dope</span>
+        <span>Acme UI is dope</span>
       </Skeleton>
       <SkeletonText isLoaded={hasLoaded} mt={2}>
-        <p>Redesign UI is dope</p>
+        <p>Acme UI is dope</p>
       </SkeletonText>
       <rh.div h="100px" borderWidth="1px" mt={2}>
         Content

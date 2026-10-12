@@ -9,7 +9,7 @@ description: The NumberInput component is similar to the Input component, but it
 
 ## Import
 
-Redesign UI exports 5 components for the NumberInput.
+Acme UI exports 5 components for the NumberInput.
 
 - `NumberInput`: The wrapper that provides context and logic to the components.
 - `NumberInputField`: The `input` field itself.

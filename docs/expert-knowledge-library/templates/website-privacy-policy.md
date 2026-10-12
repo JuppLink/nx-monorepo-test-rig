@@ -30,7 +30,7 @@ This template includes sections such as:
 
 - And more
 
-During your bounded engagement, work with your Relationship Manager and Redesign Legal Point of Contact for questions about how to best use this template.
+During your bounded engagement, work with your Relationship Manager and Acme Legal Point of Contact for questions about how to best use this template.
 
 Outside counsel should review if:
 

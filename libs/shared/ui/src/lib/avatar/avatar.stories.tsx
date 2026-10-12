@@ -30,7 +30,7 @@ export const Basic = () => (
 
 /**
  * You can use a custom generic avatar instead of
- * what we have in Redesign UI.
+ * what we have in Acme UI.
  */
 const GenericAvatar = (props: PropsOf<'svg'>) => (
   <svg

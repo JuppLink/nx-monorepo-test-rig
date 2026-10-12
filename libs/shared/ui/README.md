@@ -1,6 +1,6 @@
 # @acmehealth/ui — Shared UI Library
 
-The Redesign Health component library for React, built on top of [Chakra UI v3](https://www.chakra-ui.com). Consumed by `apps/portal` and other frontend applications in this monorepo.
+The Acme Health component library for React, built on top of [Chakra UI v3](https://www.chakra-ui.com). Consumed by `apps/portal` and other frontend applications in this monorepo.
 
 ## Documentation & Storybook
 

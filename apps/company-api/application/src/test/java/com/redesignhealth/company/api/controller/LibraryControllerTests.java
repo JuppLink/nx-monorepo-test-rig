@@ -61,7 +61,7 @@ import com.acmehealth.company.api.repository.ContentRepository;
 import com.acmehealth.company.api.repository.LibraryRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
 import com.acmehealth.company.api.scaffolding.DocUtils;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.LibraryContentService;
 import com.acmehealth.company.api.service.LibraryService;
 import java.util.Arrays;
@@ -162,7 +162,7 @@ class LibraryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER)
   public void testSearchTopics_success() throws Exception {
     var command =
         SearchCommand.builder()
@@ -198,7 +198,7 @@ class LibraryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testUpsertTopic_success() throws Exception {
     var topic = testTopic();
     when(googleDriveLambdaClient.getDocument(topic.getId(), TEXT_PLAIN))
@@ -245,7 +245,7 @@ class LibraryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER)
   public void testGetTopic_success() throws Exception {
     var topic = testTopic();
     when(googleDriveLambdaClient.getDocument(topic.getId(), TEXT_HTML))
@@ -283,7 +283,7 @@ class LibraryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testGetTopic_handleMissing() throws Exception {
     var topic = testTopic();
     when(searchService.get(
@@ -299,7 +299,7 @@ class LibraryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testGetLibraries_success() throws Exception {
     var pageable = PageRequest.of(0, 20, Sort.Direction.ASC, "displayName");
     when(libraryRepository.findAll(pageable))
@@ -320,7 +320,7 @@ class LibraryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testGetLibrary_success() throws Exception {
     var libraryData = testLibrary();
     when(libraryRepository.findByApiId(library.getApiId())).thenReturn(Optional.of(libraryData));
@@ -331,7 +331,7 @@ class LibraryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testGetLibrary_NotFound() throws Exception {
     when(libraryRepository.findByApiId(library.getApiId())).thenReturn(Optional.empty());
     mockMvc
@@ -340,7 +340,7 @@ class LibraryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testCreateLibrary_success() throws Exception {
     mockMvc
         .perform(
@@ -363,7 +363,7 @@ class LibraryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testCreateLibrary_displayNameRequired() throws Exception {
     mockMvc
         .perform(post("/library").contentType(MediaType.APPLICATION_JSON).content("{}"))
@@ -373,7 +373,7 @@ class LibraryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER)
   public void testGetContentByLibrary_LibraryNotFound() throws Exception {
     when(libraryRepository.existsByApiId(library.getApiId())).thenReturn(false);
 
@@ -383,7 +383,7 @@ class LibraryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER)
   public void testGetContentByLibrary_success() throws Exception {
     var content = testLibraryContent(TEST_PARENT_ID);
     when(libraryRepository.existsByApiId(library.getApiId())).thenReturn(true);

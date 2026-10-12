@@ -7,7 +7,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.acmehealth.company.api.entity.request.RoleAuthority;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -25,7 +25,7 @@ public class RoleControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_SUPER_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_SUPER_ADMIN)
   public void testList_returnsAll() throws Exception {
     mockMvc
         .perform(get("/role"))
@@ -38,7 +38,7 @@ public class RoleControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_SUPER_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_SUPER_ADMIN)
   public void testMeRoles_returnsAllForSuperMinusContractor() throws Exception {
     mockMvc
         .perform(get("/me/role"))
@@ -50,7 +50,7 @@ public class RoleControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testMeRoles_returnsSomeForAdmin() throws Exception {
     mockMvc
         .perform(get("/me/role"))

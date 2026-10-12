@@ -75,7 +75,7 @@ G --> I["proxy.conf.json<br/>Dev Proxy"]
 - Providers and initialization:
   - Google OAuth provider for authentication.
   - React Query provider with a singleton QueryClient.
-  - RedesignHealth UI provider with theme.
+  - AcmeHealth UI provider with theme.
   - Analytics and Hotjar initialization via environment variables.
 - App component:
   - Helmet for SEO title management.
@@ -310,7 +310,7 @@ Solution --> Module["/library/:solutionId/module/:moduleId"]
 
 ### Component Architecture and Styling
 - UI framework:
-  - RedesignHealth UI provider supplies theme and components.
+  - AcmeHealth UI provider supplies theme and components.
 - Responsive design:
   - Layout uses responsive breakpoints to show/hide navigation and scroll containers.
 - Styling approach:

@@ -59,7 +59,7 @@ import com.acmehealth.company.api.repository.ContentRepository;
 import com.acmehealth.company.api.repository.LibraryRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
 import com.acmehealth.company.api.scaffolding.DocUtils;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.LibraryContentService;
 import java.util.List;
 import java.util.Map;
@@ -144,7 +144,7 @@ public class LibraryContentControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testCreateContent_verifyParentExists() throws Exception {
     var content = testLibraryContent(TEST_PARENT_ID);
     when(contentRepository.findByApiId(TEST_PARENT_ID)).thenReturn(Optional.empty());
@@ -170,7 +170,7 @@ public class LibraryContentControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testCreateContent_success() throws Exception {
     var content = testLibraryContent(TEST_PARENT_ID);
     when(contentRepository.findByApiId(TEST_PARENT_ID))
@@ -224,7 +224,7 @@ public class LibraryContentControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testUpdateContent_notFound() throws Exception {
     var content = testLibraryContent(null);
     when(contentRepository.findByApiId(content.getApiId())).thenReturn(Optional.empty());
@@ -244,7 +244,7 @@ public class LibraryContentControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testUpdateContent_parentCannotReferenceSelf() throws Exception {
     var content = testLibraryContent(null);
     when(contentRepository.findByApiId(content.getApiId())).thenReturn(Optional.of(content));
@@ -269,7 +269,7 @@ public class LibraryContentControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testUpdateContent_success() throws Exception {
     var content = testLibraryContent(null);
     when(contentRepository.findByApiId(content.getApiId())).thenReturn(Optional.of(content));
@@ -322,7 +322,7 @@ public class LibraryContentControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testGetContent_notFound() throws Exception {
     when(contentRepository.findByApiId(ContentRef.of(TEST_LIBRARY_CONTENT_ID)))
         .thenReturn(Optional.empty());
@@ -332,7 +332,7 @@ public class LibraryContentControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testGetContent_success() throws Exception {
     var content = testLibraryContent(TEST_PARENT_ID);
     when(contentRepository.findByApiId(ContentRef.of(TEST_LIBRARY_CONTENT_ID)))
@@ -369,7 +369,7 @@ public class LibraryContentControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testQueryContent_success() throws Exception {
     var content = testLibraryContent(TEST_PARENT_ID);
     when(contentRepository.findByApiId(ContentRef.of(TEST_LIBRARY_CONTENT_ID)))
@@ -426,7 +426,7 @@ public class LibraryContentControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testAppendChild_success() throws Exception {
     var content = testLibraryContent(null);
     when(contentRepository.findByApiId(TEST_PARENT_ID))
@@ -442,7 +442,7 @@ public class LibraryContentControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testDelete_success() throws Exception {
     var content = testLibraryContent(null);
     when(contentRepository.findByApiId(TEST_PARENT_ID))

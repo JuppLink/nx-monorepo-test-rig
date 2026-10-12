@@ -166,7 +166,7 @@ export const CompanyInfraPrivacy = () => {
             </DrawerFormHeader>
             <DrawerFormDescription data-testid="q1-a-desc">
               Will the service be collecting any personal information about your
-              employees, your contractors, Redesign Health Employees, customers,
+              employees, your contractors, Acme Health Employees, customers,
               partners, patients or anyone else who would be part of the system?
               Select one response.
             </DrawerFormDescription>
@@ -247,7 +247,7 @@ export const CompanyInfraPrivacy = () => {
             </DrawerFormHeader>
             <DrawerFormDescription data-testid="q3-a-desc">
               Will the service be collecting any financial information about
-              your company, Redesign Health, your partners, your patients, your
+              your company, Acme Health, your partners, your patients, your
               employees or any other users? Select one response.
             </DrawerFormDescription>
             <DrawerFormRadioGroup
@@ -388,7 +388,7 @@ export const CompanyInfraPrivacy = () => {
             </DrawerFormHeader>
             <DrawerFormDescription data-testid="q4-a-desc">
               Will the service be collecting any additional Proprietary
-              information about your company, Redesign Health, your partners,
+              information about your company, Acme Health, your partners,
               your patients, your employees or any other users? Select one
               response.
             </DrawerFormDescription>

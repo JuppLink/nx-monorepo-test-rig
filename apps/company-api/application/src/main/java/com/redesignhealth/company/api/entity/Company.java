@@ -30,7 +30,7 @@ import java.util.Set;
 import lombok.Getter;
 import lombok.Setter;
 
-/** A company started by Redesign Health */
+/** A company started by Acme Health */
 @Entity
 @Getter
 @Setter

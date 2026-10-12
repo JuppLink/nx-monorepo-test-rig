@@ -28,7 +28,7 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-This document describes the shared libraries in the Redesign Health monorepo with a focus on:
+This document describes the shared libraries in the Acme Health monorepo with a focus on:
 - The Chakra UI v3 component library (@acmehealth/ui), including component exports, theming migration, and design system integration
 - The Portal data assets library providing API clients, hooks, types, and mock data for the portal application
 - The Third Party Network data assets library for advisor network features
@@ -425,7 +425,7 @@ AuthUtils --> JavaLib["AWS Secrets Manager Property Source"]
 - [AwsSecretsManagerPropertySource.java](file://libs/shared-java/data-access-aws-secrets-manager-property-source/src/main/java/com/acmehealth/property/AwsSecretsManagerPropertySource.java)
 
 ## Conclusion
-The shared libraries in the Redesign Health monorepo provide a cohesive foundation for building applications with consistent UI, reliable data access, and secure integrations. The @acmehealth/ui library modernizes the design system with Chakra UI v3, while the Portal and Third Party Network libraries offer domain-specific assets and utilities. The Java library ensures secure secret management. Following the migration and integration guidelines will help maintain backward compatibility and smooth upgrades.
+The shared libraries in the Acme Health monorepo provide a cohesive foundation for building applications with consistent UI, reliable data access, and secure integrations. The @acmehealth/ui library modernizes the design system with Chakra UI v3, while the Portal and Third Party Network libraries offer domain-specific assets and utilities. The Java library ensures secure secret management. Following the migration and integration guidelines will help maintain backward compatibility and smooth upgrades.
 
 [No sources needed since this section summarizes without analyzing specific files]
 

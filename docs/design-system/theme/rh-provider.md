@@ -1,6 +1,6 @@
-# Redesign Health UI Theme
+# Acme Health UI Theme
 
-This is a Redesign Health UI theme provider. This is a required wrapper for any Redesign UI driven app.
+This is a Acme Health UI theme provider. This is a required wrapper for any Acme UI driven app.
 
 ## Usage
 

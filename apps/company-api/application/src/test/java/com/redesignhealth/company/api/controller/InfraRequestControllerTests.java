@@ -38,7 +38,7 @@ import com.acmehealth.company.api.repository.FormDefinitionRepository;
 import com.acmehealth.company.api.repository.InfraRequestRepository;
 import com.acmehealth.company.api.repository.RequestFormRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.InfraRequestService;
 import com.acmehealth.company.api.template.TemplateGenerator;
 import java.util.List;
@@ -109,7 +109,7 @@ public class InfraRequestControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testGetRequest_404() throws Exception {
     mockMvc
         .perform(get("/infra-request/{companyId}", testCompanyRef()))
@@ -117,7 +117,7 @@ public class InfraRequestControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_CONTRACTOR, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = ROLE_OP_CO_CONTRACTOR, memberOf = TEST_COMPANY_ID)
   public void testGetRequest_returnsRequest() throws Exception {
     var company = testCompany();
     var infraRequest =
@@ -148,7 +148,7 @@ public class InfraRequestControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_CONTRACTOR, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = ROLE_OP_CO_CONTRACTOR, memberOf = TEST_COMPANY_ID)
   public void testGetRequest_omitsJiraTicketIfMissing() throws Exception {
     var company = testCompany();
     when(infraRequestRepository.findByCompanyApiId(company.getApiId()))
@@ -163,7 +163,7 @@ public class InfraRequestControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
   public void testUpdateRequest_handlesUnknownCompany() throws Exception {
     mockMvc
         .perform(
@@ -177,7 +177,7 @@ public class InfraRequestControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
   public void testUpdateRequest_handlesCreatingRequest() throws Exception {
     var company = testCompany();
     var infraRequest = InfrastructureRequest.builder(company).build();
@@ -204,7 +204,7 @@ public class InfraRequestControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
   public void testUpdateRequest_handlesExistingRequest() throws Exception {
     var company = testCompany();
     var infraRequest = InfrastructureRequest.builder(company).build();
@@ -223,7 +223,7 @@ public class InfraRequestControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
   public void testUpdateRequestForm_handlesMissingForm() throws Exception {
     var company = testCompany();
     var infraRequest = InfrastructureRequest.builder(company).build();
@@ -257,7 +257,7 @@ public class InfraRequestControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
   public void testUpdateRequestForm_handlesUnknownForm() throws Exception {
     var company = testCompany();
     var infraRequest = InfrastructureRequest.builder(company).build();
@@ -282,7 +282,7 @@ public class InfraRequestControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
   public void testUpdateRequestForm_handlesExistingForm() throws Exception {
     var company = testCompany();
     var infraRequest = InfrastructureRequest.builder(company).build();
@@ -307,7 +307,7 @@ public class InfraRequestControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
   public void testSubmitRequest_missingForms() throws Exception {
     var company = testCompany();
     var infraRequest = InfrastructureRequest.builder(company).build();
@@ -324,7 +324,7 @@ public class InfraRequestControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
   public void testSubmitRequest_missingCompletedForm() throws Exception {
     var company = testCompany();
     var infraRequest = InfrastructureRequest.builder(company).build();
@@ -353,7 +353,7 @@ public class InfraRequestControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
   public void testSubmitRequest_errorIfAlreadySubmitted() throws Exception {
     var company = testCompany();
     var infraRequest = InfrastructureRequest.builder(company).status(RequestStatus.PENDING).build();
@@ -372,7 +372,7 @@ public class InfraRequestControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
   public void testSubmitRequest_success() throws Exception {
     var company = testCompany();
     var infraRequest = InfrastructureRequest.builder(company).build();

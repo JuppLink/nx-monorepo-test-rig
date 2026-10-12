@@ -1,6 +1,6 @@
 # @acmehealth/shared-utils
 
-General-purpose utility functions shared across Redesign Health frontend applications.
+General-purpose utility functions shared across Acme Health frontend applications.
 
 ## Exports
 

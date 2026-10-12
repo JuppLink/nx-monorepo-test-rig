@@ -23,9 +23,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 
 @ExtendWith(MockitoExtension.class)
-public class RedesignAuthenticationFilterTests {
+public class AcmeAuthenticationFilterTests {
 
-  private RedesignAuthenticationFilter filter;
+  private AcmeAuthenticationFilter filter;
   private MockHttpServletRequest request;
   private MockHttpServletResponse response;
   @Mock private FilterChain filterChain;
@@ -33,7 +33,7 @@ public class RedesignAuthenticationFilterTests {
 
   @BeforeEach
   public void setup() {
-    filter = new RedesignAuthenticationFilter(authenticationManager);
+    filter = new AcmeAuthenticationFilter(authenticationManager);
     request = new MockHttpServletRequest();
     response = new MockHttpServletResponse();
   }
@@ -77,7 +77,7 @@ public class RedesignAuthenticationFilterTests {
     when(authenticationManager.authenticate(any()))
         .thenReturn(
             new JwtAuthentication(
-                RedesignUserDetails.from(Person.from(PersonRef.of("test@acmehealth.com")))));
+                AcmeUserDetails.from(Person.from(PersonRef.of("test@acmehealth.com")))));
     request.addHeader(HttpHeaders.AUTHORIZATION, "Bearer secret");
 
     filter.doFilter(request, response, filterChain);

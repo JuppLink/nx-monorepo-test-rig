@@ -35,7 +35,7 @@ describe('CompanyUsers', () => {
     render(<CompanyUsers />)
     expect(
       await screen.findByText(
-        `Everyone listed here has access to the Redesign Health IP Marketplace through Ever/Body's enterprise account.`
+        `Everyone listed here has access to the Acme Health IP Marketplace through Ever/Body's enterprise account.`
       )
     ).toBeInTheDocument()
   })
@@ -45,7 +45,7 @@ describe('CompanyUsers', () => {
     render(<CompanyUsers />)
     expect(
       await screen.findByText(
-        `Everyone listed here has access to the Redesign Health IP Marketplace through Ever/Body's enterprise account.`
+        `Everyone listed here has access to the Acme Health IP Marketplace through Ever/Body's enterprise account.`
       )
     ).toBeInTheDocument()
   })
@@ -55,7 +55,7 @@ describe('CompanyUsers', () => {
     render(<CompanyUsers />)
     expect(
       await screen.findByText(
-        'The individuals listed here encompass both employees that work at Ever/Body and individuals who are part of the Redesign Health team that provide customer support to Ever/Body. Contact your Relationship Manager to add new users, make edits, or update user permissions.'
+        'The individuals listed here encompass both employees that work at Ever/Body and individuals who are part of the Acme Health team that provide customer support to Ever/Body. Contact your Relationship Manager to add new users, make edits, or update user permissions.'
       )
     ).toBeInTheDocument()
   })

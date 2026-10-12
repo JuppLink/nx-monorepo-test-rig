@@ -2,7 +2,7 @@ package com.acmehealth.company.api.security;
 
 import com.acmehealth.company.api.entity.ref.PersonRef;
 import com.acmehealth.company.api.entity.request.RoleAuthority;
-import com.acmehealth.company.api.service.RedesignUserDetailsService;
+import com.acmehealth.company.api.service.AcmeUserDetailsService;
 import org.springframework.security.authentication.AccountExpiredException;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.InsufficientAuthenticationException;
@@ -16,10 +16,10 @@ import org.springframework.stereotype.Component;
 public class JwtAuthenticationProvider implements AuthenticationProvider {
 
   private final JwtService jwtService;
-  private final RedesignUserDetailsService acmeUserDetailsService;
+  private final AcmeUserDetailsService acmeUserDetailsService;
 
   public JwtAuthenticationProvider(
-      JwtService jwtService, RedesignUserDetailsService acmeUserDetailsService) {
+      JwtService jwtService, AcmeUserDetailsService acmeUserDetailsService) {
     this.jwtService = jwtService;
     this.acmeUserDetailsService = acmeUserDetailsService;
   }
@@ -46,7 +46,7 @@ public class JwtAuthenticationProvider implements AuthenticationProvider {
     return new JwtAuthentication(principal);
   }
 
-  private RedesignUserDetails reconcilePrincipal(
+  private AcmeUserDetails reconcilePrincipal(
       PersonRef jwtEmail, PersonRef impersonationRequest) {
     var personMakingRequest = acmeUserDetailsService.loadUserByUsername(jwtEmail);
 

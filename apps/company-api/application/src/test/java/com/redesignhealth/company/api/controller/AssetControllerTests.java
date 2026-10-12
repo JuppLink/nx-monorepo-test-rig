@@ -15,7 +15,7 @@ import com.acmehealth.company.api.client.file.RemoteFileUploader;
 import com.acmehealth.company.api.client.file.dto.RemoteFile;
 import com.acmehealth.company.api.entity.request.RoleAuthority;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.AssetService;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
@@ -52,7 +52,7 @@ class AssetControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER)
   public void testCreate_success() throws Exception {
     when(remoteFileUploader.upload(
             mockFile.getOriginalFilename(), mockFile.getBytes(), mockFile.getContentType()))
@@ -77,7 +77,7 @@ class AssetControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testCreate_uploaderException() throws Exception {
     when(remoteFileUploader.upload(any(), any(), any()))
         .thenThrow(S3Exception.builder().statusCode(403).message("Access denied").build());

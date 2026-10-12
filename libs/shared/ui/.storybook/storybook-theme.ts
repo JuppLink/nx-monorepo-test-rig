@@ -6,7 +6,7 @@ export default create({
   base: 'light',
   colorPrimary: '#B540EC',
   colorSecondary: '#9425C9',
-  brandTitle: 'Redesign Health',
+  brandTitle: 'Acme Health',
   brandUrl: 'https://github.com/acmehealth/rh-design-system',
   brandImage: brandImage
 })

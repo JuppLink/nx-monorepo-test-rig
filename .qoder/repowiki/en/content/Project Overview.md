@@ -36,7 +36,7 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-Redesign Health is a healthcare-focused platform designed to connect companies, vendors, researchers, and stakeholders through a unified digital portal. The Nx monorepo serves as the foundational workspace that orchestrates frontend applications, backend services, and shared libraries. Its mission is to streamline collaboration, accelerate innovation, and provide a scalable foundation for health-tech ecosystems by offering a cohesive set of tools, design systems, and reusable components.
+Acme Health is a healthcare-focused platform designed to connect companies, vendors, researchers, and stakeholders through a unified digital portal. The Nx monorepo serves as the foundational workspace that orchestrates frontend applications, backend services, and shared libraries. Its mission is to streamline collaboration, accelerate innovation, and provide a scalable foundation for health-tech ecosystems by offering a cohesive set of tools, design systems, and reusable components.
 
 Key value propositions:
 - Unified access to company profiles, vendor listings, IP marketplace, research hub, and community features
@@ -369,7 +369,7 @@ Common issues and resolutions:
 - [apps/api-server/src/main.ts:18-30](file://apps/api-server/src/main.ts#L18-L30)
 
 ## Conclusion
-The Redesign Health Nx monorepo delivers a scalable, developer-friendly platform for the healthcare ecosystem. By combining modern frontend technologies, a robust backend mock server, and a comprehensive shared design system, it accelerates feature delivery while maintaining consistency and quality. The architecture supports independent evolution of applications and libraries, enabling teams to collaborate efficiently and iterate rapidly.
+The Acme Health Nx monorepo delivers a scalable, developer-friendly platform for the healthcare ecosystem. By combining modern frontend technologies, a robust backend mock server, and a comprehensive shared design system, it accelerates feature delivery while maintaining consistency and quality. The architecture supports independent evolution of applications and libraries, enabling teams to collaborate efficiently and iterate rapidly.
 
 [No sources needed since this section summarizes without analyzing specific files]
 

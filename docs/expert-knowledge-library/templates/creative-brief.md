@@ -1,6 +1,6 @@
 ---
 cardTitle: 'Creative Brief Template'
-description: Please work with your Relationship Manager and Redesign Points of Contact for questions about how to use this checklist during the course of your bounded engagements.
+description: Please work with your Relationship Manager and Acme Points of Contact for questions about how to use this checklist during the course of your bounded engagements.
 labels:
   - template
 googleDocId: 109qgSf2JwzqoisaxLuhRNs2-fCAYoPRomKd5kEIKb9A

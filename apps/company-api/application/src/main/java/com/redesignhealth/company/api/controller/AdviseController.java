@@ -2,7 +2,7 @@ package com.acmehealth.company.api.controller;
 
 import com.acmehealth.company.api.dto.AdviseTokenExchangeSummary;
 import com.acmehealth.company.api.openapi.IncludeSecurityHeaders;
-import com.acmehealth.company.api.security.RedesignUserDetails;
+import com.acmehealth.company.api.security.AcmeUserDetails;
 import com.acmehealth.company.api.service.AdviseService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
@@ -31,7 +31,7 @@ public class AdviseController {
   @PostMapping("/token-exchange")
   @PreAuthorize("@authChecks.hasRoleOrHigher(authentication, 'ROLE_OP_CO_USER')")
   public AdviseTokenExchangeSummary tokenExchange(Authentication auth) {
-    var userDetails = (RedesignUserDetails) auth.getPrincipal();
+    var userDetails = (AcmeUserDetails) auth.getPrincipal();
     log.info("token exchange for {}", userDetails.getUsername());
 
     var accessToken = adviseService.getAccessToken();

@@ -33,7 +33,7 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-This document describes the frontend applications in the Redesign Health monorepo. It focuses on:
+This document describes the frontend applications in the Acme Health monorepo. It focuses on:
 - The Portal application (Next.js + React 19), covering routing, state management via React Query, and authentication flow.
 - The Third Party Network application for advisor-facing features.
 - Several chat proof-of-concept applications integrating Comet Chat, Rocket.Chat, and Sendbird.

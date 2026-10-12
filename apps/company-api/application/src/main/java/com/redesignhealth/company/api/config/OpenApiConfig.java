@@ -1,6 +1,6 @@
 package com.acmehealth.company.api.config;
 
-import static com.acmehealth.company.api.security.RedesignAuthenticationFilter.IMPERSONATION_HEADER;
+import static com.acmehealth.company.api.security.AcmeAuthenticationFilter.IMPERSONATION_HEADER;
 
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;

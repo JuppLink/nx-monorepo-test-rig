@@ -247,7 +247,7 @@ References:
 The application depends on:
 - React and ReactDOM for rendering
 - Emotion for styling
-- RedesignHealth UI primitives (Box)
+- AcmeHealth UI primitives (Box)
 - Sendbird UIKit React components and provider
 - Vite for build and dev server
 

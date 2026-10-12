@@ -5,7 +5,7 @@ import { HStack } from '../h-stack/h-stack'
 import { VStack } from '../v-stack/v-stack'
 
 import { Logo } from './logo'
-import { RedesignHealthPrismIcon } from './acme-health-prism'
+import { AcmeHealthPrismIcon } from './acme-health-prism'
 
 export default {
   component: Logo,
@@ -57,7 +57,7 @@ export const OnColoredBackground: StoryFn<typeof Logo> = () => (
 
 export const WithPrismIcon: StoryFn = () => (
   <HStack gap="6" align="center">
-    <RedesignHealthPrismIcon boxSize="8" />
+    <AcmeHealthPrismIcon boxSize="8" />
     <Logo height="8" />
   </HStack>
 )

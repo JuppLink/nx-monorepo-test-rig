@@ -3,23 +3,23 @@ package com.acmehealth.company.api.service;
 import com.acmehealth.company.api.entity.ref.PersonRef;
 import com.acmehealth.company.api.expansion.Expansion;
 import com.acmehealth.company.api.repository.PersonRepository;
-import com.acmehealth.company.api.security.RedesignUserDetails;
+import com.acmehealth.company.api.security.AcmeUserDetails;
 import org.springframework.security.authentication.InsufficientAuthenticationException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RedesignUserDetailsService {
+public class AcmeUserDetailsService {
 
   private final PersonRepository personRepository;
 
-  public RedesignUserDetailsService(PersonRepository personRepository) {
+  public AcmeUserDetailsService(PersonRepository personRepository) {
     this.personRepository = personRepository;
   }
 
-  public RedesignUserDetails loadUserByUsername(PersonRef username) {
+  public AcmeUserDetails loadUserByUsername(PersonRef username) {
     return personRepository
         .findByEmail(username, Expansion.MEMBER_OF)
-        .map(RedesignUserDetails::from)
+        .map(AcmeUserDetails::from)
         .orElseThrow(() -> unknownEmail(username));
   }
 

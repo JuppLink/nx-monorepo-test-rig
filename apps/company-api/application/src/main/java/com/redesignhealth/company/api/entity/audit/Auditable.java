@@ -12,7 +12,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 /**
  * Centralized logic to attach audit fields to database tables
  *
- * @see RedesignAuditorAware for how {@link CreatedBy} and {@link LastModifiedBy} are hydrated
+ * @see AcmeAuditorAware for how {@link CreatedBy} and {@link LastModifiedBy} are hydrated
  */
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)

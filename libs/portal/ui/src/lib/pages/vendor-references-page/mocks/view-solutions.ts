@@ -1152,7 +1152,7 @@ export const viewAllSolutions = {
       id: 'QEWifixv',
       title: 'MSO/PC Structure Fireside Chat for CEOs',
       description:
-        'Chat and Q&A with Redesign Health and Industry Experts (May 4, 2023)',
+        'Chat and Q&A with Acme Health and Industry Experts (May 4, 2023)',
       type: {
         displayName: 'Article',
         value: 'ARTICLE'

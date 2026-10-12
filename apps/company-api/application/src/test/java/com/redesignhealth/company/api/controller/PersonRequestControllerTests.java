@@ -24,7 +24,7 @@ import com.acmehealth.company.api.property.JiraRequestProperties;
 import com.acmehealth.company.api.repository.CompanyRepository;
 import com.acmehealth.company.api.repository.PersonRequestRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.PersonRequestService;
 import java.util.List;
 import java.util.Set;
@@ -76,7 +76,7 @@ public class PersonRequestControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testRequestPerson_handlesUnknownCompany() throws Exception {
     var companiesRequested = List.of("unknown-company", "ever-body");
     var command =
@@ -103,7 +103,7 @@ public class PersonRequestControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testRequestPerson_success() throws Exception {
     var companiesRequested = List.of("ever-body");
     var rolesRequested = List.of(RoleAuthority.ROLE_RH_ADMIN);

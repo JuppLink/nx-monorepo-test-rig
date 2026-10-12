@@ -1,6 +1,6 @@
 # Platform Portal
 
-The main React single-page application for the Redesign Health platform. Built with Vite, React 19, React Router v6, Chakra UI v3, and React Query.
+The main React single-page application for the Acme Health platform. Built with Vite, React 19, React Router v6, Chakra UI v3, and React Query.
 
 ## Running Locally
 

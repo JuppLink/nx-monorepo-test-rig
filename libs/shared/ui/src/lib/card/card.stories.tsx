@@ -223,7 +223,7 @@ export const Advanced = () => (
 
         <Box flex="1">
           <Heading size="sm">Platform and Data Team</Heading>
-          <Text>Creator, Redesign UI</Text>
+          <Text>Creator, Acme UI</Text>
         </Box>
         <IconButton
           variant="ghost"
@@ -235,7 +235,7 @@ export const Advanced = () => (
     </CardHeader>
     <CardBody>
       <Text>
-        With Redesign UI, we wanted to sync the speed of development with the
+        With Acme UI, we wanted to sync the speed of development with the
         speed of design. we wanted the developer to be just as excited as the
         designer to create a screen.
       </Text>
@@ -243,7 +243,7 @@ export const Advanced = () => (
     <Image
       objectFit="cover"
       src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-      alt="Redesign UI"
+      alt="Acme UI"
     />
 
     <CardFooter justify="space-between">

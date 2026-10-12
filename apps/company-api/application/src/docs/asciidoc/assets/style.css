@@ -29,7 +29,7 @@ h1, h2, h3, #toctitle, .sidebarblock>.content>.title, h4, h5, h6 {
   color: var(--heading);
 }
 
-/* Hack to add Redesign Logo */
+/* Hack to add Acme Logo */
 #toc:before {
   content: ' ';
   background: url("/public/docs/assets/logo.png");

@@ -37,7 +37,7 @@ import com.acmehealth.company.api.entity.vendor.Vendor;
 import com.acmehealth.company.api.repository.PersonRepository;
 import com.acmehealth.company.api.repository.VendorRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.SubcategoryService;
 import com.acmehealth.company.api.service.VendorService;
 import java.util.List;
@@ -79,7 +79,7 @@ public class VendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testGetVendors_Get_One_For_q_parameter_And_Filter() throws Exception {
     var vendor = testVendor(testCompanyVendor());
     vendor.setSubcategories(Set.of(testSubcategory("Subcategory", testCategory("Infrastructure"))));
@@ -112,7 +112,7 @@ public class VendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_USER)
+  @WithAcmeUser(role = ROLE_RH_USER)
   public void testQuery_hide_vendor_PoC_for_OpCo_user() throws Exception {
     var vendor = testVendor(testCompanyVendor());
     vendor.setSubcategories(Set.of(testSubcategory("Subcategory", testCategory("Infrastructure"))));
@@ -126,7 +126,7 @@ public class VendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN, email = "adminUser@acmehealth.com")
+  @WithAcmeUser(role = ROLE_RH_ADMIN, email = "adminUser@acmehealth.com")
   public void testCreateVendorData_Is_OK_First_Time() throws Exception {
     var vendor = testVendor(testCompanyVendor());
     when(vendorRepository.save(ArgumentMatchers.any(Vendor.class))).thenReturn(vendor);
@@ -195,7 +195,7 @@ public class VendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN, email = "adminUser@acmehealth.com")
+  @WithAcmeUser(role = ROLE_RH_ADMIN, email = "adminUser@acmehealth.com")
   public void testCreateVendorData_Data_Should_Be_Created_If_Subcategory_Info_Is_Not_Defined()
       throws Exception {
     var person = testPerson(ROLE_RH_ADMIN);
@@ -235,7 +235,7 @@ public class VendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreateVendorData_422s_Vendor_Name_Duplicated() throws Exception {
 
     when(vendorRepository.existsByName("Boomset")).thenReturn(true);
@@ -266,7 +266,7 @@ public class VendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreateVendorData_Should_Fail_If_Subcategories_Is_Not_Sent() throws Exception {
 
     var payload =
@@ -292,7 +292,7 @@ public class VendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN, email = "adminUser@acmehealth.com")
+  @WithAcmeUser(role = ROLE_RH_ADMIN, email = "adminUser@acmehealth.com")
   public void testUpdateVendorData_Is_OK() throws Exception {
     var vendor = testVendor(testCompanyVendor());
     when(vendorRepository.findByApiId(vendor.getApiId())).thenReturn(Optional.of(vendor));
@@ -368,7 +368,7 @@ public class VendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testGet_okay() throws Exception {
     var vendor = testVendor(testCompanyVendor());
     when(vendorRepository.findByApiId(vendor.getApiId())).thenReturn(Optional.of(vendor));
@@ -398,7 +398,7 @@ public class VendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testGet_not_found() throws Exception {
     var vendor = testVendor(testCompanyVendor());
     when(vendorRepository.findByApiId(vendor.getApiId())).thenReturn(Optional.empty());
@@ -406,7 +406,7 @@ public class VendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testDelete_is_okay() throws Exception {
     var vendor = testVendor();
     when(vendorRepository.findByApiId(vendor.getApiId())).thenReturn(Optional.of(vendor));

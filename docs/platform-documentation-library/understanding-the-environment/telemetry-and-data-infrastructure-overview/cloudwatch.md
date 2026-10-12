@@ -20,7 +20,7 @@ CloudWatch collects monitoring and operational data in the form of logs, metrics
 
 ## Benefits
 
-CloudWatch provides the following benefits when used as part of the Redesign Platform infrastructure:
+CloudWatch provides the following benefits when used as part of the Acme Platform infrastructure:
 
 * the recommended first offering for logging and events
 * easy integration with other AWS solutions

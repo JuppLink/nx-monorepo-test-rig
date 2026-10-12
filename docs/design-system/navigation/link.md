@@ -23,14 +23,14 @@ import { ExternalLinkIcon, Link } from '@acmehealth/ui'
 ## Usage
 
 ```jsx
-<Link>Redesign UI</Link>
+<Link>Acme UI</Link>
 ```
 
 ### External Link
 
 ```jsx
 <Link href="https://acmehealth.com" isExternal>
-  Redesign Health design system <ExternalLinkIcon mx="2px" />
+  Acme Health design system <ExternalLinkIcon mx="2px" />
 </Link>
 ```
 
@@ -79,9 +79,9 @@ Next.js `Link` component and pass the `passHref` prop. `passHref` Forces Next.js
 
 As of Next.js 13, the `Link` component directly renders an `a` element,
 therefore its child can no longer be another `a` element. One way to use the new
-`Link` component with Redesign UI's `Link` component is to pass a `legacyBehavior`
+`Link` component with Acme UI's `Link` component is to pass a `legacyBehavior`
 prop to the Next.js's link to opt out of the new behavior, and also the
-`passHref` prop to pass down the `href` to the Redesign UI link:
+`passHref` prop to pass down the `href` to the Acme UI link:
 
 ```jsx
 import NextLink from 'next/link'
@@ -95,19 +95,19 @@ import { Link, Heading } from '@acmehealth/ui'
 ```
 
 Another way to style the new Next.js `Link` component is to create a custom
-component using the Redesign UI Factory function:
+component using the Acme UI Factory function:
 
 ```jsx
 import NextLink, { type LinkProps as NextLinkProps } from 'next/link'
 import { rh } from '@acmehealth/ui'
 
-// wrap the NextLink with Redesign UI's factory function
+// wrap the NextLink with Acme UI's factory function
 const MagicLink = rh<typeof NextLink, NextLinkProps>(NextLink, {
   // ensure that you're forwarding all of the required props for your case
   shouldForwardProp: (prop) => ['href', 'target', 'children', ...].includes(prop),
 })
 
-// use the MagicLink just like you'd use the ordinary Redesign UI link
+// use the MagicLink just like you'd use the ordinary Acme UI link
 <MagicLink
   href='...'
   color='...'

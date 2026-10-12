@@ -29,7 +29,7 @@ import com.acmehealth.company.api.exception.CategoryNotFoundException;
 import com.acmehealth.company.api.expansion.Expansion;
 import com.acmehealth.company.api.repository.CategoryRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.CategoryService;
 import java.util.List;
 import java.util.Optional;
@@ -67,7 +67,7 @@ public class CategoryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestGetAll_Only_Data_In_Category_Entity() throws Exception {
     var category = testCategory();
     when(categoryRepository.findAll(ArgumentMatchers.<Specification<Category>>any()))
@@ -86,7 +86,7 @@ public class CategoryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestGetOne_Existent() throws Exception {
     var categoryId = "category_ref";
     var categoryRef = CategoryRef.of(categoryId);
@@ -107,7 +107,7 @@ public class CategoryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestGetOne_Not_Existent() throws Exception {
     mockMvc
         .perform(get("/categories/category_ref"))
@@ -118,7 +118,7 @@ public class CategoryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestUpdate_Ok() throws Exception {
     var categoryId = "category_ref";
     var categoryRef = CategoryRef.of(categoryId);
@@ -144,7 +144,7 @@ public class CategoryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestUpdate_404() throws Exception {
     var categoryId = "category_ref";
     var update = CategoryCommand.of("infra2");
@@ -160,7 +160,7 @@ public class CategoryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestUpdate_422_Null() throws Exception {
     var categoryId = "category_ref";
     var update = new CategoryCommand();
@@ -178,7 +178,7 @@ public class CategoryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestUpdate_422_Blank() throws Exception {
     var categoryId = "category_ref";
     var update = CategoryCommand.of("");
@@ -195,7 +195,7 @@ public class CategoryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestDelete_404() throws Exception {
     var categoryId = "category_ref";
     mockMvc
@@ -207,7 +207,7 @@ public class CategoryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestDelete_Ok() throws Exception {
     var categoryId = "category_ref";
     var categoryRef = CategoryRef.of(categoryId);
@@ -219,7 +219,7 @@ public class CategoryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestCreate_Ok() throws Exception {
     var create = CategoryCommand.of("infra2");
 
@@ -238,7 +238,7 @@ public class CategoryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestCreate_422_Null() throws Exception {
     var create = new CategoryCommand();
 
@@ -255,7 +255,7 @@ public class CategoryControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestCreate_422_Blank() throws Exception {
     var create = CategoryCommand.of("");
 

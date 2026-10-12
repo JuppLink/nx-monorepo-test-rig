@@ -13,14 +13,14 @@ This section provides an overview of the infrastructure components and set up. I
 
 ## Infrastructure offering
 
-Redesign Health provides infrastructure to companies as a tailored offering to meet initial development needs with the ability to grow and pivot as companies evolve.
+Acme Health provides infrastructure to companies as a tailored offering to meet initial development needs with the ability to grow and pivot as companies evolve.
 
 As part of the onboarding process, you will complete two questionnaires:
 
 * Tech Stack questionnaire - The member of your team who will manage the technical infrastructure should complete this survey and identify the infrastructure components that you want to use as part of your tech stack.
 * Privacy questionnaire - Complete this survey to identify the types of data your company will be accessing or storing.
 
-The Innovation Platform team collaborates with your company to configure a technical infrastructure based on the options you selected and in the specific context of your company technical and privacy requirements. The Platform team provides a high-level analysis as needed and compares that to Redesign offerings to ensure that your company gets an infrastructure that works for you.
+The Innovation Platform team collaborates with your company to configure a technical infrastructure based on the options you selected and in the specific context of your company technical and privacy requirements. The Platform team provides a high-level analysis as needed and compares that to Acme offerings to ensure that your company gets an infrastructure that works for you.
 
 This infrastructure can include multiple environments and tools to allow your company to begin development as soon as it has an engineering team.
 
@@ -55,7 +55,7 @@ Terraform modules are reusable, self-contained packages of Terraform configurati
 
 A Terraform module can be thought of as a set of Terraform resources that are grouped together into a single logical unit, with well-defined inputs and outputs. Modules are used to encapsulate infrastructure logic and make it easier to manage and reuse infrastructure code across different projects and teams.
 
-Redesign Health modules provides these modules through GitHub repositories created for your company. You can update or modify these modules to meet your specific use case.
+Acme Health modules provides these modules through GitHub repositories created for your company. You can update or modify these modules to meet your specific use case.
 
 - The **tf-modules** repository includes reusable components that can be individually modified.
 - The **tf-infrastructure** repository includes parent terraforms scripts.

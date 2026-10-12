@@ -32,7 +32,7 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-This document explains the development tools and custom generators in the Redesign Health monorepo. It covers the Nx workspace configuration, project generation capabilities, build orchestration, and the forgekit-nx-storybook plugin for automated Storybook story generation, component testing, and accessibility auditing. It also documents the OpenAPI client generator for creating TypeScript clients from API specifications, VS Code extension recommendations, Nx Console integration, and development workflow optimization tools. Code quality tools such as ESLint and Prettier are documented alongside Storybook integration, design system maintenance, and component documentation workflows.
+This document explains the development tools and custom generators in the Acme Health monorepo. It covers the Nx workspace configuration, project generation capabilities, build orchestration, and the forgekit-nx-storybook plugin for automated Storybook story generation, component testing, and accessibility auditing. It also documents the OpenAPI client generator for creating TypeScript clients from API specifications, VS Code extension recommendations, Nx Console integration, and development workflow optimization tools. Code quality tools such as ESLint and Prettier are documented alongside Storybook integration, design system maintenance, and component documentation workflows.
 
 ## Project Structure
 The repository is an Nx workspace with a monorepo layout containing applications, libraries, tools, and documentation. Key areas:
@@ -316,7 +316,7 @@ OPENAPI --> TS
 - [package.json:26-30](file://package.json#L26-L30)
 
 ## Conclusion
-The Redesign Health monorepo leverages Nx for robust orchestration, forgekit-nx-storybook for automated Storybook story generation and component testing, and a custom OpenAPI client generator for type-safe API consumption. Combined with ESLint and Prettier, these tools streamline development, improve code quality, and accelerate component documentation and design system maintenance.
+The Acme Health monorepo leverages Nx for robust orchestration, forgekit-nx-storybook for automated Storybook story generation and component testing, and a custom OpenAPI client generator for type-safe API consumption. Combined with ESLint and Prettier, these tools streamline development, improve code quality, and accelerate component documentation and design system maintenance.
 
 [No sources needed since this section summarizes without analyzing specific files]
 

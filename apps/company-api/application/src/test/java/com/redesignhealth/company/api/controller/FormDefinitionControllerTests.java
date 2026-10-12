@@ -20,7 +20,7 @@ import com.acmehealth.company.api.entity.FormDefinition;
 import com.acmehealth.company.api.entity.request.RoleAuthority;
 import com.acmehealth.company.api.repository.FormDefinitionRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.FormDefinitionService;
 import java.util.Optional;
 import org.hamcrest.Matchers;
@@ -56,7 +56,7 @@ public class FormDefinitionControllerTests {
   }
 
   @Test
-  @WithRedesignUser
+  @WithAcmeUser
   void testGet_returnsDefinition() throws Exception {
     var definition = testFormDefinition(PRIVACY_QUESTIONNAIRE);
     when(formDefinitionRepository.findByType(PRIVACY_QUESTIONNAIRE))
@@ -73,7 +73,7 @@ public class FormDefinitionControllerTests {
   }
 
   @Test
-  @WithRedesignUser
+  @WithAcmeUser
   void testGet_returns404() throws Exception {
     var definition = testFormDefinition(PRIVACY_QUESTIONNAIRE);
     when(formDefinitionRepository.findByType(PRIVACY_QUESTIONNAIRE)).thenReturn(Optional.empty());
@@ -87,7 +87,7 @@ public class FormDefinitionControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   void testPut_addsDefinition() throws Exception {
     when(formDefinitionRepository.findByType(PRIVACY_QUESTIONNAIRE)).thenReturn(Optional.empty());
     when(formDefinitionRepository.save(any(FormDefinition.class))).then(returnsFirstArg());

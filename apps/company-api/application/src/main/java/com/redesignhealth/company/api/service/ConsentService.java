@@ -8,7 +8,7 @@ import com.acmehealth.company.api.exception.ConsentNotFoundException;
 import com.acmehealth.company.api.exception.PersonNotFoundException;
 import com.acmehealth.company.api.repository.ConsentRepository;
 import com.acmehealth.company.api.repository.PersonRepository;
-import com.acmehealth.company.api.security.RedesignUserDetails;
+import com.acmehealth.company.api.security.AcmeUserDetails;
 import jakarta.transaction.Transactional;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -44,7 +44,7 @@ public class ConsentService {
 
   public Person getPrincipal() {
     var userDetails =
-        (RedesignUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        (AcmeUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     return personRepository
         .findByEmail(PersonRef.of(userDetails.getUsername()))
         .orElseThrow(PersonNotFoundException::new);

@@ -14,15 +14,15 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-public class RedesignAuthenticationFilter extends OncePerRequestFilter {
-  private static final Logger logger = LoggerFactory.getLogger(RedesignAuthenticationFilter.class);
+public class AcmeAuthenticationFilter extends OncePerRequestFilter {
+  private static final Logger logger = LoggerFactory.getLogger(AcmeAuthenticationFilter.class);
 
   private final AuthenticationManager authenticationManager;
 
   public static final String IMPERSONATION_HEADER = "RH-Impersonation-Email";
   public static final String GOOGLE_ACCESS_TOKEN_HEADER = "RH-Google-Access-Token";
 
-  public RedesignAuthenticationFilter(AuthenticationManager authenticationManager) {
+  public AcmeAuthenticationFilter(AuthenticationManager authenticationManager) {
     this.authenticationManager = authenticationManager;
   }
 

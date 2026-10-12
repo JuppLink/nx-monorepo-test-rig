@@ -14,7 +14,7 @@ import com.acmehealth.company.api.dto.SearchFilter;
 import com.acmehealth.company.api.entity.request.RoleAuthority;
 import com.acmehealth.company.api.repository.VendorRepository;
 import com.acmehealth.company.api.security.JwtAuthentication;
-import com.acmehealth.company.api.security.RedesignUserDetails;
+import com.acmehealth.company.api.security.AcmeUserDetails;
 import java.util.List;
 import java.util.Set;
 import org.junit.jupiter.api.AfterEach;
@@ -175,7 +175,7 @@ public class VendorServiceTests {
 
   private void mockSecurityContext(RoleAuthority role) {
     Authentication authentication =
-        new JwtAuthentication(RedesignUserDetails.from(testPerson(role)));
+        new JwtAuthentication(AcmeUserDetails.from(testPerson(role)));
     SecurityContext securityContext = mock(SecurityContext.class);
     when(securityContext.getAuthentication()).thenReturn(authentication);
     SecurityContextHolder.setContext(securityContext);

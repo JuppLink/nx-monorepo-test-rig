@@ -64,7 +64,7 @@ import com.acmehealth.company.api.repository.CompanyRepository;
 import com.acmehealth.company.api.repository.PersonRepository;
 import com.acmehealth.company.api.repository.ResearchRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.ResearchService;
 import com.acmehealth.company.api.taxonomy.CompanyTaxonomy;
 import java.util.List;
@@ -123,7 +123,7 @@ class ResearchControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER, email = "new@acmehealth.com")
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER, email = "new@acmehealth.com")
   public void testQuery_returnsResults_No_Owner_No_Conflict() throws Exception {
     var command =
         SearchCommand.builder()
@@ -188,7 +188,7 @@ class ResearchControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testCreate_success() throws Exception {
     when(personRepository.existsByEmail(testPersonRef())).thenReturn(true);
     when(companyRepository.existsByApiId(testCompanyRef())).thenReturn(true);
@@ -272,7 +272,7 @@ class ResearchControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testCreate_requiredFieldsMissing() throws Exception {
     when(personRepository.existsByEmail(testPersonRef())).thenReturn(true);
     when(companyRepository.existsByApiId(testCompanyRef())).thenReturn(true);
@@ -298,7 +298,7 @@ class ResearchControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testCreate_unknownAuthor() throws Exception {
     when(personRepository.existsByEmail(testPersonRef())).thenReturn(false);
     when(companyRepository.existsByApiId(testCompanyRef())).thenReturn(true);
@@ -328,7 +328,7 @@ class ResearchControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testCreate_unknownCompany() throws Exception {
     when(personRepository.existsByEmail(testPersonRef())).thenReturn(true);
     when(companyRepository.existsByApiId(testCompanyRef())).thenReturn(false);
@@ -358,7 +358,7 @@ class ResearchControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testCreate_missingReport() throws Exception {
     when(personRepository.existsByEmail(testPersonRef())).thenReturn(true);
     when(companyRepository.existsByApiId(testCompanyRef())).thenReturn(true);
@@ -387,7 +387,7 @@ class ResearchControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER)
   public void testFilters_returnsResults() throws Exception {
     var filterOption =
         FilterOptions.builder()
@@ -415,7 +415,7 @@ class ResearchControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER)
   public void testGet_success() throws Exception {
     when(researchRepository.findByApiId(testResearchRef())).thenReturn(Optional.of(testResearch()));
     mockMvc
@@ -449,7 +449,7 @@ class ResearchControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER)
   public void testGet_unknownResearch() throws Exception {
     mockMvc
         .perform(get("/research/{researchId}", testResearchRef()))
@@ -458,7 +458,7 @@ class ResearchControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testDelete_success() throws Exception {
     when(researchRepository.findByApiId(testResearchRef())).thenReturn(Optional.of(testResearch()));
     mockMvc
@@ -468,7 +468,7 @@ class ResearchControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testDelete_unknownResearch() throws Exception {
     mockMvc
         .perform(delete("/research/{researchId}", testResearchRef()))

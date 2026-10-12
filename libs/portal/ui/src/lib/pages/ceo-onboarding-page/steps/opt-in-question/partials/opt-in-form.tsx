@@ -14,7 +14,7 @@ const OptInForm = ({ isOptIn, setIsOptIn }: OptInFormProps) => (
           value="OPT_IN"
           isChecked={isOptIn === 'OPT_IN'}
           title="Yes, I want to opt-in"
-          subtitle="By opting in to the CEO Directory, you acknowledge your participation is completely optional. You should be mindful of the information you choose to share and we recommend that you do not share any OpCo-specific private or proprietary information. Redesign Health makes no representation or warranty, express or implied, concerning the information and content shared by members of the CEO Directory."
+          subtitle="By opting in to the CEO Directory, you acknowledge your participation is completely optional. You should be mindful of the information you choose to share and we recommend that you do not share any OpCo-specific private or proprietary information. Acme Health makes no representation or warranty, express or implied, concerning the information and content shared by members of the CEO Directory."
         />
         <ButtonRadio
           value="OPT_OUT"

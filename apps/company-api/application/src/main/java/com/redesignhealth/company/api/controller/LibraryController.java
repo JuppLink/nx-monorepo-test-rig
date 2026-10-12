@@ -1,6 +1,6 @@
 package com.acmehealth.company.api.controller;
 
-import static com.acmehealth.company.api.security.RedesignAuthenticationFilter.GOOGLE_ACCESS_TOKEN_HEADER;
+import static com.acmehealth.company.api.security.AcmeAuthenticationFilter.GOOGLE_ACCESS_TOKEN_HEADER;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 
 import com.acmehealth.company.api.assembler.LibraryAssembler;

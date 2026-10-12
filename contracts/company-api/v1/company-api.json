@@ -15746,7 +15746,7 @@
           },
           "intervieweeCompany": {
             "type": "string",
-            "example": "Redesign Health"
+            "example": "Acme Health"
           },
           "type": {
             "type": "string",
@@ -15847,7 +15847,7 @@
           },
           "intervieweeCompany": {
             "type": "string",
-            "example": "Redesign Health"
+            "example": "Acme Health"
           },
           "intervieweeEmail": {
             "type": "string",

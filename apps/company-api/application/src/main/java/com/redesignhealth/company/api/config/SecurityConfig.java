@@ -3,7 +3,7 @@ package com.acmehealth.company.api.config;
 import static org.springframework.security.config.Customizer.withDefaults;
 
 import com.acmehealth.company.api.entity.request.RoleAuthority;
-import com.acmehealth.company.api.security.RedesignAuthenticationFilter;
+import com.acmehealth.company.api.security.AcmeAuthenticationFilter;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -81,7 +81,7 @@ public class SecurityConfig {
       AuthenticationManager authenticationManager =
           http.getSharedObject(AuthenticationManager.class);
       http.addFilterBefore(
-          new RedesignAuthenticationFilter(authenticationManager),
+          new AcmeAuthenticationFilter(authenticationManager),
           UsernamePasswordAuthenticationFilter.class);
     }
   }

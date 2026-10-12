@@ -124,7 +124,7 @@ export const CeoProfileDetailsPage = ({
               <DetailsCardRowLink href={linkedInProfileHref} />
             )}
           </DetailsCardRow>
-          <DetailsCardRow title="What do you want other Redesigners to know about you?">
+          <DetailsCardRow title="What do you want other Acmeers to know about you?">
             {additionalInfo}
           </DetailsCardRow>
           <DetailsCardRow title="CEO Bio">{biography}</DetailsCardRow>

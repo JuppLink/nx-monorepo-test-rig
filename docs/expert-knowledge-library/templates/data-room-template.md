@@ -18,7 +18,7 @@ googleDocId: 10zZKWXFWcNiHeBdXphkUcwkJeYyoCE4OIgdf0wOrTW8
 
 - **Diligence materials appropriate for the round/stage of round**
 
-    * **Educate yourself in advance about what kinds of documents are typically provided to investors in diligence for the round you are raising.** Redesign Health’s Strategy & Finance team can be helpful here.
+    * **Educate yourself in advance about what kinds of documents are typically provided to investors in diligence for the round you are raising.** Acme Health’s Strategy & Finance team can be helpful here.
 
            * For example, if raising a Seed round: there are a lot of Series A investors moving down to seed stage investing, and they will go into Series A evaluation mode if you provide them with that level of detail. You should not need to provide a pro forma profit and loss (P&L) forecast; instead, focus on the total addressable market (TAM), unit economics, and enterprise and/or customer value proposition.
 

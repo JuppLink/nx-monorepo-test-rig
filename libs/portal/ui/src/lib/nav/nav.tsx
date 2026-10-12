@@ -28,7 +28,7 @@ import {
   Flex,
   Icon,
   IconButton,
-  RedesignLogo,
+  AcmeLogo,
   Stack,
   Text
 } from '@acmehealth/ui'
@@ -78,7 +78,7 @@ export const Nav = ({ userInfo, userCompanyId, onClose }: NavProps) => {
       role="navigation"
     >
       <Stack gap={4}>
-        <RedesignLogo w="214px" color="white" alt="Redesign Health logo" />
+        <AcmeLogo w="214px" color="white" alt="Acme Health logo" />
         <Stack gap={1}>
           {!isEnterpriseBuyer && !isEnterpriseSeller && (
             <HasRole currentRole={currentRole} allowed={['ROLE_OP_CO_USER']}>

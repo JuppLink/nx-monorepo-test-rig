@@ -36,7 +36,7 @@ public class SesEmailSender implements EmailSender {
     Assert.notNull(portalHostname, "Portal Hostname must not be null");
     Assert.notNull(adviseHostname, "Advise Hostname must not be null");
 
-    String subject = "Welcome to Redesign Health!";
+    String subject = "Welcome to Acme Health!";
     String to = recipient.getEmail().value();
     String body =
         templateGenerator.createPersonAddedEmail(recipient, portalHostname, adviseHostname);

@@ -60,7 +60,7 @@ export const NavExample = {
       <>
         <Box p="2">
           <Heading size="md" color="primary.500">
-            Redesign Health
+            Acme Health
           </Heading>
         </Box>
         <Spacer />

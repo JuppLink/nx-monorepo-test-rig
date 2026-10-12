@@ -16,7 +16,7 @@ AWS Web Application Firewall (WAF) is a web application firewall that helps prot
 
 ## Benefits
 
-AWS WAF provides the following benefits when used as part of the Redesign Platform infrastructure:
+AWS WAF provides the following benefits when used as part of the Acme Platform infrastructure:
 
 - an AWS edge service that can provide Tier 1 Firewall and DDOS protection against components within the stack. This is necessary for compliance with many Security Frameworks
 - a managed service

@@ -12,7 +12,7 @@ description:
 
 ## Import
 
-Redesign UI exports 7 alert dialog related components.
+Acme UI exports 7 alert dialog related components.
 
 - `AlertDialog`: provides context and state for the dialog.
 - `AlertDialogHeader`: should contain the title announced by screen readers.

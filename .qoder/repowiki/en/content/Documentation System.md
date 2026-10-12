@@ -29,7 +29,7 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-This document describes the documentation system for the Redesign Health monorepo. It covers the MkDocs configuration, site structure, and content organization strategy. It explains how API reference documentation is generated from OpenAPI specifications, how the design system documentation integrates with Storybook, and how the expert knowledge library is managed. It also documents the documentation workflow, content creation guidelines, maintenance procedures, and publishing considerations. Finally, it outlines the relationship between internal documentation and external knowledge bases, and provides contribution and review guidelines.
+This document describes the documentation system for the Acme Health monorepo. It covers the MkDocs configuration, site structure, and content organization strategy. It explains how API reference documentation is generated from OpenAPI specifications, how the design system documentation integrates with Storybook, and how the expert knowledge library is managed. It also documents the documentation workflow, content creation guidelines, maintenance procedures, and publishing considerations. Finally, it outlines the relationship between internal documentation and external knowledge bases, and provides contribution and review guidelines.
 
 ## Project Structure
 The documentation system centers on MkDocs with a Material theme and several plugins. The repository organizes content under a dedicated docs directory, with separate areas for:
@@ -376,7 +376,7 @@ Script["concat-glossary.py"] --> Py
 - [mkdocs.yml](file://mkdocs.yml)
 
 ## Conclusion
-The Redesign Health documentation system leverages MkDocs with a Material theme and specialized plugins to deliver a structured, searchable, and extensible Knowledge Hub. Content is organized into Expert Knowledge Library and Platform Developer Library, with robust API reference generation, design system documentation integrated with Storybook, and automated glossary management. The system supports both internal and external knowledge delivery, with clear workflows for building, reviewing, and publishing documentation.
+The Acme Health documentation system leverages MkDocs with a Material theme and specialized plugins to deliver a structured, searchable, and extensible Knowledge Hub. Content is organized into Expert Knowledge Library and Platform Developer Library, with robust API reference generation, design system documentation integrated with Storybook, and automated glossary management. The system supports both internal and external knowledge delivery, with clear workflows for building, reviewing, and publishing documentation.
 
 ## Appendices
 

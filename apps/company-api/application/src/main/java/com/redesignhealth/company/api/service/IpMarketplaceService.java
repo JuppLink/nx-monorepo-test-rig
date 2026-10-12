@@ -85,7 +85,7 @@ import com.acmehealth.company.api.repository.IpMarketplaceRepository;
 import com.acmehealth.company.api.repository.IpMarketplaceTrackRepository;
 import com.acmehealth.company.api.repository.PersonRepository;
 import com.acmehealth.company.api.security.AuthChecks;
-import com.acmehealth.company.api.security.RedesignUserDetails;
+import com.acmehealth.company.api.security.AcmeUserDetails;
 import com.acmehealth.company.api.service.dto.ChatRoomParameter;
 import com.acmehealth.company.api.service.helper.BuilderForException;
 import com.acmehealth.company.api.service.helper.Filter;
@@ -681,7 +681,7 @@ public class IpMarketplaceService {
   private List<IpMarketplaceSummary> transformResults(
       List<SearchResult<IpMarketplaceSearchDoc>> searchResults,
       List<Expansion> expansions,
-      RedesignUserDetails requester,
+      AcmeUserDetails requester,
       boolean isASeller,
       boolean isABuyer) {
     return searchResults.stream()
@@ -727,16 +727,16 @@ public class IpMarketplaceService {
         .toList();
   }
 
-  private boolean isASeller(RedesignUserDetails requester) {
+  private boolean isASeller(AcmeUserDetails requester) {
     return isASellerOrBuyer(requester, CompanyIPMarketplaceType.ENTERPRISE_SELLER);
   }
 
-  private boolean isABuyer(RedesignUserDetails requester) {
+  private boolean isABuyer(AcmeUserDetails requester) {
     return isASellerOrBuyer(requester, CompanyIPMarketplaceType.ENTERPRISE_BUYER);
   }
 
   private boolean isASellerOrBuyer(
-      RedesignUserDetails requester, CompanyIPMarketplaceType companyIPMarketplaceType) {
+      AcmeUserDetails requester, CompanyIPMarketplaceType companyIPMarketplaceType) {
     return requester.getMemberOf() != null
         && companyRepository.existsByCompanyIpMarketplaceActivityTypeAndApiIdIn(
             companyIPMarketplaceType, requester.getMemberOf());

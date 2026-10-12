@@ -5,7 +5,7 @@ description: "Google OAuth, JWT verification, RBAC, and security filters."
 
 ## Overview
 
-The Redesign Health platform uses **Google OAuth 2.0** for identity verification and **JWT-based authentication** for API access. The Company API enforces role-based access control (RBAC) through a custom Spring Security filter chain, while frontend clients manage tokens via localStorage and Axios interceptors.
+The Acme Health platform uses **Google OAuth 2.0** for identity verification and **JWT-based authentication** for API access. The Company API enforces role-based access control (RBAC) through a custom Spring Security filter chain, while frontend clients manage tokens via localStorage and Axios interceptors.
 
 ## Google OAuth integration
 
@@ -95,9 +95,9 @@ The `SecurityConfig` class defines the filter chain:
 - **Admin endpoints** -- `/admin/**` requires `ROLE_SUPER_ADMIN`
 - **All other endpoints** -- Require authentication
 
-### RedesignAuthenticationFilter
+### AcmeAuthenticationFilter
 
-The `RedesignAuthenticationFilter` extends `OncePerRequestFilter` and intercepts every request to extract and verify the JWT:
+The `AcmeAuthenticationFilter` extends `OncePerRequestFilter` and intercepts every request to extract and verify the JWT:
 
 ```mermaid
 flowchart TD
@@ -149,15 +149,15 @@ The `AuthChecks` class provides static helper methods for authorization checks t
 
 | Method | Description |
 | :--- | :--- |
-| `getPrincipal()` | Returns the authenticated `RedesignUserDetails` from the security context |
+| `getPrincipal()` | Returns the authenticated `AcmeUserDetails` from the security context |
 | `isAdmin(auth)` | Returns `true` if the user has `ROLE_RH_ADMIN` or higher |
 | `hasRole(role)` | Returns `true` if the user has the exact specified role |
 | `hasRoleOrHigher(auth, role)` | Returns `true` if the user's role has permissions of the specified role |
 | `isMember(auth, apiId, role)` | Returns `true` if the user is a member of the specified company (admins are members of all companies) |
 
-### RedesignUserDetails
+### AcmeUserDetails
 
-The `RedesignUserDetails` class implements Spring Security's `UserDetails` interface and holds:
+The `AcmeUserDetails` class implements Spring Security's `UserDetails` interface and holds:
 
 - **Username** -- The user's email address (as `PersonRef`)
 - **Roles** -- A set of `GrantedAuthority` derived from the user's `RoleAuthority`
@@ -224,7 +224,7 @@ sequenceDiagram
     API->>Google: Verify signature (cached keys)
     Google-->>API: Verification result
     API->>API: Load Person from database
-    API->>API: Build RedesignUserDetails
+    API->>API: Build AcmeUserDetails
     API->>API: Set SecurityContext for request
     API-->>Client: Response
     Note over API: SecurityContext cleared after request

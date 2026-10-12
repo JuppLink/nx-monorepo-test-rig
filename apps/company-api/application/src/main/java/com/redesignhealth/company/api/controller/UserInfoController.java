@@ -7,7 +7,7 @@ import com.acmehealth.company.api.entity.ref.PersonRef;
 import com.acmehealth.company.api.exception.PersonNotFoundException;
 import com.acmehealth.company.api.openapi.IncludeSecurityHeaders;
 import com.acmehealth.company.api.repository.PersonRepository;
-import com.acmehealth.company.api.security.RedesignUserDetails;
+import com.acmehealth.company.api.security.AcmeUserDetails;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,7 +31,7 @@ public class UserInfoController {
 
   @GetMapping
   public UserInfoSummary getUserInfo(Authentication auth) {
-    var userDetails = (RedesignUserDetails) auth.getPrincipal();
+    var userDetails = (AcmeUserDetails) auth.getPrincipal();
     Person p =
         personRepository
             .findByEmail(PersonRef.of(userDetails.getUsername()))

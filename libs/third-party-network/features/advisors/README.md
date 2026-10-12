@@ -1,6 +1,6 @@
 # third-party-network-features-advisors
 
-Feature library for the **Advisor Network** — a browsable directory of third-party advisors integrated into the Redesign Health platform.
+Feature library for the **Advisor Network** — a browsable directory of third-party advisors integrated into the Acme Health platform.
 
 ## Key Components
 

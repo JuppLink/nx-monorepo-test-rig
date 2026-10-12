@@ -41,7 +41,7 @@ import org.springframework.stereotype.Service;
 public class LibraryService {
   private static final Logger logger = LoggerFactory.getLogger(LibraryService.class);
   private final SearchClient searchClient;
-  private static final String REDESIGN_HEALTH_FOLDER_NAME = "Redesign Health Exports";
+  private static final String REDESIGN_HEALTH_FOLDER_NAME = "Acme Health Exports";
   private final GoogleDriveClient googleDriveClient;
   private final Map<RemoteContentSource, RemoteFileClient> remoteFileClients;
   private final LibraryRepository libraryRepository;

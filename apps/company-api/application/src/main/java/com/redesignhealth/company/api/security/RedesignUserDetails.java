@@ -13,15 +13,15 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-public class RedesignUserDetails implements UserDetails {
+public class AcmeUserDetails implements UserDetails {
 
   private PersonRef username;
   private Set<GrantedAuthority> roles;
   private Set<CompanyRef> memberOf;
   private Map<String, Object> metadata;
 
-  public static RedesignUserDetails from(Person person) {
-    var userDetails = new RedesignUserDetails();
+  public static AcmeUserDetails from(Person person) {
+    var userDetails = new AcmeUserDetails();
     userDetails.username = person.getEmail();
     userDetails.roles =
         person.getRole() != null

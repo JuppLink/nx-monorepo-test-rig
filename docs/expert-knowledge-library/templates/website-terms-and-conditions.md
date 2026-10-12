@@ -11,7 +11,7 @@ googleDocId: 147pbT6DzMSooFrTJ9VS3L56gAoXGwtE0mw7yD_xpq54
 
 This template outlines website terms and conditions, sometimes referred to as conditions of use or terms of service. They serve as an agreement between the company and site visitors about the rules of engaging with the website. They’re usually linked in an easy-to-find spot on the site, such as in the footer or main menu.
 
-During your bounded engagement, work with your Relationship Manager and Redesign Legal Point of Contact for questions about how to use this template for website terms and conditions.
+During your bounded engagement, work with your Relationship Manager and Acme Legal Point of Contact for questions about how to use this template for website terms and conditions.
 
 Outside counsel should review if:
 

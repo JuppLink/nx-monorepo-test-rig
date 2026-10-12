@@ -59,7 +59,7 @@ import com.acmehealth.company.api.repository.CompanyMemberAuditRepository;
 import com.acmehealth.company.api.repository.CompanyRepository;
 import com.acmehealth.company.api.repository.PersonRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.PersonService;
 import java.net.URI;
 import java.time.Instant;
@@ -124,7 +124,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_USER)
+  @WithAcmeUser(role = ROLE_RH_USER)
   public void testList_returns() throws Exception {
     var person = testPerson(ROLE_RH_ADMIN);
     person.setMemberOf(
@@ -161,7 +161,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testGetOne_returns404ForUnknown() throws Exception {
     mockMvc
         .perform(get("/person/{email}", "unknown@acmehealth.com"))
@@ -172,7 +172,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testGetOne_returnsPerson() throws Exception {
     var person = testPerson(ROLE_OP_CO_USER);
     person.setMemberOf(
@@ -210,7 +210,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, email = "test@acmehealth.com")
+  @WithAcmeUser(role = ROLE_OP_CO_USER, email = "test@acmehealth.com")
   public void testGetOne_As_OP_CO_USER_Receives_OK_If_Email_Is_Equals_To_Requester()
       throws Exception {
     var person = testPerson(ROLE_OP_CO_USER);
@@ -222,7 +222,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, email = "test2t@acmehealth.com")
+  @WithAcmeUser(role = ROLE_OP_CO_USER, email = "test2t@acmehealth.com")
   public void testGetOne_As_OP_CO_USER_Receives_OK_If_Email_Is_Not_Equals_To_Requester()
       throws Exception {
     var person = testPerson(ROLE_OP_CO_USER);
@@ -236,7 +236,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_returnsPerson() throws Exception {
     mockMvc
         .perform(
@@ -276,7 +276,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_handlesEmailUniqueness() throws Exception {
     // email already exists in database
     var uniqueViolation = Mockito.mock(ConstraintViolationException.class);
@@ -297,7 +297,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_handlesEmailRequired() throws Exception {
 
     mockMvc
@@ -312,7 +312,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_returnsPerson() throws Exception {
     // person already exists in database
     when(personRepository.findByEmail(personRef)).thenReturn(Optional.of(testPerson()));
@@ -345,7 +345,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_createsPerson() throws Exception {
     // person doesn't exist in database
     when(personRepository.findByEmail(personRef)).thenReturn(Optional.empty());
@@ -364,7 +364,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testAddRole_404UnknownPerson() throws Exception {
     mockMvc
         .perform(
@@ -376,7 +376,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testAddRole_404UnknownRole() throws Exception {
     when(personRepository.findByEmail(personRef)).thenReturn(Optional.of(testPerson()));
 
@@ -388,7 +388,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testAddRole_success() throws Exception {
     var person = testPerson();
     when(personRepository.findByEmail(personRef)).thenReturn(Optional.of(person));
@@ -400,7 +400,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testDeleteRole_404UnknownPerson() throws Exception {
     mockMvc
         .perform(
@@ -412,7 +412,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testDeleteRole_404UnknownRole() throws Exception {
     when(personRepository.findByEmail(personRef)).thenReturn(Optional.of(testPerson()));
 
@@ -424,7 +424,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testDeleteRole_success() throws Exception {
     var person = testPerson();
     when(personRepository.findByEmail(personRef)).thenReturn(Optional.of(person));
@@ -436,7 +436,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testDelete_missingPerson() throws Exception {
     when(personRepository.findByEmail(personRef)).thenReturn(Optional.empty());
 
@@ -446,7 +446,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testDelete_success() throws Exception {
     when(personRepository.findByEmail(personRef)).thenReturn(Optional.of(testPerson()));
 
@@ -457,7 +457,7 @@ public class PersonControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_CONTRACTOR, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = ROLE_OP_CO_CONTRACTOR, memberOf = TEST_COMPANY_ID)
   public void testGetMemberChanges_returnsChanges() throws Exception {
     var companyRef = testCompanyRef();
     var person = testPerson(ROLE_RH_ADMIN);

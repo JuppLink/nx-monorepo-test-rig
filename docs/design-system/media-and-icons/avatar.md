@@ -15,7 +15,7 @@ picture, initials or fallback icon.
 
 ## Import
 
-Redesign UI exports 3 avatar-related components:
+Acme UI exports 3 avatar-related components:
 
 - `Avatar`: The image that represents the user.
 - `AvatarBadge`: A wrapper that displays its content on the right corner of the

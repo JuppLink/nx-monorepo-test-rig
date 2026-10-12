@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "name": "Redesign Health Platform",
+  "name": "Acme Health Platform",
   "theme": "maple",
   "colors": {
     "primary": "#9425C9",

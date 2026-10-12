@@ -1,6 +1,6 @@
 # @acmehealth/shared-utils-jest
 
-Test utilities for Jest and Vitest used across Redesign Health frontend libraries. Provides a pre-configured `render` helper, common mocks, and re-exports from `@testing-library/react`.
+Test utilities for Jest and Vitest used across Acme Health frontend libraries. Provides a pre-configured `render` helper, common mocks, and re-exports from `@testing-library/react`.
 
 ## Exports
 

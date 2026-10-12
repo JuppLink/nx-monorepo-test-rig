@@ -1,5 +1,5 @@
 === Company
-A portfolio company that Redesign Health helps develop and launch and its associated entities(members, vendors, conflicts).
+A portfolio company that Acme Health helps develop and launch and its associated entities(members, vendors, conflicts).
 
 ==== Query
 Retrieve a paginated list of companies.

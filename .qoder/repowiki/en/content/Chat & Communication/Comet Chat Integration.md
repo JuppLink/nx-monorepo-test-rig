@@ -24,7 +24,7 @@
 10. [Conclusion](#conclusion)
 
 ## Introduction
-This document describes the Comet Chat integration implemented as a proof-of-concept within the Redesign Health platform. It focuses on the React-based UI implementation using the Comet Chat UIKit, covering initialization, authentication flow, real-time messaging presentation, and configuration requirements. It also provides guidance for integrating the chat widget into larger applications, customizing appearance, handling events, and addressing performance and security considerations.
+This document describes the Comet Chat integration implemented as a proof-of-concept within the Acme Health platform. It focuses on the React-based UI implementation using the Comet Chat UIKit, covering initialization, authentication flow, real-time messaging presentation, and configuration requirements. It also provides guidance for integrating the chat widget into larger applications, customizing appearance, handling events, and addressing performance and security considerations.
 
 ## Project Structure
 The Comet Chat POC is a standalone Vite-powered React application located under apps/chat-pocs/comet-chat-poc. It initializes the Comet Chat UIKit, authenticates a predefined user, and renders the user list with recent messages.

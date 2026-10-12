@@ -91,7 +91,7 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-This document provides comprehensive deployment and operations guidance for the Redesign Health platform. It covers containerization strategies, CI/CD considerations, infrastructure requirements, environment configuration, observability, scaling, security, and disaster recovery. The platform includes a React single-page application (SPA), a Java-based Spring Boot API, a Node.js JWT generator, a Python AWS Lambda function, and a Prometheus service. Container images are built using Dockerfiles per application, and a local development environment is supported via docker-compose for the Spring Boot API and its dependencies.
+This document provides comprehensive deployment and operations guidance for the Acme Health platform. It covers containerization strategies, CI/CD considerations, infrastructure requirements, environment configuration, observability, scaling, security, and disaster recovery. The platform includes a React single-page application (SPA), a Java-based Spring Boot API, a Node.js JWT generator, a Python AWS Lambda function, and a Prometheus service. Container images are built using Dockerfiles per application, and a local development environment is supported via docker-compose for the Spring Boot API and its dependencies.
 
 ## Project Structure
 The repository is an Nx monorepo with multiple applications and libraries. Deployment artifacts are produced by Nx build targets and packaged into containers per application. The SPA applications are served via Nginx containers, while backend services are packaged as JVM or Lambda runtimes.
@@ -406,7 +406,7 @@ Prom --> PromImage["Prometheus Image"]
 - [apps/prometheus/Dockerfile:1-3](file://apps/prometheus/Dockerfile#L1-L3)
 
 ## Conclusion
-The Redesign Health platform employs a container-first deployment model with clear separation between SPAs and backend services. The Nx build system streamlines artifact generation, while Dockerfiles encapsulate packaging and runtime behavior. Local development is supported via docker-compose for the Spring Boot API and its dependencies. Production-grade infrastructure, observability, and security controls are documented in the platform’s infrastructure and glossary documents.
+The Acme Health platform employs a container-first deployment model with clear separation between SPAs and backend services. The Nx build system streamlines artifact generation, while Dockerfiles encapsulate packaging and runtime behavior. Local development is supported via docker-compose for the Spring Boot API and its dependencies. Production-grade infrastructure, observability, and security controls are documented in the platform’s infrastructure and glossary documents.
 
 [No sources needed since this section summarizes without analyzing specific files]
 

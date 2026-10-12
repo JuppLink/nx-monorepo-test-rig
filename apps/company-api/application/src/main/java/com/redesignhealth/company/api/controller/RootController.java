@@ -24,8 +24,8 @@ public class RootController {
     Map<String, Object> content = new HashMap<>();
     Map<String, String> values = new HashMap<>();
     content.put("version", version);
-    content.put("Redesign Health", values);
-    values.put("Redesign Healthcare", "We bring positive change to patients' lives");
+    content.put("Acme Health", values);
+    values.put("Acme Healthcare", "We bring positive change to patients' lives");
     values.put("Own the outcome", "We do the work to get the job done");
     values.put("Champion diverse perspectives", "We work to unlock our joint potential");
     values.put("Be trusted partners", "We strive to be the teammates and co-founders of choice");

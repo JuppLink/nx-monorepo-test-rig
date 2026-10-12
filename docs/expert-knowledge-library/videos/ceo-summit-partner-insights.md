@@ -1,13 +1,13 @@
 ---
 cardTitle: 'CEO Summit 2023: Partner Panel - Seeking Partner Insights for Success'
-description: "Join us for a panel moderated by Brenda Schmidt, Head of Enterprise Growth at Redesign Health, with partners from across the healthcare landscape representing Health Systems & Hospitals, Health Plans, Independent Providers, and Employers. "
+description: "Join us for a panel moderated by Brenda Schmidt, Head of Enterprise Growth at Acme Health, with partners from across the healthcare landscape representing Health Systems & Hospitals, Health Plans, Independent Providers, and Employers. "
 labels:
   - video
 ---
 
 # Partner Panel - Seeking Partner Insights for Success
 
-Join us for a panel moderated by Brenda Schmidt, Head of Enterprise Growth at Redesign Health, with partners from across the healthcare landscape representing Health Systems & Hospitals, Health Plans, Independent Providers, and Employers. Panelists include:
+Join us for a panel moderated by Brenda Schmidt, Head of Enterprise Growth at Acme Health, with partners from across the healthcare landscape representing Health Systems & Hospitals, Health Plans, Independent Providers, and Employers. Panelists include:
 
 * Adam Cheriff, M.D., Chief of Clinical Operations at Weill Cornell Medicine
 * Aman Shah, Vice President of New Ventures & Strategic Partnerships at VNS Health

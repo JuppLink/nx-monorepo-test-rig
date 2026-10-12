@@ -20,7 +20,7 @@ import com.acmehealth.company.api.exception.CategoryNotFoundException;
 import com.acmehealth.company.api.exception.SubcategoryNotFoundException;
 import com.acmehealth.company.api.repository.SubcategoryRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.CategoryService;
 import com.acmehealth.company.api.service.SubcategoryService;
 import java.util.List;
@@ -57,7 +57,7 @@ public class SubcategoryControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestGetAll_Category_Doesnt_Exist() throws Exception {
     var categoryId = "category_ref";
     doThrow(new CategoryNotFoundException())
@@ -72,7 +72,7 @@ public class SubcategoryControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestGetAll_Only_Data_In_Subcategory_Entity_not_q() throws Exception {
     var categoryId = "category_ref";
     var subcategoryId = "subcategory_id";
@@ -92,7 +92,7 @@ public class SubcategoryControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestGetAll_Only_Data_In_Subcategory_Entity_with_q() throws Exception {
     var q = "blah";
     var categoryId = "category_ref";
@@ -114,7 +114,7 @@ public class SubcategoryControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestGetAll_Only_Data_In_Subcategory_Entity_with_q_no_duplicates() throws Exception {
     var q = "blah";
     var categoryId = "category_ref";
@@ -134,7 +134,7 @@ public class SubcategoryControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestGetAll_Only_Data_In_Subcategory_Entity_with_q_duplicates() throws Exception {
     var q = "blah";
     var categoryId = "category_ref";
@@ -155,7 +155,7 @@ public class SubcategoryControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestGet_Subcategory_Doesnt_Exist() throws Exception {
     var categoryId = "category_ref";
     var subcategoryId = "subcategory_ref";
@@ -168,7 +168,7 @@ public class SubcategoryControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestGet_Subcategory_Return_One() throws Exception {
     var categoryId = "category_ref";
     var categoryRef = CategoryRef.of(categoryId);
@@ -188,7 +188,7 @@ public class SubcategoryControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestUpdate_Ok() throws Exception {
     var categoryId = "category_ref";
     var categoryRef = CategoryRef.of(categoryId);
@@ -216,7 +216,7 @@ public class SubcategoryControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestUpdate_404() throws Exception {
     var categoryId = "category_ref";
     var subcategoryId = "subcategory_ref";
@@ -238,7 +238,7 @@ public class SubcategoryControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestUpdate_422_Null() throws Exception {
     var categoryId = "category_ref";
     var subcategoryId = "subcategory_ref";
@@ -260,7 +260,7 @@ public class SubcategoryControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestUpdate_422_Blank() throws Exception {
     var categoryId = "category_ref";
     var subcategoryId = "subcategory_ref";
@@ -282,7 +282,7 @@ public class SubcategoryControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestDelete_Subcategory_Doesnt_Exist() throws Exception {
     var categoryId = "category_ref";
     var subcategoryId = "subcategory_ref";
@@ -296,7 +296,7 @@ public class SubcategoryControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestDelete_Ok() throws Exception {
     var categoryId = "category_ref";
     var categoryRef = CategoryRef.of(categoryId);
@@ -314,7 +314,7 @@ public class SubcategoryControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestCreate_Ok() throws Exception {
     var categoryId = "category_ref";
     var categoryRef = CategoryRef.of(categoryId);
@@ -336,7 +336,7 @@ public class SubcategoryControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestCreate_404() throws Exception {
     var categoryId = "category_ref";
     doThrow(new CategoryNotFoundException())
@@ -359,7 +359,7 @@ public class SubcategoryControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestCreate_422_Null() throws Exception {
     var categoryId = "category_ref";
     mockMvc
@@ -380,7 +380,7 @@ public class SubcategoryControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void TestCreate_422_Blank() throws Exception {
     var categoryId = "category_ref";
     mockMvc

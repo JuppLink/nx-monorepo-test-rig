@@ -1,5 +1,5 @@
 === Research Article
-Redesign Health collect articles to share the improving in the health market.
+Acme Health collect articles to share the improving in the health market.
 This API is responsible for managing those documents.
 
 ==== Query

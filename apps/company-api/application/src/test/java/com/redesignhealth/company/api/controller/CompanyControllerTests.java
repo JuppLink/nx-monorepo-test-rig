@@ -107,7 +107,7 @@ import com.acmehealth.company.api.repository.PersonRepository;
 import com.acmehealth.company.api.repository.VendorRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
 import com.acmehealth.company.api.scaffolding.Fixtures;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.CompanyService;
 import com.acmehealth.company.api.taxonomy.CompanyTaxonomy;
 import java.time.Instant;
@@ -206,7 +206,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_USER)
+  @WithAcmeUser(role = ROLE_RH_USER)
   public void testList_returnsAllWithRhUser() throws Exception {
     var company = testCompany(testPerson());
     when(companyRepository.findAll(Mockito.any(Pageable.class)))
@@ -243,7 +243,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_CONTRACTOR, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = ROLE_OP_CO_CONTRACTOR, memberOf = TEST_COMPANY_ID)
   public void testList_returnsSome() throws Exception {
     when(companyRepository.findAllByMembersEmail(any(), any()))
         .thenReturn(new PageImpl<>(List.of(testCompany())));
@@ -254,7 +254,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testGetOne_returns404ForUnknown() throws Exception {
     mockMvc
         .perform(get("/company/{apiId}", "unknown"))
@@ -265,7 +265,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_CONTRACTOR, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = ROLE_OP_CO_CONTRACTOR, memberOf = TEST_COMPANY_ID)
   public void testGetOne_returns() throws Exception {
     var company = testCompany(testPerson());
     when(companyRepository.findByApiId(companyRef, Expansion.MEMBERS))
@@ -307,7 +307,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_returns_noStage() throws Exception {
     when(companyRepository.findByApiId(companyRef)).thenReturn(Optional.of(testCompany()));
     when(companyRepository.save(any(Company.class))).then(returnsFirstArg());
@@ -372,7 +372,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_CompanyIpMarketplace() throws Exception {
     var company = testCompany();
     var companyIpMarketplace = new CompanyIpMarketplace();
@@ -451,7 +451,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_CompanyIpMarketplace_Should_Fail_If_Status_Is_Paused() throws Exception {
     mockMvc
         .perform(
@@ -483,7 +483,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void
       testCreate_CompanyIpMarketplace_ShouldFail_If_ActivityType_Is_Sent_And_Not_Region_Or_Organization_Type()
           throws Exception {
@@ -517,7 +517,7 @@ public class CompanyControllerTests {
   @EnumSource(
       value = CompanyStage.class,
       names = {"THEME", "CONCEPT", "NEW_CO"})
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_Invalid_Assignation_FundraiseStatus(CompanyStage stage) throws Exception {
     when(companyRepository.findByApiId(companyRef)).thenReturn(Optional.of(testCompany()));
     when(companyRepository.save(any(Company.class))).then(returnsFirstArg());
@@ -546,7 +546,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_Status_Bad_Request_Invalid_Input() throws Exception {
     mockMvc
         .perform(
@@ -562,7 +562,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_Status_Bad_Request_Empty_Array() throws Exception {
     mockMvc
         .perform(
@@ -578,7 +578,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_Status_Bad_Request_Empty_Object() throws Exception {
     mockMvc
         .perform(
@@ -594,7 +594,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_returns_Stage() throws Exception {
     when(companyRepository.findByApiId(companyRef)).thenReturn(Optional.of(testCompany()));
     when(companyRepository.save(any(Company.class))).then(returnsFirstArg());
@@ -625,7 +625,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_And_Call_Create_G_Folder() throws Exception {
     when(companyRepository.findByApiId(companyRef)).thenReturn(Optional.of(testCompany()));
     when(companyRepository.save(any(Company.class))).then(returnsFirstArg());
@@ -657,7 +657,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_And_Not_Call_Create_G_Folder() throws Exception {
     when(companyRepository.findByApiId(companyRef)).thenReturn(Optional.of(testCompany()));
     when(companyRepository.save(any(Company.class))).then(returnsFirstArg());
@@ -690,26 +690,26 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_Fail_If_NEW_CO_Stage_Doesnt_Have_LinkedCompany() throws Exception {
     createCompanyWithStageConceptOrNewCoFailure(CompanyStage.NEW_CO);
   }
 
   // createCompanyWithStageThemeOrOpCoFailure
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_Fail_If_OP_CO_Stage_Has_LinkedCompany() throws Exception {
     createCompanyWithStageThemeOrOpCoFailure(CompanyStage.OP_CO);
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_Fail_If_THEME_Stage_Has_LinkedCompany() throws Exception {
     createCompanyWithStageThemeOrOpCoFailure(CompanyStage.THEME);
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_Fail_If_LinkedCompany_Doesnt_Exist() throws Exception {
     // writeValueAsString has issues getting the toString from the CompanyRef and this converting in
     // string all the object
@@ -726,7 +726,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_handlesNumberUniqueness() throws Exception {
     var uniqueViolation = Mockito.mock(ConstraintViolationException.class);
     var baseException = new DataIntegrityViolationException("Error", uniqueViolation);
@@ -750,7 +750,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreate_handlesNameRequired() throws Exception {
     mockMvc
         .perform(
@@ -767,7 +767,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_404s() throws Exception {
     // entity does not exist
     when(companyRepository.findByApiId(companyRef)).thenReturn(Optional.empty());
@@ -785,7 +785,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_returns() throws Exception {
     var company = testCompany();
     company.setStatus(CompanyStatus.ACTIVE);
@@ -848,7 +848,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_CompanyIpMarketplace_returns() throws Exception {
     var company = testCompany();
     var companyIpMarketplace = new CompanyIpMarketplace();
@@ -920,7 +920,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_CompanyIpMarketplace_Should_Fail_If_RequiredFields_Are_Not_Sent()
       throws Exception {
     var company = testCompany();
@@ -958,7 +958,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_CompanyIpMarketplace_Should_Fail_If_ActivityType_Wants_Be_Changed()
       throws Exception {
     var company = testCompany();
@@ -996,7 +996,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_CompanyIpMarketplace_Should_Fail_If_Status_Is_Paused()
       throws Exception {
     var company = testCompany();
@@ -1042,7 +1042,7 @@ public class CompanyControllerTests {
   @EnumSource(
       value = CompanyStage.class,
       names = {"THEME", "CONCEPT", "NEW_CO"})
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_Fail_Invalid_FundraiseStatus_Assignment(CompanyStage stage)
       throws Exception {
     var company = testCompany();
@@ -1074,7 +1074,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_Change_To_PAUSED_Or_ARCHIVED() throws Exception {
     var personRef = PersonRef.of("anytest@acmehealth.com");
     var person = Person.from(personRef);
@@ -1116,7 +1116,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_Change_To_PAUSED_Or_ARCHIVED_Member_Inactive_Should_Not_Save()
       throws Exception {
     var personRef = PersonRef.of("anytest@acmehealth.com");
@@ -1159,13 +1159,13 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_Fail_If_NEW_CO_Stage_Doesnt_Have_LinkedCompany() throws Exception {
     updateCompanyWithStageConceptOrNewCoFailure(CompanyStage.NEW_CO);
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreateConflicts_returns() throws Exception {
     when(companyRepository.findByApiId(companyRef)).thenReturn(Optional.of(testCompany()));
     when(companyConflictRepository.findByMemberOfId(testCompany())).thenReturn(List.of());
@@ -1184,7 +1184,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreateConflicts_With_Members_In_Common_should_fail() throws Exception {
     var company = testCompany();
     var company1 = testCompany("xyzhij");
@@ -1217,7 +1217,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreateConflicts_If_Exist_Should_Not_Save() throws Exception {
     var company = testCompany();
     var companyInConflict = new CompanyConflict();
@@ -1240,7 +1240,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreateConflicts_If_Company_In_Payload_Doesnt_Exist_Should_Not_Save_And_Remove()
       throws Exception {
     var company = testCompany();
@@ -1264,7 +1264,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreateConflicts_If_Some_Company_In_Payload_Exist_And_It_Is_New_Should_Save()
       throws Exception {
     var company = testCompany();
@@ -1300,7 +1300,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreateConflicts_If_Company_Equals_To_Conflict_Should_Not_Save() throws Exception {
     var apiRefId = "xyzhij";
     var company = Company.from(apiRefId);
@@ -1320,7 +1320,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreateConflicts_Update_With_New_Elements() throws Exception {
     var apiRefId = "xyzhij";
     var companyConflictApiRefId1 = "hgtrfjk";
@@ -1361,7 +1361,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreateConflicts_If_Conflicts_Is_Not_Present_And_Payload_Is_Empty_Should_Not_Save()
       throws Exception {
     var apiRefId = "xyzhij";
@@ -1382,7 +1382,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreateConflicts_If_Conflicts_Is_Present_And_Payload_Is_Empty_Should_Delete()
       throws Exception {
     var apiRefId = "xyzhij";
@@ -1415,7 +1415,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testCreateConflicts_If_Conflicts_Is_Not_Present_Should_Not_Save() throws Exception {
     var apiRefId = "xyzhij";
     var company = Company.from(apiRefId);
@@ -1435,7 +1435,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_CONTRACTOR, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = ROLE_OP_CO_CONTRACTOR, memberOf = TEST_COMPANY_ID)
   public void testGetConflicts_returns() throws Exception {
     var company = testCompany(testPerson());
     var companyInConflict = Company.from("1KlMnh9a");
@@ -1481,32 +1481,32 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_Try_to_Change_A_THEME_To_Another_Stage() throws Exception {
     changeState(CompanyStage.THEME, CompanyStage.OP_CO);
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_Try_to_Change_A_CONCEPT_To_Another_Stage() throws Exception {
     changeState(CompanyStage.CONCEPT, CompanyStage.OP_CO);
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_Try_to_Change_A_OPCO_To_Another_Stage() throws Exception {
     changeState(CompanyStage.OP_CO, CompanyStage.NEW_CO);
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_Try_to_Change_A_NEWCO_To_Another_Stage_Different_To_OPCO()
       throws Exception {
     changeState(CompanyStage.OP_CO, CompanyStage.NEW_CO);
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_Try_to_Change_A_NEWCO_To_OPCO() throws Exception {
     var company = testCompany();
     company.setStatus(CompanyStatus.ACTIVE);
@@ -1540,7 +1540,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_Try_to_Change_LinkedApiId_To_OPCO_Promoted_From_NEW_CO()
       throws Exception {
     var company = testCompany();
@@ -1567,7 +1567,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testUpdateOne_Try_to_Change_name_To_OPCO_Promoted_From_NEW_CO() throws Exception {
     var company = testCompany();
     company.setStatus(CompanyStatus.ACTIVE);
@@ -1594,7 +1594,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testGetMembers_404UnknownCompany() throws Exception {
 
     mockMvc
@@ -1606,7 +1606,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_CONTRACTOR, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = ROLE_OP_CO_CONTRACTOR, memberOf = TEST_COMPANY_ID)
   public void testGetMembers_returnsMembers() throws Exception {
     var person = testPerson(ROLE_RH_ADMIN);
 
@@ -1642,7 +1642,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testAddMember_404UnknownCompany() throws Exception {
     var companyMemberCommand = new CompanyMemberCommand();
     companyMemberCommand.setStatus(Optional.of(CompanyMemberStatus.ACTIVE));
@@ -1658,7 +1658,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testAddMember_404UnknownPerson() throws Exception {
     when(companyRepository.findByApiId(companyRef, MEMBERS)).thenReturn(Optional.of(testCompany()));
     var companyMemberCommand = new CompanyMemberCommand();
@@ -1674,7 +1674,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testAddMember_success() throws Exception {
     var company = testCompany(testPerson());
     var companyMemberCommand = new CompanyMemberCommand();
@@ -1695,7 +1695,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testAddMember_CEO_exists_Active_In_Another_Company() throws Exception {
     var company = testCompany(testPerson());
     var companyMemberCommand = new CompanyMemberCommand();
@@ -1719,7 +1719,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testAddMember_Fail_For_Theme() throws Exception {
     var company = testCompany(testPerson());
     company.setStage(CompanyStage.THEME);
@@ -1738,7 +1738,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testAddMember_Fail_For_Concept() throws Exception {
     var company = testCompany(testPerson());
     company.setStage(CompanyStage.CONCEPT);
@@ -1757,7 +1757,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testAddMember_403() throws Exception {
     var companyToAdd = testCompany(testPerson());
     var companyMemberCommand = new CompanyMemberCommand();
@@ -1789,7 +1789,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testDeleteMember_404UnknownCompany() throws Exception {
     mockMvc
         .perform(delete("/company/{apiId}/member/{email}", "unknown", "test@acmehealth.com"))
@@ -1802,7 +1802,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testDeleteMember_404UnknownPerson() throws Exception {
     when(companyRepository.findByApiId(companyRef)).thenReturn(Optional.of(Fixtures.testCompany()));
 
@@ -1818,7 +1818,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testDeleteMember_success() throws Exception {
     var company = testCompany(testPerson());
     company.setId(1L);
@@ -1844,7 +1844,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testDeleteMember_EnterpriseBuyer_With_Request_Contact_Info_success()
       throws Exception {
     var ipMarketPlace = testIpMarketPlace("sales@example.com");
@@ -1880,7 +1880,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testDelete_DNE() throws Exception {
     when(companyRepository.findByApiId(companyRef, MEMBERS)).thenReturn(Optional.empty());
 
@@ -1888,7 +1888,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testDelete_Forbidden() throws Exception {
     var company = testCompany(testPerson());
     company.setId(1L);
@@ -1903,7 +1903,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testDelete_success_No_Members() throws Exception {
     var company = Fixtures.testCompany();
     company.setMembers(Set.of());
@@ -1918,7 +1918,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testDelete_success_With_Members() throws Exception {
     var company = Fixtures.testCompany();
     var personMember = Person.from(PersonRef.of("new@acmehealth.com"));
@@ -1936,7 +1936,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void testDelete_GDriveFailure() throws Exception {
     var company = Fixtures.testCompany();
     company.setMembers(Set.of());
@@ -1950,7 +1950,7 @@ public class CompanyControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER, memberOf = TEST_COMPANY_XCLOUD_UAT_ID)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER, memberOf = TEST_COMPANY_XCLOUD_UAT_ID)
   public void testGetOne_xCloud() throws Exception {
     var uatCompany = Fixtures.testCompany(TEST_COMPANY_XCLOUD_UAT_ID);
     var uatCompanyRef = CompanyRef.of(TEST_COMPANY_XCLOUD_UAT_ID);

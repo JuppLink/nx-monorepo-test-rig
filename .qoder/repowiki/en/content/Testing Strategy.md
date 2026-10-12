@@ -82,7 +82,7 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-This document describes the testing strategy and implementation across the Redesign Health monorepo. It covers the multi-layered testing approach spanning unit tests with Jest/Vitest, integration tests, and visual regression/accessibility testing via Storybook and Chromatic. It also documents configuration, setup files, test utilities, component testing strategies, Storybook integration, and accessibility testing with axe-core. Mocking strategies for API calls, authentication, and external dependencies are outlined, along with continuous integration testing workflows, coverage requirements, and quality gates. Best practices for React components, Spring Boot services, and shared libraries are included.
+This document describes the testing strategy and implementation across the Acme Health monorepo. It covers the multi-layered testing approach spanning unit tests with Jest/Vitest, integration tests, and visual regression/accessibility testing via Storybook and Chromatic. It also documents configuration, setup files, test utilities, component testing strategies, Storybook integration, and accessibility testing with axe-core. Mocking strategies for API calls, authentication, and external dependencies are outlined, along with continuous integration testing workflows, coverage requirements, and quality gates. Best practices for React components, Spring Boot services, and shared libraries are included.
 
 ## Project Structure
 The monorepo leverages Nx for orchestration and defines target defaults for caching and inputs. Jest is configured globally and per-project, while Vitest is used for Vite-based projects. Storybook and Chromatic are integrated for visual testing and regression detection. Java-based services use Maven for unit/integration tests.
@@ -382,7 +382,7 @@ Common issues and resolutions:
 - [chromatic.config.json](file://chromatic.config.json)
 
 ## Conclusion
-The Redesign Health monorepo employs a robust, multi-layered testing strategy combining Jest/Vitest for unit tests, Storybook and Chromatic for visual regression, and Storybook accessibility addons for a11y checks. Nx orchestrates configuration and caching, while Java services use Maven for comprehensive testing. By following the documented patterns and best practices, teams can maintain high-quality, reliable software across React and Java components.
+The Acme Health monorepo employs a robust, multi-layered testing strategy combining Jest/Vitest for unit tests, Storybook and Chromatic for visual regression, and Storybook accessibility addons for a11y checks. Nx orchestrates configuration and caching, while Java services use Maven for comprehensive testing. By following the documented patterns and best practices, teams can maintain high-quality, reliable software across React and Java components.
 
 ## Appendices
 

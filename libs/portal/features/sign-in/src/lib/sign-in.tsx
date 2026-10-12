@@ -6,8 +6,8 @@ import { setUserAccessToken } from '@acmehealth/portal/utils'
 import { Flex, Image, Stack, Text } from '@acmehealth/ui'
 
 import BackgroundImage from './assets/background.jpeg'
-import RedesignHealthPrism from './assets/acme-health-prism.svg'
-import RedesignHealthText from './assets/acme-health-text.svg'
+import AcmeHealthPrism from './assets/acme-health-prism.svg'
+import AcmeHealthText from './assets/acme-health-text.svg'
 
 export const SignIn = () => {
   const [isError, setIsError] = useState<boolean>(false)
@@ -45,8 +45,8 @@ export const SignIn = () => {
           px={14}
           py={12}
         >
-          <Image src={RedesignHealthPrism} />
-          <Image src={RedesignHealthText} />
+          <Image src={AcmeHealthPrism} />
+          <Image src={AcmeHealthText} />
           <Text color="gray.600">Welcome! Sign into your account.</Text>
           <GoogleLogin
             auto_select

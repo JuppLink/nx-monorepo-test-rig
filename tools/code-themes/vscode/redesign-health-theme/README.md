@@ -1,4 +1,4 @@
-# Redesign Health Visual Studios Code Theme
+# Acme Health Visual Studios Code Theme
 
 ![](assets/theme.png)
 
@@ -9,7 +9,7 @@ $ ln -s /path/to/acme-health-theme ~/.vscode/extensions/acme-health-theme
 ```
 2. Open VS Code and hit `cmd` + `shift` + `p`
 3. Type `Color Theme` and select `Preferences: Color Theme`
-4. Select `Redesign Health`
+4. Select `Acme Health`
 5. 🎉
 
 ## Developing improvements for the theme
@@ -47,7 +47,7 @@ Here's how we do that
 ```
 
 ## More resources
-* [Redesign Health Brand Figma](https://www.figma.com/file/0KgTXLaA268QPG3xVW84hE/RH-Internal-Brand-Requests?node-id=305%3A353&t=LC6UCrQmBzSt8dum-1)
+* [Acme Health Brand Figma](https://www.figma.com/file/0KgTXLaA268QPG3xVW84hE/RH-Internal-Brand-Requests?node-id=305%3A353&t=LC6UCrQmBzSt8dum-1)
 * [How to publish a theme](https://code.visualstudio.com/api/extension-guides/color-theme#create-a-new-color-theme)
 * [Theme attribute names](https://code.visualstudio.com/api/references/theme-color)
 * [How to look up what theme attribute is being used](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#scope-inspector)

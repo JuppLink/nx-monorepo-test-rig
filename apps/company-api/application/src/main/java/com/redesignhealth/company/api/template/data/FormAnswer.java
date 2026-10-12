@@ -7,17 +7,17 @@ import java.util.Map;
 public class FormAnswer {
 
   public static String Q1 =
-      "Will the service be collecting any personal information about your employees, your contractors, Redesign Health Employees, customers, partners, patients or anyone else who would be part of the system? Select one response.";
+      "Will the service be collecting any personal information about your employees, your contractors, Acme Health Employees, customers, partners, patients or anyone else who would be part of the system? Select one response.";
   public static String Q2 =
       "Will the service be collecting any medical information (Protected Health Information) about patients or system users? Select one response.";
   public static String Q3_A =
-      "Will the service be collecting any financial information about your company, Redesign Health, your partners, your patients, your employees or any other users? Select one response.";
+      "Will the service be collecting any financial information about your company, Acme Health, your partners, your patients, your employees or any other users? Select one response.";
   public static String Q3_B =
       "Will your service be collecting any Credit Card data in any way, shape or form? Select one response.";
   public static String Q3_C =
       "How will the financial information be stored? Select all that apply.";
   public static String Q4 =
-      "Will the service be collecting any additional Proprietary information about your company, Redesign Health, your partners, your patients, your employees or any other users? Select one response.";
+      "Will the service be collecting any additional Proprietary information about your company, Acme Health, your partners, your patients, your employees or any other users? Select one response.";
   public static String Q5_A =
       "Is the information that is collected stored in your system? Select one response.";
   public static String Q5_B =

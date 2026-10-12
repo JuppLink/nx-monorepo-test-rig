@@ -76,7 +76,7 @@ You can prevent the skeleton from rendering using the `isLoaded` prop.
 
 ```jsx
 <Skeleton isLoaded>
-  <span>Redesign UI is dope</span>
+  <span>Acme UI is dope</span>
 </Skeleton>
 ```
 
@@ -114,7 +114,7 @@ function Example() {
         bg="blue.500"
         color="white"
       >
-        <Box>Hello Redesign Health!</Box>
+        <Box>Hello Acme Health!</Box>
       </Skeleton>
 
       <Box textAlign="center">

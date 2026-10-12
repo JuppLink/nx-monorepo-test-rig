@@ -76,7 +76,7 @@ import com.acmehealth.company.api.repository.IpMarketplaceRepository;
 import com.acmehealth.company.api.repository.IpMarketplaceTrackRepository;
 import com.acmehealth.company.api.repository.PersonRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.IpMarketplaceService;
 import com.acmehealth.company.api.util.RhCustomCounter;
 import java.net.URI;
@@ -153,7 +153,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, memberOf = "1KlMnh9a", email = "seller@seller.com")
+  @WithAcmeUser(role = ROLE_OP_CO_USER, memberOf = "1KlMnh9a", email = "seller@seller.com")
   public void createIpMarketplace() throws Exception {
     var companyApiId = testCompanyRef();
     var personEmail = "seller@seller.com";
@@ -237,7 +237,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, memberOf = "1KlMnh9a", email = "seller2@seller.com")
+  @WithAcmeUser(role = ROLE_OP_CO_USER, memberOf = "1KlMnh9a", email = "seller2@seller.com")
   public void
       createIpMarketplace_Should_Fail_If_Want_To_Create_Ip_Record_With_Not_My_Email_Being_Seller()
           throws Exception {
@@ -267,7 +267,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, memberOf = "buyerCompanyId", email = "buyer@buyer.com")
+  @WithAcmeUser(role = ROLE_OP_CO_USER, memberOf = "buyerCompanyId", email = "buyer@buyer.com")
   public void createIpMarketplace_Should_Fail_If_Requester_Is_A_Buyer() throws Exception {
     var companyApiId = testCompanyRef();
     var personEmail = "seller@seller.com";
@@ -294,7 +294,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void createIpMarketplace_Should_Fail_If_Company_Doesnt_Exist() throws Exception {
     mockMvc
         .perform(
@@ -307,7 +307,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void createIpMarketplace_Should_Fail_If_Company_Is_Not_Enterprise_Seller()
       throws Exception {
     var companyApiId = testCompanyRef();
@@ -334,7 +334,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void createIpMarketplace_Should_Fail_If_Seller_Doesnt_Exist() throws Exception {
     var companyApiId = testCompanyRef();
     var company = testIpMarketplaceCompany();
@@ -351,7 +351,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void
       createIpMarketplace_ShouldFail_If_Seller_Doesnt_Belong_To_Company_Selling_And_Doesnt_Have_Company_Assigned()
           throws Exception {
@@ -375,7 +375,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void createIpMarketplace_ShouldFail_If_Seller_Doesnt_Belong_To_Company_Selling()
       throws Exception {
     var companyApiId = testCompanyRef();
@@ -401,7 +401,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void createIpMarketplace_Should_Fail_If_Company_is_Not_Active() throws Exception {
     var companyApiId = testCompanyRef();
     var personEmail = "seller@seller.com";
@@ -425,7 +425,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void createIpMarketplace_Should_Fail_If_Seller_is_Not_Active() throws Exception {
     var companyApiId = testCompanyRef();
     var personEmail = "seller@seller.com";
@@ -448,7 +448,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void
       createIpMarketplace_Should_Fail_If_LicenseInfo_Is_False_And_AboutLicenseRestriction_Is_Not_Null()
           throws Exception {
@@ -517,7 +517,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void
       createIpMarketplace_Should_Fail_If_LicenseInfo_Was_Not_Sent_And_AboutLicenseRestriction_Is_Not_Null()
           throws Exception {
@@ -586,7 +586,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void
       createIpMarketplace_Should_Fail_If_Patent_Status_Is_Different_To_Other_And_patentStatusOtherInfo_Is_Not_Null()
           throws Exception {
@@ -656,7 +656,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void
       createIpMarketplace_Should_Fail_If_Patent_Status_Was_Not_Sent_And_patentStatusOtherInfo_Is_Not_Null()
           throws Exception {
@@ -726,7 +726,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void
       createIpMarketplace_Should_Fail_If_Patent_Geography_Validity_Doesnt_Contains_Other_And_Patent_Geographic_Validity_Other_Is_Not_Null()
           throws Exception {
@@ -797,7 +797,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void
       createIpMarketplace_Should_Fail_If_Preferred_Terms_Doesnt_Contains_Other_And_Preferred_Terms_Other_Is_Not_Null()
           throws Exception {
@@ -868,7 +868,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void updateIpMarketplace() throws Exception {
     var personEmail = "seller@seller.com";
     var ipMarketplaceId = "iPMarketplaceId";
@@ -945,7 +945,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, memberOf = "buyerCompanyId", email = "buyer@buyer.com")
+  @WithAcmeUser(role = ROLE_OP_CO_USER, memberOf = "buyerCompanyId", email = "buyer@buyer.com")
   public void updateIpMarketplace_Should_Fail_If_Requester_Is_A_Buyer() throws Exception {
     var personEmail = "seller@seller.com";
     var ipMarketplaceId = "iPMarketplaceId";
@@ -969,7 +969,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, memberOf = "1KlMnh9a", email = "seller2@seller.com")
+  @WithAcmeUser(role = ROLE_OP_CO_USER, memberOf = "1KlMnh9a", email = "seller2@seller.com")
   public void
       updateIpMarketplace_Should_Fail_If_Requester_Is_A_Seller_And_Not_The_Owner_Of_The_Ip_Record()
           throws Exception {
@@ -993,7 +993,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void updateIpMarketplace_Should_Fail_404() throws Exception {
     var ipMarketplaceId = "iPMarketplaceId";
     mockMvc
@@ -1005,7 +1005,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "seller@seller.com",
       memberOf = "1KlMnh9a")
@@ -1091,7 +1091,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "buyer@buyer.com",
       memberOf = "buyerCompanyId")
@@ -1196,7 +1196,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "seller@seller.com",
       memberOf = "1KlMnh9a")
@@ -1299,7 +1299,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "buyer@buyer.com",
       memberOf = "buyerCompanyId")
@@ -1362,7 +1362,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "seller@seller.com",
       memberOf = "1KlMnh9a")
@@ -1417,7 +1417,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER, email = "seller@seller.com")
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER, email = "seller@seller.com")
   public void testGet_One_Should_Fail_If_Not_A_Seller_Or_Buyer() throws Exception {
     var sellerEmail = "seller@seller.com";
     var person = testPerson(ROLE_OP_CO_USER, sellerEmail);
@@ -1442,7 +1442,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "buyer@buyer.com",
       memberOf = "buyerCompanyId")
@@ -1488,7 +1488,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "seller@seller.com",
       memberOf = "1KlMnh9a")
@@ -1549,7 +1549,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "buyer@buyer.com",
       memberOf = "buyerCompanyId")
@@ -1595,7 +1595,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "seller@seller.com",
       memberOf = "1KlMnh9a")
@@ -1623,7 +1623,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER, email = "seller@seller.com")
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER, email = "seller@seller.com")
   public void testQuery_returnsResults_Should_Fail_If_Not_A_Seller_Buyer_Or_Admin()
       throws Exception {
     var sellerEmail = "seller@seller.com";
@@ -1667,7 +1667,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "seller@seller.com",
       memberOf = "1KlMnh9a")
@@ -1715,7 +1715,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "buyer@buyer.com",
       memberOf = "buyerCompanyId")
@@ -1762,7 +1762,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER, email = "rh@rh.com")
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER, email = "rh@rh.com")
   public void testProcessInfo_Should_Fail_If_Not_A_Seller_Or_Buyer() throws Exception {
     var sellerEmail = "seller@seller.com";
     var buyerCompanyId = "buyerCompanyId";
@@ -1794,7 +1794,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "seller@seller.com",
       memberOf = "1KlMnh9a")
@@ -1826,7 +1826,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "seller@seller.com",
       memberOf = "1KlMnh9a")
@@ -1867,7 +1867,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "seller@seller.com",
       memberOf = "1KlMnh9a")
@@ -1906,7 +1906,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "seller@seller.com",
       memberOf = "1KlMnh9a")
@@ -1948,7 +1948,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "seller@seller.com",
       memberOf = "1KlMnh9a")
@@ -1991,7 +1991,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "buyer@buyer.com",
       memberOf = "buyerCompanyId")
@@ -2044,7 +2044,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void testFilters_returnsResults() throws Exception {
     var filterOption =
         FilterOptions.builder()
@@ -2071,7 +2071,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testDelete_success() throws Exception {
     var ipMarketplaceId = "ipMarketplaceId";
     var ipMarketplaceRef = IpMarketplaceRef.of(ipMarketplaceId);
@@ -2086,7 +2086,7 @@ public class IpMarketplaceControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testDelete_Is_Not_Found() throws Exception {
     var ipMarketplaceId = "ipMarketplaceId";
     var ipMarketplaceRef = IpMarketplaceRef.of(ipMarketplaceId);

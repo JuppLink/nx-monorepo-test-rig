@@ -20,7 +20,7 @@ import com.acmehealth.company.api.entity.ref.PersonRef;
 import com.acmehealth.company.api.repository.ConsentRepository;
 import com.acmehealth.company.api.repository.PersonRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.ConsentService;
 import java.util.Optional;
 import org.hamcrest.Matchers;
@@ -58,7 +58,7 @@ public class ConsentControllerTests {
   }
 
   @Test
-  @WithRedesignUser(email = "test@acmehealth.com")
+  @WithAcmeUser(email = "test@acmehealth.com")
   public void testGet_returnsResult() throws Exception {
     var person = testPerson();
     var consent = testConsent(person);
@@ -78,7 +78,7 @@ public class ConsentControllerTests {
   }
 
   @Test
-  @WithRedesignUser(email = "test@acmehealth.com")
+  @WithAcmeUser(email = "test@acmehealth.com")
   public void testGet_handles404() throws Exception {
     when(personRepository.findByEmail(PersonRef.of("test@acmehealth.com")))
         .thenReturn(Optional.of(testPerson()));
@@ -89,7 +89,7 @@ public class ConsentControllerTests {
   }
 
   @Test
-  @WithRedesignUser(email = "test@acmehealth.com")
+  @WithAcmeUser(email = "test@acmehealth.com")
   public void testUpsert_handlesNewEntry() throws Exception {
     when(personRepository.findByEmail(PersonRef.of("test@acmehealth.com")))
         .thenReturn(Optional.of(testPerson()));

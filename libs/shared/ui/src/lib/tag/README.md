@@ -9,7 +9,7 @@ organized using keywords that describe them."
 
 ## Import
 
-Redesign UI exports 5 Tag related components:
+Acme UI exports 5 Tag related components:
 
 - **Tag**: The wrapper for all the tag elements.
 - **TagLabel**: The label for tag's text content.

@@ -35,7 +35,7 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-This document describes the architectural design and implementation patterns of the Redesign Health Nx monorepo. It explains the Nx workspace organization, layered architecture (presentation, business logic, data access), microservices approach using Spring Boot for backend services and React for frontend, and the integration points between applications. Cross-cutting concerns such as authentication, authorization, and observability are addressed alongside technology stack choices, trade-offs, and constraints.
+This document describes the architectural design and implementation patterns of the Acme Health Nx monorepo. It explains the Nx workspace organization, layered architecture (presentation, business logic, data access), microservices approach using Spring Boot for backend services and React for frontend, and the integration points between applications. Cross-cutting concerns such as authentication, authorization, and observability are addressed alongside technology stack choices, trade-offs, and constraints.
 
 ## Project Structure
 The repository follows an Nx workspace with a clear separation of applications (apps/) and shared libraries (libs/). Applications include:
@@ -316,7 +316,7 @@ Common areas to check:
 - [apps/company-api/docker-compose.yml:1-82](file://apps/company-api/docker-compose.yml#L1-L82)
 
 ## Conclusion
-The Redesign Health monorepo leverages Nx to organize a scalable full-stack architecture. The Portal application benefits from a cohesive design system and typed API integrations, while the Spring Boot microservice provides robust data access and search capabilities. Cross-cutting concerns such as analytics and observability are integrated thoughtfully, and architectural decisions emphasize maintainability, modularity, and developer productivity.
+The Acme Health monorepo leverages Nx to organize a scalable full-stack architecture. The Portal application benefits from a cohesive design system and typed API integrations, while the Spring Boot microservice provides robust data access and search capabilities. Cross-cutting concerns such as analytics and observability are integrated thoughtfully, and architectural decisions emphasize maintainability, modularity, and developer productivity.
 
 [No sources needed since this section summarizes without analyzing specific files]
 

@@ -29,7 +29,7 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-This document provides comprehensive API documentation for the Redesign Health Company API service. It covers REST endpoints, request/response schemas, authentication, authorization, error handling, and integration guidance. The API follows OpenAPI 3.0.1 and exposes Swagger and OpenAPI definitions for client generation.
+This document provides comprehensive API documentation for the Acme Health Company API service. It covers REST endpoints, request/response schemas, authentication, authorization, error handling, and integration guidance. The API follows OpenAPI 3.0.1 and exposes Swagger and OpenAPI definitions for client generation.
 
 ## Project Structure
 The Company API is implemented as a Spring Boot application with controllers grouped by domain (Company, Person, Vendor, etc.). The OpenAPI specification is embedded in the contract and generated at runtime. Documentation is produced via AsciiDoc and hosted under the public endpoints.
@@ -91,7 +91,7 @@ The API uses stateless authentication, method-level authorization, and HATEOAS-f
 sequenceDiagram
 participant Client as "Client"
 participant Sec as "SecurityFilterChain"
-participant Auth as "RedesignAuthenticationFilter"
+participant Auth as "AcmeAuthenticationFilter"
 participant Ctrl as "Controller"
 participant Svc as "Service Layer"
 participant Ex as "GlobalExceptionHandler"

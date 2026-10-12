@@ -1,6 +1,6 @@
 # @acmehealth/shared-hooks
 
-Shared React hooks for use across Redesign Health frontend applications.
+Shared React hooks for use across Acme Health frontend applications.
 
 ## Exports
 

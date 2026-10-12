@@ -5,7 +5,7 @@ import com.acmehealth.company.api.entity.Company;
 import com.acmehealth.company.api.entity.CompanyMember;
 import com.acmehealth.company.api.entity.Person;
 import com.acmehealth.company.api.entity.ref.PersonRef;
-import com.acmehealth.company.api.security.RedesignUserDetails;
+import com.acmehealth.company.api.security.AcmeUserDetails;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -14,10 +14,10 @@ import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.test.context.support.WithSecurityContextFactory;
 
-public class WithRedesignUserSecurityContextFactory
-    implements WithSecurityContextFactory<WithRedesignUser> {
+public class WithAcmeUserSecurityContextFactory
+    implements WithSecurityContextFactory<WithAcmeUser> {
   @Override
-  public SecurityContext createSecurityContext(WithRedesignUser customUser) {
+  public SecurityContext createSecurityContext(WithAcmeUser customUser) {
     SecurityContext context = SecurityContextHolder.createEmptyContext();
     Person person = Person.from(PersonRef.of(customUser.email()));
     person.setRole(customUser.role());
@@ -29,7 +29,7 @@ public class WithRedesignUserSecurityContextFactory
             .collect(Collectors.toSet());
 
     person.setMemberOf(memberOf);
-    RedesignUserDetails principal = RedesignUserDetails.from(person);
+    AcmeUserDetails principal = AcmeUserDetails.from(person);
     principal.getMetadata().put("picture", customUser.picture());
     Authentication auth =
         new UsernamePasswordAuthenticationToken(principal, null, principal.getAuthorities());

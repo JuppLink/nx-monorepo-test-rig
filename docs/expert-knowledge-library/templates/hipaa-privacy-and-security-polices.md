@@ -11,7 +11,7 @@ googleDocId: 1XLxqwLOeBrf2wQabybIBBnzq71UOavDqZJoZpbT5dhc
 
 Use this template to document your company’s compliance policies and procedures to the Health Insurance Portability and Accountability (HIPAA) Act.
 
-During your bounded engagement, work with your Relationship Manager and Redesign Legal Point of Contact for questions about how to use this template.
+During your bounded engagement, work with your Relationship Manager and Acme Legal Point of Contact for questions about how to use this template.
 
 Includes sections on:
 

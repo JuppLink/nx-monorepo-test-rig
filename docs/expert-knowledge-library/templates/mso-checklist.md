@@ -8,7 +8,7 @@ googleDocId: 1kv9QLiDxYdAnBIXfmriNauA9N7mZvqEBF6JKDdqemj4
 ---
 
 # Tool: MSO/PC Checklist
-Use this step-by-step checklist for confident decision-making when standing up an MSO/PC. See details on how the Redesign Health Legal, Policy, and Compliance team can support your company during your bounded engagement.
+Use this step-by-step checklist for confident decision-making when standing up an MSO/PC. See details on how the Acme Health Legal, Policy, and Compliance team can support your company during your bounded engagement.
 
 Includes sections on:
 

@@ -9,7 +9,7 @@ import static org.mockito.Mockito.when;
 import com.acmehealth.company.api.entity.Person;
 import com.acmehealth.company.api.entity.ref.PersonRef;
 import com.acmehealth.company.api.repository.PersonRepository;
-import com.acmehealth.company.api.service.RedesignUserDetailsService;
+import com.acmehealth.company.api.service.AcmeUserDetailsService;
 import java.util.Map;
 import java.util.Optional;
 import org.junit.jupiter.api.BeforeEach;
@@ -36,7 +36,7 @@ class JwtAuthenticationProviderTests {
   @BeforeEach
   public void setup() {
     authenticationProvider =
-        new JwtAuthenticationProvider(jwtService, new RedesignUserDetailsService(personRepository));
+        new JwtAuthenticationProvider(jwtService, new AcmeUserDetailsService(personRepository));
   }
 
   @Test

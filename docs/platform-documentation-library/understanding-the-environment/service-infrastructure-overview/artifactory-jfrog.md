@@ -16,7 +16,7 @@ JFrog Artifactory is a universal DevOps solution providing end-to-end automation
 
 ## Benefits
 
-* Enables Opcos, vendors, and Redesign Health to build software and deploy the versioned software builds to a central repository housed internally to the OpCo for control in a highly secure manner.
+* Enables Opcos, vendors, and Acme Health to build software and deploy the versioned software builds to a central repository housed internally to the OpCo for control in a highly secure manner.
 * Provides a central repository for all containter artifacts for Opcos.
 * Provides a central repository mirroring all external dependencies with security scans.
 * Supports repository mirroring and a local repository for all languages and container types.

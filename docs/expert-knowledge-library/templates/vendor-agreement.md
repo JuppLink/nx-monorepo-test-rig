@@ -11,7 +11,7 @@ googleDocId: 1_-4InLltgO_bM_UwIB0iIGpCagzy7QQj33ypgW9iQOA
 
 Use this template to establish the conditions of an agreement between your company and a potential vendor.
 
-During your bounded engagement, work with your Relationship Manager and Redesign Legal Point of Contact for questions about how to best use this template.
+During your bounded engagement, work with your Relationship Manager and Acme Legal Point of Contact for questions about how to best use this template.
 
 Includes sections on:
 

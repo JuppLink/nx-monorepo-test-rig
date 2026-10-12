@@ -1,6 +1,6 @@
 {
   "$schema": "vscode://schemas/color-theme",
-  "name": "Redesign Health",
+  "name": "Acme Health",
   "type": "dark",
   "colors": {
     "activityBar.background": "#3f1046",

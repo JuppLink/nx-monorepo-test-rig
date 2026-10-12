@@ -12,7 +12,7 @@ description:
 
 ## Import
 
-Redesign UI exports 4 components to help you create a Card.
+Acme UI exports 4 components to help you create a Card.
 
 ```js
 import { Card, CardHeader, CardBody, CardFooter } from '@acmehealth/ui'
@@ -160,7 +160,7 @@ more for a more advanced layout.
 
       <Box flex="1">
         <Heading size="sm">Segun Adebayo</Heading>
-        <Text>Creator, Redesign UI</Text>
+        <Text>Creator, Acme UI</Text>
       </Box>
       <IconButton
         variant="ghost"
@@ -172,7 +172,7 @@ more for a more advanced layout.
   </CardHeader>
   <CardBody>
     <Text>
-      With Redesign UI, I wanted to sync the speed of development with the speed
+      With Acme UI, I wanted to sync the speed of development with the speed
       of design. I wanted the developer to be just as excited as the designer to
       create a screen.
     </Text>
@@ -180,7 +180,7 @@ more for a more advanced layout.
   <Image
     objectFit="cover"
     src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-    alt="Redesign UI"
+    alt="Acme UI"
   />
 
   <CardFooter justify="space-between">
@@ -262,7 +262,7 @@ the Card.
 
 ## Variants
 
-Redesign UI provides 4 card variants - `elevated`, `outline`, `filled`, and
+Acme UI provides 4 card variants - `elevated`, `outline`, `filled`, and
 `unstyled`. Use the `variant` prop to change the style of your card. If the
 variant prop is not passed, the default variant, `elevated` is used.
 
@@ -283,7 +283,7 @@ variant prop is not passed, the default variant, `elevated` is used.
 
 ## Sizes
 
-Redesign UI provides 3 Card sizes. Use the `size` prop to change the size and set
+Acme UI provides 3 Card sizes. Use the `size` prop to change the size and set
 the value to `sm`, `md`, or `lg`.
 
 ```jsx

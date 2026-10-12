@@ -88,7 +88,7 @@ export const CompanyDetailsOverview = () => {
             }
           >
             <Text>
-              We provide documentation to help you get started with Redesign
+              We provide documentation to help you get started with Acme
               Health. It includes what to expect your first month, key people on
               the team and in leadership, and upfront deliverables. Please make
               sure to disable pop-up blockers for this website to access these
@@ -117,7 +117,7 @@ export const CompanyDetailsOverview = () => {
             <Text>
               Take charge of your company's partnership and fundraising
               pipelines with Salesforce Experience Cloud. Track pipeline
-              performance and streamline CRM communications with Redesign
+              performance and streamline CRM communications with Acme
               Health's Enterprise Growth & Finance teams.
             </Text>
           </OverviewCard>

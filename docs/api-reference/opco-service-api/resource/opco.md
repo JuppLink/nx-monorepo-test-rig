@@ -1,4 +1,4 @@
-A portfolio company that Redesign Health helps develop and launch (OpCo for short).
+A portfolio company that Acme Health helps develop and launch (OpCo for short).
 
 ## Query
 Retrieve a paginated list of OpCos.

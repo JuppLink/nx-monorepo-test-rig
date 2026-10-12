@@ -4,8 +4,8 @@ import { Button, Flex, Image, Stack, Text } from '@chakra-ui/react'
 import { ErrorCode, useGoogleLogin } from '@react-oauth/google'
 
 import BackgroundImage from '../../assets/background.jpeg'
-import RedesignHealthPrism from '../../assets/acme-health-prism.svg'
-import RedesignHealthText from '../../assets/acme-health-text.svg'
+import AcmeHealthPrism from '../../assets/acme-health-prism.svg'
+import AcmeHealthText from '../../assets/acme-health-text.svg'
 import api from '../../utils/api'
 import { getAccessToken, setTokens } from '../../utils/auth'
 
@@ -63,8 +63,8 @@ export const SignIn = () => {
           px={14}
           py={12}
         >
-          <Image src={RedesignHealthPrism} />
-          <Image src={RedesignHealthText} />
+          <Image src={AcmeHealthPrism} />
+          <Image src={AcmeHealthText} />
           <Text color="gray.600">Welcome! Sign into your account.</Text>
 
           <Button

@@ -15,7 +15,7 @@ information via a window that is overlaid on primary content.
 
 ## Import
 
-Redesign UI exports 7 components to help you create any modal dialog.
+Acme UI exports 7 components to help you create any modal dialog.
 
 - `Modal`: The wrapper that provides context for its children.
 - `ModalOverlay`: The dimmed overlay behind the modal dialog.
@@ -123,7 +123,7 @@ function ReturnFocus() {
 ### Block Scrolling when Modal opens
 
 For accessibility, it is recommended to block scrolling on the main document
-behind the modal. Redesign UI does this by default but you can set
+behind the modal. Acme UI does this by default but you can set
 `blockScrollOnMount` to `false` to allow scrolling behind the modal.
 
 ```jsx
@@ -161,11 +161,11 @@ function BasicUsage() {
 
 ### Focus on specific element
 
-Redesign UI automatically sets focus on the first tabbable element in the modal.
+Acme UI automatically sets focus on the first tabbable element in the modal.
 However, there might be scenarios where you need to manually control where focus
 goes.
 
-Redesign UI provides 2 props for this use case:
+Acme UI provides 2 props for this use case:
 
 - `initialFocusRef`: The `ref` of the component that receives focus when the
   modal opens.

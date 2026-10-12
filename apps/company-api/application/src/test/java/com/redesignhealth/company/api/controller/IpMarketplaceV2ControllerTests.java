@@ -45,7 +45,7 @@ import com.acmehealth.company.api.repository.IpMarketplaceRepository;
 import com.acmehealth.company.api.repository.IpMarketplaceTrackRepository;
 import com.acmehealth.company.api.repository.PersonRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.IpMarketplaceService;
 import java.net.URI;
 import java.time.Instant;
@@ -110,7 +110,7 @@ public class IpMarketplaceV2ControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "seller@seller.com",
       memberOf = "1KlMnh9a")
@@ -178,7 +178,7 @@ public class IpMarketplaceV2ControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "buyer@buyer.com",
       memberOf = "buyerCompany")
@@ -198,7 +198,7 @@ public class IpMarketplaceV2ControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "seller@seller.com",
       memberOf = "1KlMnh9a")
@@ -252,7 +252,7 @@ public class IpMarketplaceV2ControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "buyer@buyer.com",
       memberOf = "buyerCompanyId")
@@ -298,7 +298,7 @@ public class IpMarketplaceV2ControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       role = RoleAuthority.ROLE_OP_CO_USER,
       email = "seller@seller.com",
       memberOf = "sellerCompany")

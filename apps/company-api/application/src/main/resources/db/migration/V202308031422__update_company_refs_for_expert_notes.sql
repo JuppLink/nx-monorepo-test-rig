@@ -8,7 +8,7 @@ WHERE expert_note_id in (
   WHERE jsonb_array_length(company_api_company_id) > 3
 );
 
--- Insert single 'Redesign Health' (id:PHIvQQI1) Theme reference into relationship table for each expert note
+-- Insert single 'Acme Health' (id:PHIvQQI1) Theme reference into relationship table for each expert note
 INSERT INTO expert_note_companies (expert_note_id, company_id)
 SELECT expert_note.id as expert_note_id, c.id as company_id FROM expert_note, company c
 WHERE c.api_id = 'PHIvQQI1'
@@ -21,7 +21,7 @@ WHERE c.api_id = 'PHIvQQI1'
                        HAVING count(en.id) > 3
   );
 
--- Update API ids to Redesign Health Theme
+-- Update API ids to Acme Health Theme
 UPDATE expert_note
 SET company_api_company_id = '["PHIvQQI1"]'
 WHERE jsonb_array_length(company_api_company_id) > 3;

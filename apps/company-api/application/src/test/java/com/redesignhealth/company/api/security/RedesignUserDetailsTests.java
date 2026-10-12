@@ -10,7 +10,7 @@ import com.acmehealth.company.api.entity.request.RoleAuthority;
 import java.util.Set;
 import org.junit.jupiter.api.Test;
 
-public class RedesignUserDetailsTests {
+public class AcmeUserDetailsTests {
 
   @Test
   public void testConstructor_onlyIncludesActiveMembers() {
@@ -19,7 +19,7 @@ public class RedesignUserDetailsTests {
     var activeMember = new CompanyMember(company, person, CompanyMemberStatus.ACTIVE);
     var inactiveMember = new CompanyMember(company, person, CompanyMemberStatus.INACTIVE);
     person.setMemberOf(Set.of(activeMember, inactiveMember));
-    var userDetails = RedesignUserDetails.from(person);
+    var userDetails = AcmeUserDetails.from(person);
 
     assertThat(userDetails.getMemberOf().size()).isEqualTo(1);
   }
@@ -28,7 +28,7 @@ public class RedesignUserDetailsTests {
   public void testConstructor_ignoresMembersIfNull() {
     var person = testPerson();
     person.setMemberOf(null);
-    var userDetails = RedesignUserDetails.from(person);
+    var userDetails = AcmeUserDetails.from(person);
 
     assertThat(userDetails.getMemberOf()).isNull();
   }
@@ -37,7 +37,7 @@ public class RedesignUserDetailsTests {
   public void testConstructor_setsRoles() {
     var person = testPerson();
     person.setRole(RoleAuthority.ROLE_OP_CO_USER);
-    var userDetails = RedesignUserDetails.from(person);
+    var userDetails = AcmeUserDetails.from(person);
 
     assertThat(userDetails.getAuthorities().size()).isEqualTo(1);
     assertThat(userDetails.getAuthorities().iterator().next().getAuthority())
@@ -48,7 +48,7 @@ public class RedesignUserDetailsTests {
   public void testConstructor_handlesNullRole() {
     var person = testPerson();
     person.setRole(null);
-    var userDetails = RedesignUserDetails.from(person);
+    var userDetails = AcmeUserDetails.from(person);
 
     assertThat(userDetails.getAuthorities()).isEmpty();
   }
@@ -57,7 +57,7 @@ public class RedesignUserDetailsTests {
   public void testConstructor_setsEmailToUsername() {
     var person = testPerson();
     person.setRole(RoleAuthority.ROLE_OP_CO_USER);
-    var userDetails = RedesignUserDetails.from(person);
+    var userDetails = AcmeUserDetails.from(person);
 
     assertThat(userDetails.getUsername()).isEqualTo("test@acmehealth.com");
   }

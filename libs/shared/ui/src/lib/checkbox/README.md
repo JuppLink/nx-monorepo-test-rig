@@ -164,7 +164,7 @@ render(<CustomCheckbox />)
 
 ### CheckboxGroup
 
-Redesign UI exports a `CheckboxGroup` component to help manage the checked state of
+Acme UI exports a `CheckboxGroup` component to help manage the checked state of
 its children `Checkbox` components and conveniently pass a few shared style
 props to each. See the props table at the bottom of this page for a list of the
 shared styling props.

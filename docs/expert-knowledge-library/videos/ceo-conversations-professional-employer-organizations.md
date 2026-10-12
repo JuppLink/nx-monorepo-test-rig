@@ -17,7 +17,7 @@ In this CEO conversation, CEOs explore what a professional employer organization
 
 **Overview of Stitch PEO**
 
-* Rajesh Voddiraju, [Stitch PEO](https://stitchpeo.com/), a company built at Redesign Health, gives a quick overview of what his company offers. Currently licensed in eight states, Stitch is a PEO for the healthcare industry that offers payroll and benefits including medical, dental, vision, short-term and long-term disability, 401k plans, and voluntary benefits. Stitch offers several different service plans based on their customers' needs. *(02:52)*
+* Rajesh Voddiraju, [Stitch PEO](https://stitchpeo.com/), a company built at Acme Health, gives a quick overview of what his company offers. Currently licensed in eight states, Stitch is a PEO for the healthcare industry that offers payroll and benefits including medical, dental, vision, short-term and long-term disability, 401k plans, and voluntary benefits. Stitch offers several different service plans based on their customers' needs. *(02:52)*
 
 **Individual Coverage Health Reimbursement Arrangement (ICHRA) vs. a PEO**
 

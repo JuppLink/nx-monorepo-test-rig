@@ -12,7 +12,7 @@ import com.acmehealth.company.api.entity.Company;
 import com.acmehealth.company.api.entity.CompanyConflict;
 import com.acmehealth.company.api.entity.ref.CompanyRef;
 import com.acmehealth.company.api.repository.CompanyConflictRepository;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -31,7 +31,7 @@ public class ConflictEngineTest {
   }
 
   @Test
-  @WithRedesignUser
+  @WithAcmeUser
   public void When_Company_Doesnt_Have_Conflict_Should_Return_Empty_List() {
     var apiId = testCompanyRef();
     when(companyConflictRepository.findByMemberOfIdApiId(apiId)).thenReturn(List.of());
@@ -40,7 +40,7 @@ public class ConflictEngineTest {
   }
 
   @Test
-  @WithRedesignUser
+  @WithAcmeUser
   public void When_Company_Has_Conflict_Should_Return_List_With_Elements() {
     var apiId = testCompanyRef();
     var apiId2 = CompanyRef.of("company_id");
@@ -54,20 +54,20 @@ public class ConflictEngineTest {
   }
 
   @Test
-  @WithRedesignUser(memberOf = {})
+  @WithAcmeUser(memberOf = {})
   public void When_Person_Doesnt_Belong_To_Any_Company_Should_Access_To_Any_Document() {
     assertTrue(conflictEngine.hasAccess(testCompanyRef()));
   }
 
   @Test
-  @WithRedesignUser(memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(memberOf = TEST_COMPANY_ID)
   public void
       When_Person_Belong_To_Any_Company_But_Doesnt_Have_Conflicts_Should_Access_To_Any_Document() {
     assertTrue(conflictEngine.hasAccess(CompanyRef.of("companyRef1")));
   }
 
   @Test
-  @WithRedesignUser(memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(memberOf = TEST_COMPANY_ID)
   public void
       When_Person_Belong_To_Any_Company_But_It_Has_Conflicts_Not_Should_Access_To_Any_Document() {
     var company = testCompany();

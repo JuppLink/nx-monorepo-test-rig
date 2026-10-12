@@ -74,7 +74,7 @@ either of these values.
 
 ### Changing the icon
 
-As with most Redesign Health components, you can change the arrow icon used in the
+As with most Acme Health components, you can change the arrow icon used in the
 select. Simply pass the `icon` prop.
 
 In case the custom icon size doesn't look right, you can pass the `iconSize`

@@ -6,7 +6,7 @@ sectionOrder:
 
 # Welcome to the Developer Libray
 
-The Developer Library provides documentation on the use of the Redesign Health Innovation Platform and its subcomponents.
+The Developer Library provides documentation on the use of the Acme Health Innovation Platform and its subcomponents.
 
 ![Platform components](https://assets.acmehealth.com/image/c057417a26b59ea47ed6d9587d14fb03cb3d1b84.png)
 

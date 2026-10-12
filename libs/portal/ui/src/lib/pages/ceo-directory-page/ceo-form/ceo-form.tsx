@@ -172,7 +172,7 @@ export const CeoForm = ({ apiError, isEdit = false, user }: CeoFormProps) => {
           control={control}
           render={({ field: { onChange, name, ref, value, onBlur } }) => (
             <FormFieldContainer
-              label="What do you want other Redesigners to know about you?"
+              label="What do you want other Acmeers to know about you?"
               name={name}
               serverErrors={serverFieldErrors}
               clientErrors={clientErrors}
@@ -183,7 +183,7 @@ export const CeoForm = ({ apiError, isEdit = false, user }: CeoFormProps) => {
                 ref={ref}
                 value={value}
                 onBlur={onBlur}
-                placeholder="What else do you think Redesign should know?"
+                placeholder="What else do you think Acme should know?"
               />
             </FormFieldContainer>
           )}

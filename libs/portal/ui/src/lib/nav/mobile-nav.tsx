@@ -6,7 +6,7 @@ import {
   DrawerPositioner,
   DrawerRoot,
   IconButton,
-  RedesignLogo,
+  AcmeLogo,
   rh,
   useDisclosure
 } from '@acmehealth/ui'
@@ -56,8 +56,8 @@ export const MobileNav = ({ userInfo }: MobileNavProps) => {
       left={0}
       zIndex="docked"
     >
-      <RedesignLogo
-        alt="Redesign Health logo"
+      <AcmeLogo
+        alt="Acme Health logo"
         w={{ base: '225px', md: '250px' }}
         // mt="7px"
       />

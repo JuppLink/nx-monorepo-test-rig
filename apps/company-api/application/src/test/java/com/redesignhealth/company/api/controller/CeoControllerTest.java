@@ -60,7 +60,7 @@ import com.acmehealth.company.api.repository.CeoRepository;
 import com.acmehealth.company.api.repository.CompanyRepository;
 import com.acmehealth.company.api.repository.PersonRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.CeoService;
 import java.util.List;
 import java.util.Map;
@@ -122,7 +122,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void CreateCeo() throws Exception {
     var personRef = PersonRef.of("anytest@acmehealth.com");
     var person = testPerson(personRef);
@@ -194,7 +194,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void CreateCeo_Only_With_Email() throws Exception {
     var personRef = PersonRef.of("anytest@acmehealth.com");
     var person = testPerson(personRef);
@@ -217,7 +217,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void CreateCeo_Txn_Conflict() throws Exception {
     var personRef = PersonRef.of("anytest@acmehealth.com");
     var person = testPerson(personRef);
@@ -242,7 +242,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void CreateCeo_Generic_Jpa_Error() throws Exception {
     var personRef = PersonRef.of("anytest@acmehealth.com");
     var person = testPerson(personRef);
@@ -266,7 +266,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void CreateCeo_Email_Not_Found() throws Exception {
     var payload =
         """
@@ -298,7 +298,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void CreateCeo_Email_Was_Not_Sent() throws Exception {
     var payload = """
      {
@@ -311,7 +311,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void CreateCeo_Email_Is_Empty() throws Exception {
     var payload = """
      {
@@ -325,7 +325,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void CreateCeo_Invalid_Location() throws Exception {
     var personRef = PersonRef.of("anytest@acmehealth.com");
     var person = testPerson(personRef);
@@ -366,7 +366,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void CreateCeo_Ceo_Exists() throws Exception {
     var personRef = PersonRef.of("anytest@acmehealth.com");
     var person = testPerson(personRef);
@@ -407,7 +407,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN)
+  @WithAcmeUser(role = ROLE_RH_ADMIN)
   public void CreateCeo_Ceo_Active_in_More_Than_One_Company() throws Exception {
     var personRef = PersonRef.of("anytest@acmehealth.com");
     var person = testPerson(personRef);
@@ -452,7 +452,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN, email = "anytest@acmehealth.com")
+  @WithAcmeUser(role = ROLE_RH_ADMIN, email = "anytest@acmehealth.com")
   public void GetCeo_One() throws Exception {
     var ceoId = "anyCeoId";
     var ceoRef = CeoRef.of(ceoId);
@@ -490,7 +490,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testDelete_success() throws Exception {
     var ceoId = "anyCeoId";
     var ceoRef = CeoRef.of(ceoId);
@@ -504,7 +504,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testDelete_NotFound() throws Exception {
     var ceoId = "anyCeoId";
     var ceoRef = CeoRef.of(ceoId);
@@ -512,7 +512,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER)
   public void testQuery_returnsResults() throws Exception {
     var MEMBER = "member";
     var company = testCompany();
@@ -576,14 +576,14 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN, email = "anytest@acmehealth.com")
+  @WithAcmeUser(role = ROLE_RH_ADMIN, email = "anytest@acmehealth.com")
   public void GetCeo_Not_Found() throws Exception {
     var ceoId = "anyCeoId";
     mockMvc.perform(get("/ceos/{ceoId}", ceoId)).andExpect(status().isNotFound());
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN, email = "anytest@acmehealth.com")
+  @WithAcmeUser(role = ROLE_RH_ADMIN, email = "anytest@acmehealth.com")
   public void UpdateCeo() throws Exception {
     var ceoId = "anyCeoId";
     var ceoRef = CeoRef.of(ceoId);
@@ -656,7 +656,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN, email = "anytest@acmehealth.com")
+  @WithAcmeUser(role = ROLE_RH_ADMIN, email = "anytest@acmehealth.com")
   public void UpdateCeo_Invalid_Location() throws Exception {
     var ceoId = "anyCeoId";
     var ceoRef = CeoRef.of(ceoId);
@@ -700,7 +700,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_ADMIN, email = "anytest@acmehealth.com")
+  @WithAcmeUser(role = ROLE_RH_ADMIN, email = "anytest@acmehealth.com")
   public void UpdateCeo_Ceo_Not_Found() throws Exception {
     var ceoId = "anyCeoId";
     var company = testCompany();
@@ -734,7 +734,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, email = "anytest2@acmehealth.com")
+  @WithAcmeUser(role = ROLE_OP_CO_USER, email = "anytest2@acmehealth.com")
   public void UpdateCeo_Invalid_Editor_Role_It_Is_Not_CEO() throws Exception {
     var ceoId = "anyCeoId";
     var ceoRef = CeoRef.of(ceoId);
@@ -779,7 +779,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_RH_USER, email = "anytest2@acmehealth.com")
+  @WithAcmeUser(role = ROLE_RH_USER, email = "anytest2@acmehealth.com")
   public void UpdateCeo_Invalid_Editor_Role_It_Is_ROLE_RH_USER() throws Exception {
     var ceoId = "anyCeoId";
     var ceoRef = CeoRef.of(ceoId);
@@ -824,7 +824,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER, email = "anytest@acmehealth.com")
+  @WithAcmeUser(role = ROLE_OP_CO_USER, email = "anytest@acmehealth.com")
   public void UpdateCeo_CEO_Edit_its_Info() throws Exception {
     var ceoId = "anyCeoId";
     var ceoRef = CeoRef.of(ceoId);
@@ -867,7 +867,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void testFilters_returnsResults() throws Exception {
     var filterOption =
         FilterOptions.builder().field(BUSINESS_TYPE).terms(List.of(Term.of("B2B", 10))).build();
@@ -891,7 +891,7 @@ public class CeoControllerTest {
   }
 
   @Test
-  @WithRedesignUser(role = ROLE_OP_CO_USER)
+  @WithAcmeUser(role = ROLE_OP_CO_USER)
   public void testFilters_returns_Not_Results() throws Exception {
     var command =
         SearchFilterOptionsCommand.builder()

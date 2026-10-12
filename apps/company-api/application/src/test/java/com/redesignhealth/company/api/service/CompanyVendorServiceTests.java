@@ -29,7 +29,7 @@ import com.acmehealth.company.api.exception.status.UnprocessableEntityException;
 import com.acmehealth.company.api.repository.CompanyRepository;
 import com.acmehealth.company.api.repository.CompanyVendorRepository;
 import com.acmehealth.company.api.repository.PersonRepository;
-import com.acmehealth.company.api.security.RedesignUserDetails;
+import com.acmehealth.company.api.security.AcmeUserDetails;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -269,7 +269,7 @@ class CompanyVendorServiceTests {
 
   private void mockSecurityContext() {
     Authentication authentication = mock(Authentication.class);
-    when(authentication.getPrincipal()).thenReturn(RedesignUserDetails.from(testPerson()));
+    when(authentication.getPrincipal()).thenReturn(AcmeUserDetails.from(testPerson()));
     SecurityContext securityContext = mock(SecurityContext.class);
     when(securityContext.getAuthentication()).thenReturn(authentication);
     SecurityContextHolder.setContext(securityContext);

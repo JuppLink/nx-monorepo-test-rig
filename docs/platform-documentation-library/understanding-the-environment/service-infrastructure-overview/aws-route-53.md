@@ -16,7 +16,7 @@ Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web 
 
 ## Benefits
 
-AWS Route 53 provides the following benefits when used as part of the Redesign Platform infrastructure:
+AWS Route 53 provides the following benefits when used as part of the Acme Platform infrastructure:
 
 - a cloud-based edge service that enables complex DNS interoperability
 - managed service

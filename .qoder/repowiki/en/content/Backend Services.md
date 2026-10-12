@@ -29,7 +29,7 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-This document describes the backend services in the Redesign Health monorepo with a focus on the Spring Boot microservice architecture of the Company API service, the OAuth JWT Generator service, the FF4J Feature Flag Service, and the Prometheus monitoring service. It explains REST API endpoints, business logic, database integration patterns, security measures, configuration, deployment strategies, monitoring, inter-service communication, error handling, and scalability considerations.
+This document describes the backend services in the Acme Health monorepo with a focus on the Spring Boot microservice architecture of the Company API service, the OAuth JWT Generator service, the FF4J Feature Flag Service, and the Prometheus monitoring service. It explains REST API endpoints, business logic, database integration patterns, security measures, configuration, deployment strategies, monitoring, inter-service communication, error handling, and scalability considerations.
 
 ## Project Structure
 The repository is a monorepo containing multiple applications and libraries. The backend services relevant to this document include:
@@ -344,7 +344,7 @@ PROM --> FF4J
 - [Dockerfile:1-3](file://apps/prometheus/Dockerfile#L1-L3)
 
 ## Conclusion
-The backend services in the Redesign Health monorepo demonstrate a modular, observable, and extensible architecture. The Company API provides robust company and vendor management with strong integration points and security controls. The OAuth JWT Generator streamlines authentication, FF4J enables controlled feature releases, and Prometheus ensures continuous monitoring visibility across services.
+The backend services in the Acme Health monorepo demonstrate a modular, observable, and extensible architecture. The Company API provides robust company and vendor management with strong integration points and security controls. The OAuth JWT Generator streamlines authentication, FF4J enables controlled feature releases, and Prometheus ensures continuous monitoring visibility across services.
 
 [No sources needed since this section summarizes without analyzing specific files]
 

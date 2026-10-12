@@ -10,7 +10,7 @@ description: Alerts are used to communicate a state that affects a system, featu
 
 ## Import
 
-Redesign UI exports 4 alert related components.
+Acme UI exports 4 alert related components.
 
 - `Alert`: The wrapper for alert components.
 - `AlertIcon`: The visual icon for the alert that changes based on the `status`
@@ -34,7 +34,7 @@ import {
 <Alert status="error">
   <AlertIcon />
   <AlertTitle>Your browser is outdated!</AlertTitle>
-  <AlertDescription>Your Redesign experience may be degraded.</AlertDescription>
+  <AlertDescription>Your Acme experience may be degraded.</AlertDescription>
 </Alert>
 ```
 
@@ -122,7 +122,7 @@ kinds of layouts. Here's an example of a custom alert style and layout:
 </Alert>
 ```
 
-`Alert` can also incorporate other Redesign components. Here's an example of an
+`Alert` can also incorporate other Acme components. Here's an example of an
 alert with wrapping description text and the `CloseButton` component with simple
 close functionality:
 

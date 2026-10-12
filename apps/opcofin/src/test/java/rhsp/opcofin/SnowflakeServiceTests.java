@@ -64,7 +64,7 @@ public class SnowflakeServiceTests {
                     [
                         "44",
                         "RH Studio 2 OpCo 31, Inc.",
-                        "Parent Company : Redesign Health Inc. : RHI Holdings 2, LLC : RH Studio 2 OpCo 31, Inc.",
+                        "Parent Company : Acme Health Inc. : RHI Holdings 2, LLC : RH Studio 2 OpCo 31, Inc.",
                         "RH Studio 2 OpCo 31, Inc.",
                         null,
                         "33",
@@ -86,11 +86,11 @@ public class SnowflakeServiceTests {
                     [
                         "45",
                         "RHI NVF Management Co., Inc.",
-                        "Parent Company : Redesign Health Inc. : RHI NVF Management Co., Inc.",
+                        "Parent Company : Acme Health Inc. : RHI NVF Management Co., Inc.",
                         null,
                         null,
                         "4",
-                        "Redesign Health Inc.",
+                        "Acme Health Inc.",
                         null,
                         null,
                         null,
@@ -106,7 +106,7 @@ public class SnowflakeServiceTests {
                         "1650573513.000000000"
                     ]
                 ],
-            "resultSetMetaData": 
+            "resultSetMetaData":
                 {
                     "rowType": [
                         {
@@ -117,7 +117,7 @@ public class SnowflakeServiceTests {
                         },
                         {
                         "name": "SUBSIDIARY_FULL_NAME"
-    
+
                         },
                         {
                         "name": "SUBSIDIARY_LEGAL_NAME"

@@ -34,7 +34,7 @@ export const VendorFilterBox = () => {
   return (
     <FilterBox
       title="Looking for references on vendors?"
-      description="Leverage the Redesign Health network to benefit from information already compiled by your peers on software vendors, agencies, contractors, and more. Look up a vendor by name to find others who are willing to discuss their experiences and share yours to contribute to our community."
+      description="Leverage the Acme Health network to benefit from information already compiled by your peers on software vendors, agencies, contractors, and more. Look up a vendor by name to find others who are willing to discuss their experiences and share yours to contribute to our community."
       mb={8}
     >
       <form>

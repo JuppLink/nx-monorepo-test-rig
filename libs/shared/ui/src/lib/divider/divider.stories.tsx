@@ -28,7 +28,7 @@ export const Composition: StoryObj<typeof Divider> = {
   render: args => (
     <Stack direction="row" h="100px" p={4} bgColor="primary.500" color="white">
       <Divider orientation="vertical" />
-      <Text>Redesign Health</Text>
+      <Text>Acme Health</Text>
     </Stack>
   )
 }

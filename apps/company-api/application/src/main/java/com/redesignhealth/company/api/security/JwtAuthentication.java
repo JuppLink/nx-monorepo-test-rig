@@ -15,7 +15,7 @@ import org.springframework.util.Assert;
 public class JwtAuthentication implements Authentication {
 
   private final JwtRef ref;
-  private RedesignUserDetails userDetails;
+  private AcmeUserDetails userDetails;
   private PersonRef impersonationRequest;
   private boolean authenticated;
 
@@ -25,7 +25,7 @@ public class JwtAuthentication implements Authentication {
     this.impersonationRequest = impersonationRequest;
   }
 
-  public JwtAuthentication(RedesignUserDetails userDetails) {
+  public JwtAuthentication(AcmeUserDetails userDetails) {
     this.ref = JwtRef.of("REDACTED");
     this.userDetails = userDetails;
     this.authenticated = true;

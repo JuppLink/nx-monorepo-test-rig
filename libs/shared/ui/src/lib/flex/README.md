@@ -122,7 +122,7 @@ doubled when the spacer is completely collapsed.
 ```jsx
 <Flex minWidth="max-content" alignItems="center" gap="2">
   <Box p="2">
-    <Heading size="md">Redesign App</Heading>
+    <Heading size="md">Acme App</Heading>
   </Box>
   <Spacer />
   <ButtonGroup gap="2">

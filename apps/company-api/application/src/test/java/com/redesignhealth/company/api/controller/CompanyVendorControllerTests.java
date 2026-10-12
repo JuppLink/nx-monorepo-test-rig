@@ -41,7 +41,7 @@ import com.acmehealth.company.api.repository.CompanyRepository;
 import com.acmehealth.company.api.repository.CompanyVendorRepository;
 import com.acmehealth.company.api.repository.PersonRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.CompanyVendorService;
 import com.acmehealth.company.api.service.SubcategoryService;
 import com.acmehealth.company.api.service.VendorService;
@@ -100,7 +100,7 @@ public class CompanyVendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
   public void testGetAll_is_okay() throws Exception {
     var company = testCompany();
     when(companyRepository.findByApiId(company.getApiId())).thenReturn(Optional.of(company));
@@ -134,7 +134,7 @@ public class CompanyVendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
   public void testGetAll_404_company_not_found() throws Exception {
     var company = testCompany();
     when(companyRepository.findByApiId(company.getApiId())).thenReturn(Optional.empty());
@@ -145,7 +145,7 @@ public class CompanyVendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
   public void testGetOne_is_okay() throws Exception {
     var companyVendor = testCompanyVendor();
     when(companyVendorRepository.findByApiId(companyVendor.getApiId()))
@@ -172,7 +172,7 @@ public class CompanyVendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
   public void testGetOne_404_vendor_not_found() throws Exception {
     var companyVendor = testCompanyVendor();
     when(companyVendorRepository.findByApiId(companyVendor.getApiId()))
@@ -187,7 +187,7 @@ public class CompanyVendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER, memberOf = TEST_COMPANY_ID)
   public void testCreate_404_company_not_found() throws Exception {
     var company = testCompany();
     when(companyRepository.findByApiId(company.getApiId())).thenReturn(Optional.empty());
@@ -211,7 +211,7 @@ public class CompanyVendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       email = TEST_PERSON_EMAIL,
       role = RoleAuthority.ROLE_OP_CO_USER,
       memberOf = TEST_COMPANY_ID)
@@ -276,7 +276,7 @@ public class CompanyVendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       email = TEST_PERSON_EMAIL,
       role = RoleAuthority.ROLE_OP_CO_USER,
       memberOf = TEST_COMPANY_ID)
@@ -342,7 +342,7 @@ public class CompanyVendorControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testDelete_is_okay() throws Exception {
     var companyVendor = testCompanyVendor();
     when(companyVendorRepository.findByApiId(companyVendor.getApiId()))

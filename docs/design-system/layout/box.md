@@ -4,13 +4,13 @@ category: layout
 title: Box
 package: '@acmehealth/ui'
 description:
-  Box is the most abstract component on top of which all other Redesign UI
+  Box is the most abstract component on top of which all other Acme UI
   components are built. By default, it renders a `div` element
 ---
 
 # Box
 
-The `Box` component is the most abstract component on top of which all other Redesign UI
+The `Box` component is the most abstract component on top of which all other Acme UI
 components are built. By default, it renders a `div` element
 
 ## Import

@@ -1,7 +1,7 @@
 package com.acmehealth.company.api.dto;
 
 import com.acmehealth.company.api.entity.Person;
-import com.acmehealth.company.api.security.RedesignUserDetails;
+import com.acmehealth.company.api.security.AcmeUserDetails;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
@@ -16,7 +16,7 @@ public class UserInfoSummary extends PersonSummary {
     super(p);
   }
 
-  public static UserInfoSummary from(Person p, RedesignUserDetails userDetails) {
+  public static UserInfoSummary from(Person p, AcmeUserDetails userDetails) {
     var info = new UserInfoSummary(p);
     info.picture = (String) userDetails.getMetadata().get("picture");
     return info;

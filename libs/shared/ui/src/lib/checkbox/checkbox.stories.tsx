@@ -87,7 +87,7 @@ export const WithIconColor = () => (
   <CheckboxRoot iconColor="yellow.400">
     <CheckboxHiddenInput />
     <CheckboxControl />
-    <CheckboxLabel>I love Redesign Health</CheckboxLabel>
+    <CheckboxLabel>I love Acme Health</CheckboxLabel>
   </CheckboxRoot>
 )
 

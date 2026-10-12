@@ -10,7 +10,7 @@ import com.acmehealth.company.api.property.ExpertNoteEntityConverter;
 import com.acmehealth.company.api.property.JiraClientProperties;
 import com.acmehealth.company.api.property.ResearchEntityConverter;
 import com.acmehealth.company.api.security.AuthChecksService;
-import com.acmehealth.company.api.service.RedesignUserDetailsService;
+import com.acmehealth.company.api.service.AcmeUserDetailsService;
 import com.acmehealth.company.api.taxonomy.CompanyTaxonomy;
 import org.mockito.Mockito;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -28,8 +28,8 @@ import org.springframework.context.annotation.Import;
 })
 public class CommonTestConfig {
   @Bean
-  public RedesignUserDetailsService acmeUserDetailsService() {
-    return Mockito.mock(RedesignUserDetailsService.class);
+  public AcmeUserDetailsService acmeUserDetailsService() {
+    return Mockito.mock(AcmeUserDetailsService.class);
   }
 
   @Bean

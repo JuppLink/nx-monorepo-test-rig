@@ -31,7 +31,7 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-This document defines the end-to-end contribution workflow for the Redesign Health Nx monorepo. It covers code style and formatting, commit hygiene, pull request processes, development workflow (branching, issue tracking, code review), contribution types (bug fixes, features, documentation), testing and quality gates, CI expectations, monorepo and dependency management, cross-project changes, AI assistant configurations for Claude and Gemini, and release/versioning/changelog practices.
+This document defines the end-to-end contribution workflow for the Acme Health Nx monorepo. It covers code style and formatting, commit hygiene, pull request processes, development workflow (branching, issue tracking, code review), contribution types (bug fixes, features, documentation), testing and quality gates, CI expectations, monorepo and dependency management, cross-project changes, AI assistant configurations for Claude and Gemini, and release/versioning/changelog practices.
 
 ## Project Structure
 The repository is an Nx-powered monorepo with:
@@ -423,7 +423,7 @@ ci_chromatic --> nx_cfg
 - [CLAUDE.md:260-267](file://CLAUDE.md#L260-L267)
 
 ## Conclusion
-By following these guidelines—consistent code style, disciplined PR processes, rigorous testing and quality gates, and seamless AI-assisted workflows—you will contribute effectively to the Redesign Health Nx monorepo while maintaining high standards for reliability, accessibility, and maintainability.
+By following these guidelines—consistent code style, disciplined PR processes, rigorous testing and quality gates, and seamless AI-assisted workflows—you will contribute effectively to the Acme Health Nx monorepo while maintaining high standards for reliability, accessibility, and maintainability.
 
 ## Appendices
 

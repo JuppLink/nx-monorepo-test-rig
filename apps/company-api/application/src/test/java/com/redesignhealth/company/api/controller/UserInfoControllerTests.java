@@ -11,7 +11,7 @@ import com.acmehealth.company.api.entity.ref.PersonRef;
 import com.acmehealth.company.api.entity.request.RoleAuthority;
 import com.acmehealth.company.api.repository.PersonRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import java.util.Optional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +33,7 @@ public class UserInfoControllerTests {
   }
 
   @Test
-  @WithRedesignUser(
+  @WithAcmeUser(
       email = "test@acmehealth.com",
       role = RoleAuthority.ROLE_RH_ADMIN,
       picture = "https://example.com/picture.jpg")

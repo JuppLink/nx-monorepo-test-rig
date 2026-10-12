@@ -1,6 +1,6 @@
 # @acmehealth/shared-analytics
 
-Shared Google Analytics 4 event helpers for Redesign Health frontend applications. Wraps `react-ga4` with typed, named event functions that follow the GA4 recommended event schema.
+Shared Google Analytics 4 event helpers for Acme Health frontend applications. Wraps `react-ga4` with typed, named event functions that follow the GA4 recommended event schema.
 
 ## Usage
 

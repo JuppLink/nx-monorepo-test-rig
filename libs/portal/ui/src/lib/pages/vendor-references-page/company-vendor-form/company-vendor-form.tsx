@@ -380,13 +380,13 @@ export const CompanyVendorForm = ({
               By clicking accept or agree when this option is made available to
               you, you: (i) represent and warrant that: you have all rights,
               consents, and permissions required to lawfully disclose any and
-              all information provided by you to Redesign Health, including
+              all information provided by you to Acme Health, including
               information related to any third-party Vendor, and to allow
-              Redesign Health to feature such information on Redesign Health's
+              Acme Health to feature such information on Acme Health's
               platform (the “Platform”); and (ii) agree to indemnify, defend,
-              and hold harmless Redesign Health from any and all damages or
+              and hold harmless Acme Health from any and all damages or
               other losses arising out of any third-party claim, action, or
-              proceeding related to Redesign Health featuring on the Platform
+              proceeding related to Acme Health featuring on the Platform
               any third-party Vendor information provided by you.
             </Text>
           </Box>

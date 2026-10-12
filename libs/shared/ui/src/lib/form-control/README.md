@@ -12,7 +12,7 @@ description:
 
 ## Import
 
-Redesign Health UI exports 4 components for Form Control:
+Acme Health UI exports 4 components for Form Control:
 
 - **`FormControl`**: The wrapper that provides context and functionality for all
   children.

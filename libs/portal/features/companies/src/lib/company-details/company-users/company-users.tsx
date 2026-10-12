@@ -25,11 +25,11 @@ const getDescriptionText = (company?: CompanySummary) => {
       type => type === company?.activityType?.value
     )
   ) {
-    return `Everyone listed here has access to the Redesign Health IP Marketplace through ${company?.name}'s enterprise account.`
+    return `Everyone listed here has access to the Acme Health IP Marketplace through ${company?.name}'s enterprise account.`
   }
 
   return `The individuals listed here encompass both employees that work at
-          ${company?.name} and individuals who are part of the Redesign Health
+          ${company?.name} and individuals who are part of the Acme Health
           team that provide customer support to ${company?.name}. Contact your
           Relationship Manager to add new users, make edits, or update user
           permissions.`

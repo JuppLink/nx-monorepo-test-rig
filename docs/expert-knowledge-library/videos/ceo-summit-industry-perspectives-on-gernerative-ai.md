@@ -11,8 +11,8 @@ Join Venture Chair James Quarles and a panel of industry experts as they provide
 
 Speakers include:
 
-* Fawad Butt, Redesign Health Advisor, Executive in Residence at Canvas Ventures, and Board Member at companies including Particle Health, Vida Health and Pine Park Health
-* Mike Desjadon, CEO of Anomaly, a company built at Redesign Health, will also join the panel. Anomaly builds machine learning and AI solutions to uncovers costly and preventable defects in health payment data, and is at the forefront of exploring how to thoughtfully and safely implement generative AI with health systems as the next-generation leap of their existing tech stack
+* Fawad Butt, Acme Health Advisor, Executive in Residence at Canvas Ventures, and Board Member at companies including Particle Health, Vida Health and Pine Park Health
+* Mike Desjadon, CEO of Anomaly, a company built at Acme Health, will also join the panel. Anomaly builds machine learning and AI solutions to uncovers costly and preventable defects in health payment data, and is at the forefront of exploring how to thoughtfully and safely implement generative AI with health systems as the next-generation leap of their existing tech stack
 * Jon Moore, Head of Engineering Project & Program Management at Cohere
 * Justin Norden, Partner at GSR Ventures, Adjunct Professor at Stanford Medicine
 

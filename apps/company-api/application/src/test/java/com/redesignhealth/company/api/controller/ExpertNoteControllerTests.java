@@ -65,7 +65,7 @@ import com.acmehealth.company.api.repository.CompanyRepository;
 import com.acmehealth.company.api.repository.ExpertNoteRepository;
 import com.acmehealth.company.api.repository.PersonRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.ExpertNoteService;
 import com.acmehealth.company.api.taxonomy.CompanyTaxonomy;
 import java.util.List;
@@ -123,7 +123,7 @@ class ExpertNoteControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER)
   public void testQuery_returnsResults() throws Exception {
     when(companyRepository.findAllByApiIdIn(Set.of(testCompanyRef())))
         .thenReturn(Set.of(testCompany()));
@@ -187,7 +187,7 @@ class ExpertNoteControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testCreate_success() throws Exception {
     when(personRepository.existsByEmail(testPersonRef())).thenReturn(true);
     when(companyRepository.findAllByApiIdIn(anyCollection())).thenReturn(Set.of(testCompany()));
@@ -260,7 +260,7 @@ class ExpertNoteControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testCreate_noteHrefRequiredIfNoteRawMissing() throws Exception {
     when(personRepository.existsByEmail(testPersonRef())).thenReturn(true);
     mockMvc
@@ -283,7 +283,7 @@ class ExpertNoteControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testCreate_unknownPerson() throws Exception {
     when(personRepository.findByEmail(testPersonRef())).thenReturn(Optional.empty());
     mockMvc
@@ -308,7 +308,7 @@ class ExpertNoteControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testCreate_unknownCompany() throws Exception {
     when(personRepository.existsByEmail(testPersonRef())).thenReturn(true);
     mockMvc
@@ -333,7 +333,7 @@ class ExpertNoteControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testCreate_baseRequiredFields() throws Exception {
     when(personRepository.findByEmail(testPersonRef())).thenReturn(Optional.empty());
     when(companyRepository.findAllByApiIdIn(anySet())).thenReturn(Set.of(testCompany()));
@@ -352,7 +352,7 @@ class ExpertNoteControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testFilters_returnsResults() throws Exception {
     var filterOption =
         FilterOptions.builder()
@@ -380,7 +380,7 @@ class ExpertNoteControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testFilters_returnsNoResults() throws Exception {
     var command =
         SearchFilterOptionsCommand.builder()
@@ -397,7 +397,7 @@ class ExpertNoteControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER)
   public void testGet_success() throws Exception {
     when(expertNoteRepository.findByApiId(testExpertNoteRef()))
         .thenReturn(Optional.of(testExpertNote()));
@@ -433,7 +433,7 @@ class ExpertNoteControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_OP_CO_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_OP_CO_USER)
   public void testGet_unknownId() throws Exception {
     when(expertNoteRepository.findByApiId(testExpertNoteRef())).thenReturn(Optional.empty());
     mockMvc
@@ -443,7 +443,7 @@ class ExpertNoteControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testDelete_success() throws Exception {
     when(expertNoteRepository.findByApiId(testExpertNoteRef()))
         .thenReturn(Optional.of(testExpertNote()));
@@ -454,7 +454,7 @@ class ExpertNoteControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_ADMIN)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_ADMIN)
   public void testDelete_unknownId() throws Exception {
     when(expertNoteRepository.findByApiId(testExpertNoteRef())).thenReturn(Optional.empty());
     mockMvc

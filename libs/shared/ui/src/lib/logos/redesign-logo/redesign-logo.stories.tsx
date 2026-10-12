@@ -1,10 +1,10 @@
 import { Meta } from '@storybook/react-vite'
 
-import { RedesignLogo } from './acme-logo'
+import { AcmeLogo } from './acme-logo'
 
-const Story: Meta<typeof RedesignLogo> = {
-  component: RedesignLogo,
-  title: 'Components / Logos / Redesign Health',
+const Story: Meta<typeof AcmeLogo> = {
+  component: AcmeLogo,
+  title: 'Components / Logos / Acme Health',
   args: {}
 }
 export default Story

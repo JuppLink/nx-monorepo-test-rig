@@ -57,7 +57,7 @@ import com.acmehealth.company.api.repository.CompanyRepository;
 import com.acmehealth.company.api.repository.ResearchArticleRepository;
 import com.acmehealth.company.api.scaffolding.CommonTestConfig;
 import com.acmehealth.company.api.scaffolding.DocUtils;
-import com.acmehealth.company.api.scaffolding.WithRedesignUser;
+import com.acmehealth.company.api.scaffolding.WithAcmeUser;
 import com.acmehealth.company.api.service.ResearchArticleService;
 import com.acmehealth.company.api.taxonomy.CompanyTaxonomy;
 import java.util.Collections;
@@ -109,7 +109,7 @@ public class ResearchArticleControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testCreate_success() throws Exception {
     when(companyRepository.findAllByApiIdIn(List.of(testCompanyRef())))
         .thenReturn(Set.of(testCompany()));
@@ -183,7 +183,7 @@ public class ResearchArticleControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testCreate_unknownCompany() throws Exception {
     when(companyRepository.findAllByApiIdIn(List.of(testCompanyRef())))
         .thenReturn(Collections.emptySet());
@@ -222,7 +222,7 @@ public class ResearchArticleControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testCreate_baseRequiredFields() throws Exception {
     mockMvc
         .perform(
@@ -239,7 +239,7 @@ public class ResearchArticleControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testFilters_returnsResults() throws Exception {
     var filterOption =
         FilterOptions.builder()
@@ -264,7 +264,7 @@ public class ResearchArticleControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testFilters_returnsNoResults() throws Exception {
     var command =
         SearchFilterOptionsCommand.builder()
@@ -279,7 +279,7 @@ public class ResearchArticleControllerTests {
   }
 
   @Test
-  @WithRedesignUser(role = RoleAuthority.ROLE_RH_USER)
+  @WithAcmeUser(role = RoleAuthority.ROLE_RH_USER)
   public void testQuery_returnsResults() throws Exception {
     when(companyRepository.findAllByApiIdIn(Set.of(testCompanyRef())))
         .thenReturn(Set.of(testCompany()));

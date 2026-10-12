@@ -3,18 +3,18 @@ id: icon
 category: media-and-icons
 title: "Icon"
 package: "@acmehealth/ui"
-description: "Redesign UI provides a set of commonly used interface icons you can use in your
+description: "Acme UI provides a set of commonly used interface icons you can use in your
 project"
 ---
 
 # Icon
 
-Redesign UI provides a set of commonly used interface icons you can use in your
+Acme UI provides a set of commonly used interface icons you can use in your
 project.
 
 ## Installation
 
-Redesign UI provides a set of commonly used interface icons you can use them in your
+Acme UI provides a set of commonly used interface icons you can use them in your
 project.
 
 These icons are published into a separate package that is not part of
@@ -32,7 +32,7 @@ yarn add @acmehealth/ui
 
 ## Usage
 
-Redesign UI provides multiple ways to use icons in your project:
+Acme UI provides multiple ways to use icons in your project:
 
 - [Icon](#icon)
   - [Installation](#installation)
@@ -108,7 +108,7 @@ function Example() {
 
 ## Creating your custom icons
 
-Redesign UI provides two methods for creating your custom icons:
+Acme UI provides two methods for creating your custom icons:
 
 - Using the [Icon](#using-the-icon-component) component
 - Using the [createIcon](#using-the-createicon-function) function

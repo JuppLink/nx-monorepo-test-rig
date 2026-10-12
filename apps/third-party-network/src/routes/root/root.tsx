@@ -13,7 +13,7 @@ export const Home = () => {
             RH Advise
           </Text>
           <Text as="p" fontSize="md" color="gray.600" lineHeight="none" mt="2">
-            Search Redesign Health’s advisor database to find experts to consult
+            Search Acme Health’s advisor database to find experts to consult
             on concept development
           </Text>
         </Box>

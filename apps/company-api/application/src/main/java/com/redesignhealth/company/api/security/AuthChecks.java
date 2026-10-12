@@ -7,8 +7,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 
 public class AuthChecks {
 
-  public static RedesignUserDetails getPrincipal() {
-    return (RedesignUserDetails)
+  public static AcmeUserDetails getPrincipal() {
+    return (AcmeUserDetails)
         SecurityContextHolder.getContext().getAuthentication().getPrincipal();
   }
 
@@ -29,7 +29,7 @@ public class AuthChecks {
   }
 
   public static boolean isMember(Authentication auth, CompanyRef apiId, RoleAuthority role) {
-    var user = (RedesignUserDetails) auth.getPrincipal();
+    var user = (AcmeUserDetails) auth.getPrincipal();
     // admins are members of all companies
     if (isAdmin(auth)) {
       return true;

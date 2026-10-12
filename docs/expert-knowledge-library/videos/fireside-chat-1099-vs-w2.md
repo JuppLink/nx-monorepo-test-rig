@@ -7,7 +7,7 @@ labels:
 
 # Fireside chat: Provider Staffing - 1099 vs. W2s with Kurt Knight, COO of Amwell
 
-In this Fireside Chat, Redesign Health Venture Chair Danielle Russella hosts a discussion with Kurt Knight, Chief Operating Officer at Amwell, about top considerations for 1099 vs. W2 for provider staffing. They cover topics like which option gives you a better competitive moat, how to control quality and standards of care with 1099, demand forecasting, scheduling considerations, and more.
+In this Fireside Chat, Acme Health Venture Chair Danielle Russella hosts a discussion with Kurt Knight, Chief Operating Officer at Amwell, about top considerations for 1099 vs. W2 for provider staffing. They cover topics like which option gives you a better competitive moat, how to control quality and standards of care with 1099, demand forecasting, scheduling considerations, and more.
 
 
 [Jump to summary and key takeaways.](#summary)

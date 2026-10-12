@@ -39,7 +39,7 @@
 13. [Conclusion](#conclusion)
 
 ## Introduction
-Third Party Network is an advisor-facing application that enables users to discover, review, and engage with external advisors within the Redesign Health ecosystem. Built as a single-page application (SPA), it leverages modern frontend tooling and a modular feature architecture to deliver a responsive, accessible, and maintainable user experience. The application integrates with company API services for advisor data and authentication, while adhering to strict routing and authentication patterns to ensure secure access for authorized users.
+Third Party Network is an advisor-facing application that enables users to discover, review, and engage with external advisors within the Acme Health ecosystem. Built as a single-page application (SPA), it leverages modern frontend tooling and a modular feature architecture to deliver a responsive, accessible, and maintainable user experience. The application integrates with company API services for advisor data and authentication, while adhering to strict routing and authentication patterns to ensure secure access for authorized users.
 
 ## Project Structure
 The application follows a Nx workspace monorepo layout with a dedicated application under apps/third-party-network and reusable features under libs/third-party-network. The structure emphasizes separation of concerns, with distinct packages for authentication, advisors, UI utilities, and shared utilities.

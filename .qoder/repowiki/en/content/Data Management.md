@@ -34,7 +34,7 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-This document describes the data management system used by the Redesign Health platform. It covers the PostgreSQL-compatible schema design, entity relationships, and data modeling patterns. It explains the Flyway migration strategy and versioning, the Spring Data JPA repository pattern, entity lifecycle management, and the data access layer. It also documents the mock data generation system used for development and testing, including fixtures and seeding. Finally, it outlines validation rules, business constraints, referential integrity enforcement, and operational considerations such as backup, disaster recovery, and data retention.
+This document describes the data management system used by the Acme Health platform. It covers the PostgreSQL-compatible schema design, entity relationships, and data modeling patterns. It explains the Flyway migration strategy and versioning, the Spring Data JPA repository pattern, entity lifecycle management, and the data access layer. It also documents the mock data generation system used for development and testing, including fixtures and seeding. Finally, it outlines validation rules, business constraints, referential integrity enforcement, and operational considerations such as backup, disaster recovery, and data retention.
 
 ## Project Structure
 The data management system spans several modules:
@@ -462,7 +462,7 @@ Common issues and resolutions:
 - [Auditable.java:1-60](file://apps/company-api/application/src/main/java/com/acmehealth/company/api/entity/audit/Auditable.java#L1-L60)
 
 ## Conclusion
-The Redesign Health data management system leverages Flyway for robust schema evolution, Spring Data JPA for type-safe data access, and typed natural keys for secure and flexible identifiers. Audit fields, expansion-aware repositories, and strict validation rules ensure data integrity and operability. The mock data generator streamlines development and testing. Together, these patterns provide a scalable, maintainable foundation for healthcare data operations.
+The Acme Health data management system leverages Flyway for robust schema evolution, Spring Data JPA for type-safe data access, and typed natural keys for secure and flexible identifiers. Audit fields, expansion-aware repositories, and strict validation rules ensure data integrity and operability. The mock data generator streamlines development and testing. Together, these patterns provide a scalable, maintainable foundation for healthcare data operations.
 
 ## Appendices
 

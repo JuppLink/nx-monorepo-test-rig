@@ -16,7 +16,7 @@ Amazon Elastic Container Service (ECS) is a fully managed container orchestratio
 
 ## Benefits
 
-Amazon ECS provies the following benefits when used as part of the Redesign Platform infrastructure:
+Amazon ECS provies the following benefits when used as part of the Acme Platform infrastructure:
 
 * a simple way to deploy applications onto an infrastructure
 * simple orchestration to solve the generic use-case for small marketing websites

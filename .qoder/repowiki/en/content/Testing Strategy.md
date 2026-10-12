@@ -35,10 +35,10 @@
 - [libs/shared/ui/jest.config.ts](file://libs/shared/ui/jest.config.ts)
 - [libs/shared-java/pom.xml](file://libs/shared-java/pom.xml)
 - [apps/company-api/application/pom.xml](file://apps/company-api/application/pom.xml)
-- [apps/ff4j-acme/pom.xml](file://apps/ff4j-acme/pom.xml)
+- [apps/ff4j-rh/pom.xml](file://apps/ff4j-rh/pom.xml)
 - [apps/opcofin/pom.xml](file://apps/opcofin/pom.xml)
 - [apps/company-api/application/src/test/java/com/acmehealth/companyapi/application/Ff4jAcmeApplicationTests.java](file://apps/company-api/application/src/test/java/com/acmehealth/companyapi/application/Ff4jAcmeApplicationTests.java)
-- [apps/ff4j-acme/src/test/java/com/acmehealth/ff4jrh/Ff4jAcmeApplicationTests.java](file://apps/ff4j-acme/src/test/java/com/acmehealth/ff4jrh/Ff4jAcmeApplicationTests.java)
+- [apps/ff4j-rh/src/test/java/com/acmehealth/ff4jrh/Ff4jAcmeApplicationTests.java](file://apps/ff4j-rh/src/test/java/com/acmehealth/ff4jrh/Ff4jAcmeApplicationTests.java)
 - [apps/opcofin/src/test/java/rhsp/opcofin/OpcofinApplicationTests.java](file://apps/opcofin/src/test/java/rhsp/opcofin/OpcofinApplicationTests.java)
 - [libs/shared-java/src/test/java/com/acmehealth/sharedjava/SharedJavaApplicationTests.java](file://libs/shared-java/src/test/java/com/acmehealth/sharedjava/SharedJavaApplicationTests.java)
 - [libs/shared-java/src/test/java/com/acmehealth/sharedjava/ExampleUnitTest.java](file://libs/shared-java/src/test/java/com/acmehealth/sharedjava/ExampleUnitTest.java)
@@ -98,7 +98,7 @@ OAuthJWT["apps/oauth-jwt-generator"]
 end
 subgraph "Spring Boot Services"
 CompanyAPI["apps/company-api/application"]
-FF4JAcme["apps/ff4j-acme"]
+FF4JAcme["apps/ff4j-rh"]
 Opcofin["apps/opcofin"]
 SharedJava["libs/shared-java"]
 end
@@ -332,7 +332,7 @@ Quality gates:
 **Section sources**
 - [libs/shared-java/pom.xml](file://libs/shared-java/pom.xml)
 - [apps/company-api/application/pom.xml](file://apps/company-api/application/pom.xml)
-- [apps/ff4j-acme/pom.xml](file://apps/ff4j-acme/pom.xml)
+- [apps/ff4j-rh/pom.xml](file://apps/ff4j-rh/pom.xml)
 - [apps/opcofin/pom.xml](file://apps/opcofin/pom.xml)
 
 ## Dependency Analysis

@@ -20,7 +20,7 @@
 - [apps/prometheus/project.json](file://apps/prometheus/project.json)
 - [apps/company-api/project.json](file://apps/company-api/project.json)
 - [apps/api-server/project.json](file://apps/api-server/project.json)
-- [apps/ff4j-acme/project.json](file://apps/ff4j-acme/project.json)
+- [apps/ff4j-rh/project.json](file://apps/ff4j-rh/project.json)
 - [apps/opcofin/project.json](file://apps/opcofin/project.json)
 - [apps/parser-playground/project.json](file://apps/parser-playground/project.json)
 - [apps/chat-pocs/rocketchat-poc/Dockerfile](file://apps/chat-pocs/rocketchat-poc/Dockerfile)

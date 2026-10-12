@@ -8,10 +8,10 @@
 		<version>3.0.7</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.acmehealth</groupId>
-	<artifactId>ff4j-acme</artifactId>
+	<groupId>com.redesignhealth</groupId>
+	<artifactId>ff4j-rh</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ff4j-acme</name>
+	<name>ff4j-rh</name>
 	<description>ff4j</description>
 	<properties>
 		<java.version>17</java.version>

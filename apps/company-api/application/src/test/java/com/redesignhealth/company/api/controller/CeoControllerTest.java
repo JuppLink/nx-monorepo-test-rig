@@ -929,21 +929,21 @@ public class CeoControllerTest {
     return subsectionWithPath("customerSegment")
         .description(
             "List for different segments for which the CEO could have experience. Valid values: "
-                + "https://github.com/acmehealth/rh-design-system/blob/main/apps/company-api/application/src/main/java/com/acmehealth/company/api/dto/enums/CeoCustomerSegment.java#L6-L10[company-api-repo]");
+                + "https://github.com/acmehealth/acme-design-system/blob/main/apps/company-api/application/src/main/java/com/acmehealth/company/api/dto/enums/CeoCustomerSegment.java#L6-L10[company-api-repo]");
   }
 
   private static FieldDescriptor businessFocusAreaField() {
     return subsectionWithPath("businessFocusArea")
         .description(
             "List to define the businesses where the CEO has more expertise. Valid values: "
-                + "https://github.com/acmehealth/rh-design-system/blob/main/apps/company-api/application/src/main/java/com/acmehealth/company/api/dto/enums/CeoBusinessFocusArea.java#L6-L56[company-api-repo]");
+                + "https://github.com/acmehealth/acme-design-system/blob/main/apps/company-api/application/src/main/java/com/acmehealth/company/api/dto/enums/CeoBusinessFocusArea.java#L6-L56[company-api-repo]");
   }
 
   private static FieldDescriptor healthcareSectorField() {
     return fieldWithPath("healthcareSector")
         .description(
             "Sector where the CEO has experience, Valid values: "
-                + "https://github.com/acmehealth/rh-design-system/blob/main/apps/company-api/application/src/main/java/com/acmehealth/company/api/dto/enums/CeoHealthcareSector.java#L6-L15[company-api-repo]");
+                + "https://github.com/acmehealth/acme-design-system/blob/main/apps/company-api/application/src/main/java/com/acmehealth/company/api/dto/enums/CeoHealthcareSector.java#L6-L15[company-api-repo]");
   }
 
   private static FieldDescriptor bioField() {

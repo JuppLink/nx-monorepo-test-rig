@@ -11,7 +11,7 @@ module.exports = {
 
     const verifier = awsJwtVerify.CognitoJwtVerifier.create({
       userPoolId: CONFIG.USER_POOL_ID,
-      clientId: CONFIG.CLIENT_ID, // rh-searchlight-web-client,
+      clientId: CONFIG.CLIENT_ID, // acme-searchlight-web-client,
       tokenUse: 'id'
     })
 

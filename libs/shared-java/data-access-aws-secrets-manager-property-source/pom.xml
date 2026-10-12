@@ -14,7 +14,7 @@
    <repository>
      <id>github</id>
      <name>GitHub Acme Health Apache Maven Packages</name>
-     <url>https://maven.pkg.github.com/acmehealth/rh-design-system</url>
+     <url>https://maven.pkg.github.com/acmehealth/acme-design-system</url>
    </repository>
 </distributionManagement>
 	<dependencyManagement>

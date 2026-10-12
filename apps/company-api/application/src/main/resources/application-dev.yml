@@ -23,7 +23,7 @@ aws:
     service: es
   s3:
     assets:
-      bucket: rh-dev-company-api-assets
+      bucket: acme-dev-company-api-assets
       url: https://company-api-assets.dev.acmehealth.com
 
 jira:

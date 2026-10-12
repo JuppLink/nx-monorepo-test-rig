@@ -33,8 +33,8 @@ Example `settings.xml` file:
           <url>https://repo1.maven.org/maven2</url>
         </repository>
         <repository>
-          <id>rh-design-library</id>
-          <url>https://maven.pkg.github.com/acmehealth/rh-design-library</url>
+          <id>acme-design-library</id>
+          <url>https://maven.pkg.github.com/acmehealth/acme-design-library</url>
           <snapshots>
             <enabled>true</enabled>
           </snapshots>
@@ -79,8 +79,8 @@ Add the following to your `<project>` in `pom.xml`
 <repositories>
   <repository>
     <id>github</id>
-    <name>GitHub Packages from rh-design-library</name>
-    <url>https://maven.pkg.github.com/acmehealth/rh-design-system</url>
+    <name>GitHub Packages from acme-design-library</name>
+    <url>https://maven.pkg.github.com/acmehealth/acme-design-system</url>
   </repository>
 </repositories>
 ```

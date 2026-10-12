@@ -16,7 +16,7 @@
       {
         "label": "Acme Health",
         "uiTheme": "vs-dark",
-        "path": "./themes/rh-color-theme.json"
+        "path": "./themes/acme-color-theme.json"
       }
     ]
   }

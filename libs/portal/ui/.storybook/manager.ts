@@ -2,15 +2,15 @@ import { addons } from 'storybook/manager-api'
 
 import { create } from '@storybook/theming'
 
-import Logo from './RH_Logo_Single_Ultraviolet.png'
+// import Logo from './RH_Logo_Single_Ultraviolet.png'
 
 const storybookTheme = create({
   base: 'light',
   colorPrimary: '#B540EC',
   colorSecondary: '#9425C9',
   brandTitle: 'Acme Health',
-  brandUrl: 'https://github.com/acmehealth/rh-design-system',
-  brandImage: Logo
+  brandUrl: 'https://github.com/acmehealth/acme-design-system',
+  // brandImage: Logo
 })
 
 addons.setConfig({

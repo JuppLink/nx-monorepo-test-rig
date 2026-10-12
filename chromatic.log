@@ -14,7 +14,7 @@ A new major version is available (v13.3.5).
 Run yarn upgrade chromatic --latest to upgrade.
 App firstBuild: %o, lastBuild: %o, pullRequest: %o null null null
 App has no builds, returning []
-Found parentCommits: 
+Found parentCommits:
 Retrieved git information
     → Commit '83bae74' on branch 'feat--big-cleanup-and-MCP-integrations'; no ancestor found
 Collecting Storybook metadata
@@ -55,10 +55,10 @@ i Runtime metadata:
 }
 
 i Storybook build output:
-D:\documents-from-c\GitHub\rh-nx-monorepo\build-storybook.log
+D:\documents-from-c\GitHub\acme-nx-monorepo\build-storybook.log
 
 
-> rh-design-system@0.0.0 build-storybook-portal-ui
+> acme-design-system@0.0.0 build-storybook-portal-ui
 > nx run portal-ui:build-storybook --output-dir C:\Users\Rich\AppData\Local\Temp\chromatic--93260-CNFtXfWFxVGd
 
 
@@ -85,7 +85,7 @@ D:\documents-from-c\GitHub\rh-nx-monorepo\build-storybook.log
     libs/portal/ui/tsconfig.json:2:2:
       2 │   "extends": "../../../tsconfig.base.json",
         ╵   ~~~~~~~~~
-failed to load config from D:\documents-from-c\GitHub\rh-nx-monorepo\libs\portal\ui\vite.config.ts
+failed to load config from D:\documents-from-c\GitHub\acme-nx-monorepo\libs\portal\ui\vite.config.ts
 │
 ■  Failed to build the preview
  NX   (0 , import_vite.splitVendorChunkPlugin) is not a function

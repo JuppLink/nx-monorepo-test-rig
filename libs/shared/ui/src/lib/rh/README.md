@@ -37,7 +37,7 @@ rh styles, you can write `<rh.button />`.
 
 This reduces the need to create custom component wrappers and name them. This
 syntax is available for common html elements. See the reference for the full
-[list of elements](https://github.com/rh-ui/rh-ui/blob/main/packages/system/src/system.utils.ts#L9)
+[list of elements](https://github.com/acme-ui/acme-ui/blob/main/packages/system/src/system.utils.ts#L9)
 supported.
 
 ```jsx
@@ -47,7 +47,7 @@ supported.
 ## Acme UI Factory function
 
 This is a function that converts **non-rh components** or **jsx element** to
-rh-enabled components so you can pass style props to them.
+acme-enabled components so you can pass style props to them.
 
 Consider a package called `react-input-autoresize`, let's use the Acme UI Factory
 function to make possible to pass style props.

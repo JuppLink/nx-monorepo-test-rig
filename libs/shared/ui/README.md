@@ -56,4 +56,4 @@ nx storybook shared-ui
 
 Run the GitHub Action `.github/workflows/shared-ui-npm-publish.yaml` to publish the version specified in this folder's `package.json` to GitHub Packages:
 
-https://github.com/effinrich/rh-nx-monorepo/pkgs/npm/ui
+https://github.com/effinrich/acme-nx-monorepo/pkgs/npm/ui

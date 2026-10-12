@@ -19,7 +19,7 @@ aws:
   enabled: true
   s3:
     assets:
-      bucket: rh-core-assets
+      bucket: acme-core-assets
       url: https://assets.core.acmehealth.com
 jira:
   enabled: true

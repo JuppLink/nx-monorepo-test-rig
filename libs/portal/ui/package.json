@@ -14,7 +14,7 @@
   "version": "2.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/acmehealth/rh-design-system",
+    "url": "https://github.com/acmehealth/acme-design-system",
     "directory": "libs/portal/ui"
   },
   "msw": {

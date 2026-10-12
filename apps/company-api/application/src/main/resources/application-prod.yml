@@ -23,7 +23,7 @@ aws:
     service: es
   s3:
     assets:
-      bucket: rh-prod-assets
+      bucket: acme-prod-assets
       url: https://assets.acmehealth.com
 
 jira:

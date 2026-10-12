@@ -21,19 +21,19 @@ CONFIG_MAP = {
     'staging': {
         'ekl-library': 'BrhOU64b',
         'developer-library': '1omThfaC',
-        'mkdocs-s3-bucket': 'rh-staging-developer-library',
+        'mkdocs-s3-bucket': 'acme-staging-developer-library',
         'company-api-base-url': 'https://company-api.staging.acmehealth.com'
     },
     'dev': {
         'ekl-library': 'MnDeoylC',
         'developer-library': 'TkGC8nvM',
-        'mkdocs-s3-bucket': 'rh-developer-library-dev',
+        'mkdocs-s3-bucket': 'acme-developer-library-dev',
         'company-api-base-url': 'https://company-api.dev.acmehealth.com'
     },
     'prod': {
         'ekl-library': 'xoK3mG8Q',
         'developer-library': 'ELagNxhb',
-        'mkdocs-s3-bucket': 'rh-developer-library-prod',
+        'mkdocs-s3-bucket': 'acme-developer-library-prod',
         'company-api-base-url': 'https://company-api.acmehealth.com'
     },
     'local': {
